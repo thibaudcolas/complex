@@ -1,4 +1,4 @@
-Complex — Données complexes, Play! framework
+Complex — Données liées, framework Jena & NoSQL
 ---------------------------------------------------------------------
 
 © masalthunlass — thibweb

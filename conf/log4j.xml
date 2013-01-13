@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+
+  <appender name="defaultFileLog" class="org.apache.log4j.DailyRollingFileAppender">
+     <param name="file" value="./log/complex.log"/>
+
+     <layout class="org.apache.log4j.PatternLayout">
+       <param name="conversionPattern" value="%d{ISO8601}|%-5p|%X{Timer}|%X{User}|%X{Path}|%c{1}|%m%n"/>
+     </layout>
+   </appender>
+   
+   <appender name="defaultConsoleLog" class="org.apache.log4j.ConsoleAppender">
+      <param name="Target" value="System.out"/>
+      <param name="Threshold" value="INFO"/>
+
+      <layout class="org.apache.log4j.PatternLayout">
+         <!-- The default pattern: Date Priority [Category] Message\n -->
+         <param name="ConversionPattern" value="%d{ABSOLUTE} %-5p [%c{1}] %m%n"/>
+      </layout>
+   </appender>
+   
+  <logger name="com.github.masalthunlass.complex.test">
+    <level value="info"/>
+    <appender-ref ref="defaultConsoleLog"/>
+  </logger>
+
+  <root>
+    <level value="info"/>
+    <appender-ref ref="defaultFileLog"/>
+  </root>
+
+</log4j:configuration>

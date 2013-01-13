@@ -21,6 +21,6 @@
     sdb:sdbType       "MySQL" ;
 	# Instance on Thibaud's Xeround.
     sdb:sdbHost       "instance33931.db.xeround.com:15462" ;
-    sdb:sdbName       "jena-sdb" ;
+    sdb:sdbName       "jena-sdb";
     sdb:driver        "com.mysql.jdbc.Driver" ;
     .

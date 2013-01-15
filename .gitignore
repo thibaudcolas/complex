@@ -26,3 +26,5 @@ local.properties
 .buildpath
 
 *~
+
+apache-tomcat-7.0.32/*

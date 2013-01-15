@@ -1,4 +1,4 @@
-/* CVS $Id: $ */
+package com.github.masalthunlass.complex.schemagen;
  
 import com.hp.hpl.jena.rdf.model.*;
  
@@ -27,43 +27,43 @@ public class INSEE_Geo_Ontology {
     
     public static final Resource Arrondissement = m_model.createResource( "http://rdf.insee.fr/def/geo#Arrondissement" );
     
-    /** <p>Cette classe n'est utilisée que pour les arrondissements de Paris, Lyon et 
+    /** <p>Cette classe n'est utilisÔøΩe que pour les arrondissements de Paris, Lyon et 
      *  Marseille</p>
      */
     public static final Resource ArrondissementMunicipal = m_model.createResource( "http://rdf.insee.fr/def/geo#ArrondissementMunicipal" );
     
-    /** <p>Canton français, circonscription d'élection des conseillers généraux</p> */
+    /** <p>Canton franÔøΩais, circonscription d'ÔøΩlection des conseillers gÔøΩnÔøΩraux</p> */
     public static final Resource Canton = m_model.createResource( "http://rdf.insee.fr/def/geo#Canton" );
     
     /** <p>Dit aussi 'pseudo-canton', c'est un regroupement d'une ou plusieurs communes 
-     *  entières</p>
+     *  entiÔøΩres</p>
      */
     public static final Resource CantonOuVille = m_model.createResource( "http://rdf.insee.fr/def/geo#CantonOuVille" );
     
     /** <p>Changement de rattachement administratif d'une commune</p> */
     public static final Resource ChangementDeDepartementOuArrondissement = m_model.createResource( "http://rdf.insee.fr/def/geo#ChangementDeDepartementOuArrondissement" );
     
-    /** <p>Changement de l'intitulé du territoire</p> */
+    /** <p>Changement de l'intitulÔøΩ du territoire</p> */
     public static final Resource ChangementDeNom = m_model.createResource( "http://rdf.insee.fr/def/geo#ChangementDeNom" );
     
-    /** <p>Collectivité territoriale d'outre-mer. Inclut les TOM et les territoires à 
+    /** <p>CollectivitÔøΩ territoriale d'outre-mer. Inclut les TOM et les territoires ÔøΩ 
      *  statut particulier.</p>
      */
     public static final Resource CollectiviteTerritoriale = m_model.createResource( "http://rdf.insee.fr/def/geo#CollectiviteTerritoriale" );
     
     public static final Resource Commune = m_model.createResource( "http://rdf.insee.fr/def/geo#Commune" );
     
-    /** <p>Création ou rétablissemnt d'un territoire</p> */
+    /** <p>CrÔøΩation ou rÔøΩtablissemnt d'un territoire</p> */
     public static final Resource CreationOuRetablissement = m_model.createResource( "http://rdf.insee.fr/def/geo#CreationOuRetablissement" );
     
     public static final Resource Departement = m_model.createResource( "http://rdf.insee.fr/def/geo#Departement" );
     
     public static final Resource DeplacementDeLimitesDIRIS = m_model.createResource( "http://rdf.insee.fr/def/geo#DeplacementDeLimitesDIRIS" );
     
-    /** <p>Établissement public de coopération intercommunale</p> */
+    /** <p>ÔøΩtablissement public de coopÔøΩration intercommunale</p> */
     public static final Resource EPCI = m_model.createResource( "http://rdf.insee.fr/def/geo#EPCI" );
     
-    /** <p>Échange de parcelles entre territoires</p> */
+    /** <p>ÔøΩchange de parcelles entre territoires</p> */
     public static final Resource EchangeDeParcelles = m_model.createResource( "http://rdf.insee.fr/def/geo#EchangeDeParcelles" );
     
     public static final Resource EchangeParcellesCommunesIrisees = m_model.createResource( "http://rdf.insee.fr/def/geo#EchangeParcellesCommunesIrisees" );
@@ -76,13 +76,13 @@ public class INSEE_Geo_Ontology {
     
     public static final Resource GrandQuartier = m_model.createResource( "http://rdf.insee.fr/def/geo#GrandQuartier" );
     
-    /** <p>Exemples : Communauté Européenne, OCDE, OTAN, Pays arabes ...</p> */
+    /** <p>Exemples : CommunautÔøΩ EuropÔøΩenne, OCDE, OTAN, Pays arabes ...</p> */
     public static final Resource GroupementDePays = m_model.createResource( "http://rdf.insee.fr/def/geo#GroupementDePays" );
     
-    /** <p>Modélise des zonages divers d'intérêt statistique</p> */
+    /** <p>ModÔøΩlise des zonages divers d'intÔøΩrÔøΩt statistique</p> */
     public static final Resource GroupementStatistiqueDeCommunes = m_model.createResource( "http://rdf.insee.fr/def/geo#GroupementStatistiqueDeCommunes" );
     
-    /** <p>Îlot regroupé pour l'information statistique</p> */
+    /** <p>ÔøΩlot regroupÔøΩ pour l'information statistique</p> */
     public static final Resource IRIS = m_model.createResource( "http://rdf.insee.fr/def/geo#IRIS" );
     
     public static final Resource LAU = m_model.createResource( "http://rdf.insee.fr/def/geo#LAU" );
@@ -98,7 +98,7 @@ public class INSEE_Geo_Ontology {
     
     public static final Resource ModificationDeGroupement = m_model.createResource( "http://rdf.insee.fr/def/geo#ModificationDeGroupement" );
     
-    /** <p>Classe générique de tous les événements liés à la création ou à la modification 
+    /** <p>Classe gÔøΩnÔøΩrique de tous les ÔøΩvÔøΩnements liÔøΩs ÔøΩ la crÔøΩation ou ÔøΩ la modification 
      *  de territoires</p>
      */
     public static final Resource ModificationTerritoriale = m_model.createResource( "http://rdf.insee.fr/def/geo#ModificationTerritoriale" );
@@ -113,10 +113,10 @@ public class INSEE_Geo_Ontology {
     
     public static final Resource Pays = m_model.createResource( "http://rdf.insee.fr/def/geo#Pays" );
     
-    /** <p>Pays ou subdivision géopolitique d'un pays</p> */
+    /** <p>Pays ou subdivision gÔøΩopolitique d'un pays</p> */
     public static final Resource PaysOuTerritoire = m_model.createResource( "http://rdf.insee.fr/def/geo#PaysOuTerritoire" );
     
-    /** <p>Région française de métropole ou d'outre-mer</p> */
+    /** <p>RÔøΩgion franÔøΩaise de mÔøΩtropole ou d'outre-mer</p> */
     public static final Resource Region = m_model.createResource( "http://rdf.insee.fr/def/geo#Region" );
     
     public static final Resource RetablissementCommunesIssuesDeCommuneIrisees = m_model.createResource( "http://rdf.insee.fr/def/geo#RetablissementCommunesIssuesDeCommuneIrisees" );
@@ -128,13 +128,13 @@ public class INSEE_Geo_Ontology {
     
     public static final Resource TRIRIS = m_model.createResource( "http://rdf.insee.fr/def/geo#TRIRIS" );
     
-    /** <p>Subdivision administrative du territoire français</p> */
+    /** <p>Subdivision administrative du territoire franÔøΩais</p> */
     public static final Resource TerritoireAdministratif = m_model.createResource( "http://rdf.insee.fr/def/geo#TerritoireAdministratif" );
     
-    /** <p>Subdivision administrative ou statistique du territoire français</p> */
+    /** <p>Subdivision administrative ou statistique du territoire franÔøΩais</p> */
     public static final Resource TerritoireFrancais = m_model.createResource( "http://rdf.insee.fr/def/geo#TerritoireFrancais" );
     
-    /** <p>Subdivision du territoire français utilisée pour la production de statistiques</p> */
+    /** <p>Subdivision du territoire franÔøΩais utilisÔøΩe pour la production de statistiques</p> */
     public static final Resource TerritoireStatistique = m_model.createResource( "http://rdf.insee.fr/def/geo#TerritoireStatistique" );
     
     /** <p>Changement de la commune chef-lieu d'un territoire</p> */

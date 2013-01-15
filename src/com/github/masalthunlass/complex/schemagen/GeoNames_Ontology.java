@@ -1,4 +1,4 @@
-/* CVS $Id: $ */
+package com.github.masalthunlass.complex.schemagen;
 
 import com.hp.hpl.jena.rdf.model.*;
 

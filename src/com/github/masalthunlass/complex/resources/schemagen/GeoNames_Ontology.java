@@ -1,4 +1,4 @@
-package com.github.masalthunlass.complex.schemagen;
+package com.github.masalthunlass.complex.resources.schemagen;
 
 import com.hp.hpl.jena.rdf.model.*;
 

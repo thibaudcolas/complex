@@ -31,10 +31,11 @@ public class PairingDescription {
 		System.out.println("new pairing description");
 	}
 
-	public void definePairing(DataEnum data, SourcesEnum source)
+	public Boolean definePairing(DataEnum data, SourcesEnum source)
 			throws PairingException, FileNotFoundException, IOException {
-		if(!PairingUtil.verify(data,source)) throw new PairingException("Couplage Données / Source interdit");
-		
+		if (!PairingUtil.verify(data, source))
+			throw new PairingException("Couplage Données / Source interdit");
+
 		Iterator<Entry<DataEnum, SourcesEnum>> it = pairing.iterator();
 		Boolean ok = false;
 		while (it.hasNext()) {
@@ -54,6 +55,28 @@ public class PairingDescription {
 			pairing.add(entry);
 			System.out.println("new");
 		}
+		
+		return complete();
+	}
+
+	public SourcesEnum getSource(DataEnum data) {
+		Iterator<Entry<DataEnum, SourcesEnum>> it = pairing.iterator();
+		while (it.hasNext()) {
+			Entry<DataEnum, SourcesEnum> entry = (Entry<DataEnum, SourcesEnum>) it
+					.next();
+			DataEnum entry_key = entry.getKey();
+			if (entry_key.equals(data))
+				return entry.getValue();
+		}
+		return null;
+	}
+
+	public Boolean complete() {
+		DataEnum[] data = DataEnum.values();
+		for (DataEnum d : data) {
+			if(getSource(d) == null) return false;
+		}
+		return true;
 	}
 
 	// Model getCorrespondingModel()
@@ -68,7 +91,7 @@ public class PairingDescription {
 			SourcesEnum entry_value = entry.getValue();
 			retour += "\n\t" + entry_key + " -> " + entry_value;
 		}
-		retour += "\n]";
+		retour += "\n] complete = " + complete();
 		return retour;
 	}
 }

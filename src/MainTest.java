@@ -5,7 +5,6 @@ import com.github.masalthunlass.complex.enums.DataEnum;
 import com.github.masalthunlass.complex.enums.SourcesEnum;
 import com.github.masalthunlass.complex.exceptions.PairingException;
 import com.github.masalthunlass.complex.model.PairingDescription;
-import com.github.masalthunlass.complex.utils.PairingUtil;
 
 
 public class MainTest {
@@ -17,13 +16,15 @@ public class MainTest {
 	 * @throws FileNotFoundException 
 	 */
 	public static void main(String[] args) throws PairingException, FileNotFoundException, IOException {
-//		PairingDescription desc = new PairingDescription();
-//		desc.definePairing(DataEnum.ISF, SourcesEnum.D2RQ);
-//		desc.definePairing(DataEnum.GEONAMES, SourcesEnum.TDB);
-//		
-//		System.out.println(desc);
+		PairingDescription desc = new PairingDescription();
+		System.out.println(desc.definePairing(DataEnum.ISF, SourcesEnum.D2RQ));
+		System.out.println(desc.definePairing(DataEnum.GEONAMES, SourcesEnum.D2RQ));
+		System.out.println(desc.definePairing(DataEnum.PASSIM, SourcesEnum.TDB));
+		System.out.println(desc.definePairing(DataEnum.INSEE, SourcesEnum.TDB));
+		System.out.println(desc.definePairing(DataEnum.MONUMENTS, SourcesEnum.TDB));
 		
-		System.out.println(PairingUtil.verify(DataEnum.GEONAMES, SourcesEnum.TDB));
+		System.out.println(desc);
+		
 	}
 
 }

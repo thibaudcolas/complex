@@ -1,10 +1,10 @@
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import com.github.masalthunlass.complex.enums.DataEnum;
-import com.github.masalthunlass.complex.enums.SourcesEnum;
 import com.github.masalthunlass.complex.exceptions.PairingException;
 import com.github.masalthunlass.complex.model.PairingDescription;
+import com.github.masalthunlass.complex.model.enums.DataEnum;
+import com.github.masalthunlass.complex.model.enums.SourcesEnum;
 
 
 public class MainTest {

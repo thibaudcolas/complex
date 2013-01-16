@@ -1,10 +1,10 @@
-package com.github.masalthunlass.complex.utils;
+package com.github.masalthunlass.complex.model.utils;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import com.github.masalthunlass.complex.enums.DataEnum;
-import com.github.masalthunlass.complex.enums.SourcesEnum;
+import com.github.masalthunlass.complex.model.enums.DataEnum;
+import com.github.masalthunlass.complex.model.enums.SourcesEnum;
 
 /**
  * Classe utilitaire permettant de faciliter la gestion des couplages.

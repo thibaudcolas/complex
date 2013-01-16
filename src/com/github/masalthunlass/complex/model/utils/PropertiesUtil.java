@@ -1,4 +1,4 @@
-package com.github.masalthunlass.complex.utils;
+package com.github.masalthunlass.complex.model.utils;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

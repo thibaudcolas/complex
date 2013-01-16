@@ -16,10 +16,10 @@ import java.util.Iterator;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import com.github.masalthunlass.complex.enums.DataEnum;
-import com.github.masalthunlass.complex.enums.SourcesEnum;
 import com.github.masalthunlass.complex.exceptions.PairingException;
-import com.github.masalthunlass.complex.utils.PairingUtil;
+import com.github.masalthunlass.complex.model.enums.DataEnum;
+import com.github.masalthunlass.complex.model.enums.SourcesEnum;
+import com.github.masalthunlass.complex.model.utils.PairingUtil;
 
 /**
  * Classe décrivant le couplage entre les jeux de données et les sources de

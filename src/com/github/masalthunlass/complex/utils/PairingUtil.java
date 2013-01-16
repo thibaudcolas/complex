@@ -6,7 +6,27 @@ import java.io.IOException;
 import com.github.masalthunlass.complex.enums.DataEnum;
 import com.github.masalthunlass.complex.enums.SourcesEnum;
 
+/**
+ * Classe utilitaire permettant de faciliter la gestion des couplages.
+ * 
+ * @author thibaut
+ * 
+ */
 public class PairingUtil {
+	/**
+	 * Retourne vrai si le pairing est possible (déclaré dans le fichier de
+	 * conf)
+	 * 
+	 * @param data
+	 *            Le jeu de données
+	 * @param source
+	 *            Le système de gestion de données
+	 * @return Vrai si le pairing est possible, faux sinon
+	 * @throws FileNotFoundException
+	 *             Si le fichier de conf n'existe pas
+	 * @throws IOException
+	 *             Si le fichier de conf n'est pas accessible
+	 */
 	public static Boolean verify(DataEnum data, SourcesEnum source)
 			throws FileNotFoundException, IOException {
 		System.out.println("verifying");

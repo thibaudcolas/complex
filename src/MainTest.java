@@ -18,7 +18,7 @@ public class MainTest {
 	public static void main(String[] args) throws PairingException, FileNotFoundException, IOException {
 		PairingDescription desc = new PairingDescription();
 		System.out.println(desc.definePairing(DataEnum.ISF, SourcesEnum.D2RQ));
-		System.out.println(desc.definePairing(DataEnum.GEONAMES, SourcesEnum.D2RQ));
+		System.out.println(desc.definePairing(DataEnum.GEONAMES, SourcesEnum.TDB));
 		System.out.println(desc.definePairing(DataEnum.PASSIM, SourcesEnum.TDB));
 		System.out.println(desc.definePairing(DataEnum.INSEE, SourcesEnum.TDB));
 		System.out.println(desc.definePairing(DataEnum.MONUMENTS, SourcesEnum.TDB));

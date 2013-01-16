@@ -20,7 +20,15 @@ import com.github.masalthunlass.complex.enums.DataEnum;
 import com.github.masalthunlass.complex.enums.SourcesEnum;
 import com.github.masalthunlass.complex.exceptions.PairingException;
 import com.github.masalthunlass.complex.utils.PairingUtil;
-import com.hp.hpl.jena.sparql.function.library.e;
+
+/**
+ * Classe décrivant le couplage entre les jeux de données et les sources de
+ * données. Ces sources et données sont définies dans le fichier
+ * sources.properties du répertoire conf/
+ * 
+ * @author thibaut
+ * 
+ */
 
 public class PairingDescription {
 
@@ -31,6 +39,18 @@ public class PairingDescription {
 		System.out.println("new pairing description");
 	}
 
+	/**
+	 * Définition d'un nouveau couplage données / source. Lors de l'ajout d'un
+	 * pairing, la méthode utilise l'utilitaire de Pairing (PaitingUtil) afin de
+	 * vérifier si le couplage est possible.
+	 * 
+	 * @param data Le jeu de donnée
+	 * @param source Le système de stockage
+	 * @return Vrai si le pairing est complet (tous les jeux sont associés à un système de stockage), Faux sinon
+	 * @throws PairingException En cas de pairing interdit
+	 * @throws FileNotFoundException Si le fichier de configuration n'est pas présent
+	 * @throws IOException Si le fichier de configuration n'est pas accessible
+	 */
 	public Boolean definePairing(DataEnum data, SourcesEnum source)
 			throws PairingException, FileNotFoundException, IOException {
 		if (!PairingUtil.verify(data, source))
@@ -55,10 +75,15 @@ public class PairingDescription {
 			pairing.add(entry);
 			System.out.println("new");
 		}
-		
+
 		return complete();
 	}
 
+	/**
+	 * Permet l'accès au système de stockage de données associé à un jeu de donnée.
+	 * @param data Le jeu de données
+	 * @return Le système de stockage de données associé
+	 */
 	public SourcesEnum getSource(DataEnum data) {
 		Iterator<Entry<DataEnum, SourcesEnum>> it = pairing.iterator();
 		while (it.hasNext()) {
@@ -71,15 +96,20 @@ public class PairingDescription {
 		return null;
 	}
 
+	/**
+	 * Permet de savoir si cette définition de Pairing est complete (Complet = si chaque jeu de donné est associé à un système de stockage).
+	 * @return Vrai si complet, Faux sinon
+	 */
 	public Boolean complete() {
 		DataEnum[] data = DataEnum.values();
 		for (DataEnum d : data) {
-			if(getSource(d) == null) return false;
+			if (getSource(d) == null)
+				return false;
 		}
 		return true;
 	}
 
-	// Model getCorrespondingModel()
+	//TODO Model getCorrespondingModel()
 
 	public String toString() {
 		Iterator<Entry<DataEnum, SourcesEnum>> it = pairing.iterator();

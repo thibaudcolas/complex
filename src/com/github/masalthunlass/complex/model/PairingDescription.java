@@ -44,12 +44,18 @@ public class PairingDescription {
 	 * pairing, la méthode utilise l'utilitaire de Pairing (PaitingUtil) afin de
 	 * vérifier si le couplage est possible.
 	 * 
-	 * @param data Le jeu de donnée
-	 * @param source Le système de stockage
-	 * @return Vrai si le pairing est complet (tous les jeux sont associés à un système de stockage), Faux sinon
-	 * @throws PairingException En cas de pairing interdit
-	 * @throws FileNotFoundException Si le fichier de configuration n'est pas présent
-	 * @throws IOException Si le fichier de configuration n'est pas accessible
+	 * @param data
+	 *            Le jeu de donnée
+	 * @param source
+	 *            Le système de stockage
+	 * @return Vrai si le pairing est complet (tous les jeux sont associés à un
+	 *         système de stockage), Faux sinon
+	 * @throws PairingException
+	 *             En cas de pairing interdit
+	 * @throws FileNotFoundException
+	 *             Si le fichier de configuration n'est pas présent
+	 * @throws IOException
+	 *             Si le fichier de configuration n'est pas accessible
 	 */
 	public Boolean definePairing(DataEnum data, SourcesEnum source)
 			throws PairingException, FileNotFoundException, IOException {
@@ -80,8 +86,11 @@ public class PairingDescription {
 	}
 
 	/**
-	 * Permet l'accès au système de stockage de données associé à un jeu de donnée.
-	 * @param data Le jeu de données
+	 * Permet l'accès au système de stockage de données associé à un jeu de
+	 * donnée.
+	 * 
+	 * @param data
+	 *            Le jeu de données
 	 * @return Le système de stockage de données associé
 	 */
 	public SourcesEnum getSource(DataEnum data) {
@@ -97,7 +106,9 @@ public class PairingDescription {
 	}
 
 	/**
-	 * Permet de savoir si cette définition de Pairing est complete (Complet = si chaque jeu de donné est associé à un système de stockage).
+	 * Permet de savoir si cette définition de Pairing est complete (Complet =
+	 * si chaque jeu de donné est associé à un système de stockage).
+	 * 
 	 * @return Vrai si complet, Faux sinon
 	 */
 	public Boolean complete() {
@@ -109,7 +120,7 @@ public class PairingDescription {
 		return true;
 	}
 
-	//TODO Model getCorrespondingModel()
+	// TODO Model getCorrespondingModel()
 
 	public String toString() {
 		Iterator<Entry<DataEnum, SourcesEnum>> it = pairing.iterator();

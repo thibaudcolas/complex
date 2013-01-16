@@ -47,7 +47,7 @@ public class PropertiesUtil {
 	 */
 	public static String getSourcesProperty(String key)
 			throws FileNotFoundException, IOException {
-		Iterator it = getSourcesValues().iterator();
+		Iterator<Entry<Object, Object>> it = getSourcesProperties().iterator();
 		while (it.hasNext()) {
 			Entry<Object, Object> entry = (Entry<Object, Object>) it.next();
 			String entry_key = (String) entry.getKey();
@@ -71,7 +71,7 @@ public class PropertiesUtil {
 	 * @throws IOException
 	 *             Si le fichier de configuration n'est pas accessible
 	 */
-	private static Set<Entry<Object, Object>> getSourcesValues()
+	public static Set<Entry<Object, Object>> getSourcesProperties()
 			throws FileNotFoundException, IOException {
 		if (sources_values == null)
 			loadProperties();

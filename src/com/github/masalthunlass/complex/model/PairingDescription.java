@@ -16,10 +16,13 @@ import java.util.Iterator;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import com.github.masalthunlass.complex.exceptions.ModelException;
 import com.github.masalthunlass.complex.exceptions.PairingException;
 import com.github.masalthunlass.complex.model.enums.DataEnum;
 import com.github.masalthunlass.complex.model.enums.SourcesEnum;
+import com.github.masalthunlass.complex.model.utils.ModelUtil;
 import com.github.masalthunlass.complex.model.utils.PairingUtil;
+import com.hp.hpl.jena.rdf.model.Model;
 
 /**
  * Classe décrivant le couplage entre les jeux de données et les sources de
@@ -120,7 +123,34 @@ public class PairingDescription {
 		return true;
 	}
 
-	// TODO Model getCorrespondingModel()
+	/**
+	 * Retourne le modele correspondant au pairing.
+	 * 
+	 * @return Le modele
+	 * @throws PairingException
+	 *             Si le pairing n'est pas complet
+	 * @throws ModelException
+	 *             Si une erreur est survenue lors de la génération du modele
+	 */
+	Model getCorrespondingModel() throws PairingException, ModelException {
+		if (!complete())
+			throw new PairingException(
+					"Trying to get a corresponding model on an incomplete pairing.");
+		Model model = null;
+		Iterator<Entry<DataEnum, SourcesEnum>> it = pairing.iterator();
+		while (it.hasNext()) {
+			Entry<DataEnum, SourcesEnum> entry = (Entry<DataEnum, SourcesEnum>) it
+					.next();
+			DataEnum entry_key = entry.getKey();
+			SourcesEnum entry_value = entry.getValue();
+			if (model == null) {
+				model = ModelUtil.generateModel(entry_key, entry_value);
+			} else {
+				model.union(ModelUtil.generateModel(entry_key, entry_value));
+			}
+		}
+		return model;
+	}
 
 	public String toString() {
 		Iterator<Entry<DataEnum, SourcesEnum>> it = pairing.iterator();

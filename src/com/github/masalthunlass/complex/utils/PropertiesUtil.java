@@ -11,7 +11,10 @@ import java.util.Set;
 import org.apache.log4j.Logger;
 
 /**
- * Classe permettant la lecture des proprietés de l'application
+ * Class permettant la gestion des fichiers de properties
+ * 
+ * @author thibaut
+ * 
  */
 public class PropertiesUtil {
 	public static Logger logger = (Logger) Logger
@@ -20,7 +23,7 @@ public class PropertiesUtil {
 	/** Properties filenames */
 	private static String SOURCES_PATH = "sources.properties";
 
-	/** Values */
+	/** Applications Path & values */
 	private static String projectPath = System.getProperty("user.dir");
 	private static String webAppPath = projectPath + "/complex";
 	private static String webInfPath = webAppPath + "/WEB-INF";
@@ -30,7 +33,20 @@ public class PropertiesUtil {
 	/** properties values */
 	private static Set<Entry<Object, Object>> sources_values = null;
 
-	public static String getSourcesProperty(String key) throws FileNotFoundException, IOException {
+	/**
+	 * Assure l'accès aux valeurs des paramètres définies dans le fichier de
+	 * configuration des sources.
+	 * 
+	 * @param key
+	 *            Le nom de la clé
+	 * @return La valeur si la clé existe, null sinon
+	 * @throws FileNotFoundException
+	 *             Si le fichier n'existe pas
+	 * @throws IOException
+	 *             Si le fichier n'est pas accessible
+	 */
+	public static String getSourcesProperty(String key)
+			throws FileNotFoundException, IOException {
 		Iterator it = getSourcesValues().iterator();
 		while (it.hasNext()) {
 			Entry<Object, Object> entry = (Entry<Object, Object>) it.next();
@@ -44,6 +60,17 @@ public class PropertiesUtil {
 		return null;
 	}
 
+	/**
+	 * Permet de charger les clés/valeurs définies dans le fichier de
+	 * configuration des sources. Cette méthode respecte les principes du
+	 * singleton.
+	 * 
+	 * @return Les clés/valeurs sous la forme d'un set d'entry
+	 * @throws FileNotFoundException
+	 *             Si le fichier de configuration n'existe pas
+	 * @throws IOException
+	 *             Si le fichier de configuration n'est pas accessible
+	 */
 	private static Set<Entry<Object, Object>> getSourcesValues()
 			throws FileNotFoundException, IOException {
 		if (sources_values == null)
@@ -51,6 +78,15 @@ public class PropertiesUtil {
 		return sources_values;
 	}
 
+	/**
+	 * Charge le fichier de configuration (Appellé uniquement si celui-ci n'a
+	 * pas été chargé auparavant).
+	 * 
+	 * @throws FileNotFoundException
+	 *             Si le fichier de configuration n'existe pas
+	 * @throws IOException
+	 *             Si le fichier de configuration n'est pas accessible
+	 */
 	private static void loadProperties() throws FileNotFoundException,
 			IOException {
 		Properties properties = new Properties();

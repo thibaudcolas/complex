@@ -3,6 +3,7 @@ package com.github.masalthunlass.complex.utils;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.Map.Entry;
 import java.util.Properties;
 import java.util.Set;
@@ -17,19 +18,34 @@ public class PropertiesUtil {
 			.getLogger(PropertiesUtil.class);
 
 	/** Properties filenames */
-	public static String SOURCES_PATH = "sources.properties";
+	private static String SOURCES_PATH = "sources.properties";
 
 	/** Values */
-	public static String projectPath = System.getProperty("user.dir");
-	public static String webAppPath = projectPath + "/complex";
-	public static String webInfPath = webAppPath + "/WEB-INF";
-	public static String srcPath = projectPath + "/src";
-	public static String propertiesPath = projectPath + "/conf";
+	private static String projectPath = System.getProperty("user.dir");
+	private static String webAppPath = projectPath + "/complex";
+	private static String webInfPath = webAppPath + "/WEB-INF";
+	private static String srcPath = projectPath + "/src";
+	private static String propertiesPath = projectPath + "/conf";
 
 	/** properties values */
-	public static Set<Entry<Object, Object>> sources_values = null;
+	private static Set<Entry<Object, Object>> sources_values = null;
 
-	private static Set<Entry<Object, Object>> getSourcesValues() throws FileNotFoundException, IOException {
+	public static String getSourcesProperty(String key) throws FileNotFoundException, IOException {
+		Iterator it = getSourcesValues().iterator();
+		while (it.hasNext()) {
+			Entry<Object, Object> entry = (Entry<Object, Object>) it.next();
+			String entry_key = (String) entry.getKey();
+			String entry_value = (String) entry.getValue();
+
+			if (entry_key.equalsIgnoreCase(key))
+				return entry_value;
+
+		}
+		return null;
+	}
+
+	private static Set<Entry<Object, Object>> getSourcesValues()
+			throws FileNotFoundException, IOException {
 		if (sources_values == null)
 			loadProperties();
 		return sources_values;
@@ -39,10 +55,10 @@ public class PropertiesUtil {
 			IOException {
 		Properties properties = new Properties();
 		// Loading sources properties
-		properties.load(new FileInputStream(propertiesPath + "/" + SOURCES_PATH));
+		properties
+				.load(new FileInputStream(propertiesPath + "/" + SOURCES_PATH));
 		sources_values = properties.entrySet();
-		
-		
+
 	}
 
 }

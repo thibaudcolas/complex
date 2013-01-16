@@ -9,8 +9,66 @@
 
 package com.github.masalthunlass.complex.model;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import com.github.masalthunlass.complex.enums.DataEnum;
+import com.github.masalthunlass.complex.enums.SourcesEnum;
+import com.github.masalthunlass.complex.exceptions.PairingException;
+import com.github.masalthunlass.complex.utils.PairingUtil;
+import com.hp.hpl.jena.sparql.function.library.e;
+
 public class PairingDescription {
 
-	// list pair<jeux_de_donnees, SGD>;
+	private Set<Entry<DataEnum, SourcesEnum>> pairing;
+
+	public PairingDescription() {
+		pairing = new HashSet<Entry<DataEnum, SourcesEnum>>();
+		System.out.println("new pairing description");
+	}
+
+	public void definePairing(DataEnum data, SourcesEnum source)
+			throws PairingException, FileNotFoundException, IOException {
+		if(!PairingUtil.verify(data,source)) throw new PairingException("Couplage Données / Source interdit");
+		
+		Iterator<Entry<DataEnum, SourcesEnum>> it = pairing.iterator();
+		Boolean ok = false;
+		while (it.hasNext()) {
+			Entry<DataEnum, SourcesEnum> entry = (Entry<DataEnum, SourcesEnum>) it
+					.next();
+			DataEnum entry_key = entry.getKey();
+			if (entry_key.equals(data)) {
+				entry.setValue(source);
+				ok = true;
+				System.out.println("override");
+			}
+		}
+
+		if (!ok) {
+			Entry<DataEnum, SourcesEnum> entry = new MyEntry<DataEnum, SourcesEnum>(
+					data, source);
+			pairing.add(entry);
+			System.out.println("new");
+		}
+	}
+
 	// Model getCorrespondingModel()
+
+	public String toString() {
+		Iterator<Entry<DataEnum, SourcesEnum>> it = pairing.iterator();
+		String retour = "[";
+		while (it.hasNext()) {
+			Entry<DataEnum, SourcesEnum> entry = (Entry<DataEnum, SourcesEnum>) it
+					.next();
+			DataEnum entry_key = entry.getKey();
+			SourcesEnum entry_value = entry.getValue();
+			retour += "\n\t" + entry_key + " -> " + entry_value;
+		}
+		retour += "\n]";
+		return retour;
+	}
 }

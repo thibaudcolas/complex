@@ -9,9 +9,9 @@
 
 map:database a d2rq:Database;
 	d2rq:jdbcDriver "org.postgresql.Driver";
-	d2rq:jdbcDSN "jdbc:postgresql://ec2-54-243-230-119.compute-1.amazonaws.com:5432/deutubhtp9hpn1?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory";
-	d2rq:username "tzkzhvxvstissp";
-	d2rq:password "";
+	d2rq:jdbcDSN "jdbc:postgresql://localhost:5432/db-name";
+	d2rq:username "user";
+	d2rq:password "passwd";
 	.
 
 # Table impot

@@ -95,6 +95,14 @@ header > .f3 {
  * ---------------------------------------------------------------------
  */
 
+.environment-selection legend {
+  margin-bottom: 0;
+}
+
+.environment-selection select {
+  width:100%;
+}
+
 /*
  * Results
  * ---------------------------------------------------------------------

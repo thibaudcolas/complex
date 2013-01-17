@@ -1,71 +1,78 @@
 {
-  "datastores" : {
-    "memory" : {
-      "title" : "In-Memory store",
-      "description" : "A non-persistent RDF store which is kept in the RAM until reboot.",
-      "data" : ["geoinsee", "demoinsee", "geonames", "passim", "isf", "taweb"]
-      },
-    "tdb" : {
+  "datastores" : [
+    {
+      "name" : "memory",
+      "title" : "In-Memory",
+      "description" : "A non-persistent RDF store which is kept in the RAM until reboot."
+    },
+    {
+      "name" : "tdb",
       "title" : "Jena TDB",
-      "description" : "A persistence library for Jena that uses the filesystem to store triples.",
-      "data" : ["geoinsee", "demoinsee", "geonames", "passim", "isf", "taweb"]
-      },
-    "sdb" : {
+      "description" : "A persistence library for Jena that uses the filesystem to store triples."
+    },
+    {
+      "name" : "sdb",
       "title" : "Jena SDB PostgreSQL",
-      "description" : "A persistence library for Jena backed by the PostgreSQL RDBMS.",
-      "data" : ["geoinsee", "demoinsee", "geonames", "passim", "isf", "taweb"]
-      },
-    "d2rq" : {
+      "description" : "A persistence library for Jena backed by the PostgreSQL RDBMS."
+    },
+    {
+      "name" : "d2rq",
       "title" : "D2RQ PostgreSQL",
-      "description" : "A mapping engine to access relational data with SPARQL.",
-      "data" : ["geoinsee", "demoinsee", "geonames", "passim", "isf", "taweb"]
-      },
-    "neo4j" : {
+      "description" : "A mapping engine to access relational data with SPARQL."
+    },
+    {
+      "name" : "neo4j",
       "title" : "Sail Neo4J",
-      "description" : "A NoSQL graph database which stores RDF triples.",
-      "data" : ["geoinsee", "demoinsee", "geonames", "passim", "isf", "taweb"]
-      },
-    "hbase" : {
-      "title" : "HBase RDF",
-      "description" : "A NoSQL column database wich stores RDF triples.",
-      "data" : ["geoinsee", "demoinsee", "geonames", "passim", "isf", "taweb"]
-      },
-    "sesame" : {
+      "description" : "A NoSQL graph database which stores RDF triples."
+    },
+    {
+      "name" : "sesame",
       "title" : "OpenRDF Sesame",
-      "description" : "A triple store accessed via its SPARQL Endpoint.",
-      "data" : ["geoinsee", "demoinsee", "geonames", "passim", "isf", "taweb"]
-      }
-  },
-  "datasources" : {
-    "geoinsee" : {
-      "title" : "COG INSEE",
-      "description" : "French official geographical code, contains administrative geographical entities in France.",
-      "size" : "1"
-    },
-    "demoinsee" : {
-      "title" : "POP INSEE",
-      "description" : "French offical census data of 2010, divided by town.",
-      "size" : "2"
-    },
-    "geonames" : {
-      "title" : "GeoNames FR",
-      "description" : "The GeoNames geographical features database, restrained to France.",
-      "size" : "3"
-    },
-    "passim" : {
-      "title" : "PASSIM",
-      "description" : "French transport companies directory.",
-      "size" : "4"
-    },
-    "isf" : {
-      "title" : "ISF",
-      "description" : "Tax data about the french tax on wealth.",
-      "size" : "5"
-    },
-    "taweb" : {
-      "title" : "TAWeb",
-      "description" : "Data provided by other M2 projects.",
-      "size" : "6"
+      "description" : "A triple store accessed via its SPARQL Endpoint."
     }
-  }
+  ],
+  "datasources" : [
+    {
+      "name" : "inseecog",
+      "title" : "<a href=\"http://insee.fr/fr/\" title=\"Institut National de la Statistique et des Études Économiques\">INSEE</a> <a href=\"http://rdf.insee.fr/geo/index.html\" title=\"Code Officiel Géographique\">COG</a>",
+      "description" : "French official geographical code, contains administrative geographical entities in France.",
+      "size" : "1",
+      "locations" : ["memory", "tdb", "sdb", "neo4j", "sesame"]
+    },
+    {
+      "name" : "inseepop",
+      "title" : "<a href=\"http://insee.fr/fr/\" title=\"Institut National de la Statistique et des Études Économiques\">INSEE</a> <a href=\"http://rdf.insee.fr/demo/index.html\">Population</a>",
+      "description" : "French offical census data of 2004 - 2011, divided by town.",
+      "size" : "2",
+      "locations" : ["memory", "tdb", "sdb", "neo4j", "sesame"]
+    },
+    {
+      "name" : "geonames",
+      "title" : "<a href=\"http://www.geonames.org/ontology/documentation.html\">GeoNames</a> France",
+      "description" : "The GeoNames geographical features database, restrained to France.",
+      "size" : "3",
+      "locations" : ["memory", "tdb", "sdb", "neo4j", "sesame"]
+    },
+    {
+      "name" : "passim",
+      "title" : "<a href=\"http://www.passim.info/\">PASSIM</a> Directory",
+      "description" : "French transport companies directory.",
+      "size" : "4",
+      "locations" : ["memory", "tdb", "sdb", "neo4j", "sesame"]
+    },
+    {
+      "name" : "isf",
+      "title" : "<a href=\"http://www.nosdonnees.fr/package/isf2009\">ISF</a> Tax on wealth",
+      "description" : "Tax data about the french tax on wealth.",
+      "size" : "5",
+      "locations" : ["d2rq"]
+    },
+    {
+      "name" : "taweb",
+      "title" : "TAWeb Monuments",
+      "description" : "Data provided by other M2 projects.",
+      "size" : "6",
+      "locations" : ["memory", "tdb", "sdb", "neo4j", "sesame"]
+    }
+  ]
 }

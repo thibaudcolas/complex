@@ -115,6 +115,51 @@ jQuery(document).ready(function($) {
     $('.observation-table').dataTable({'aoColumns': aoColumns});
   });
 
+  /**
+   * Environment
+   * ---------------------------------------------------------------------
+   */
+
+  $environmentSelection = $('.environment-selection');
+
+  $.getJSON('data/environment.json', function(data) {
+    var datasourceHTML = '';
+    var environmentHTML = '';
+
+    var datastores = {};
+
+    for (var j = 0; j < data.datastores.length; j++) {
+      datastores[data.datastores[j].name] = data.datastores[j];
+    }
+
+    for (var i = 0; i < data.datasources.length; i++) {
+      datasourceHTML += '<fieldset class="span4"><legend>'+data.datasources[i].title+'<small class="pull-right">'+data.datasources[i].size+'Mo</small></legend><div class="control-group"><select form="query-form" class="environment-select">';
+
+      for (var k = 0; k < data.datasources[i].locations.length; k++) {
+        datasourceHTML += '<option data-name="'+data.datasources[i].locations[k]+'" data-description="'+datastores[data.datasources[i].locations[k]].description+'">'+datastores[data.datasources[i].locations[k]].title+'</option>';
+      }
+
+      datasourceHTML += '</select><p class="help-block">'+data.datasources[i].description+'</p></div></fieldset>';
+      if (i !== 0 && (i + 1) % 3 === 0) {
+        environmentHTML += '<div class="row-fluid">'+datasourceHTML+'</div>';
+        datasourceHTML = '';
+      }
+    }
+    $environmentSelection.append(environmentHTML);
+  });
+
+$('.environment-select').popover({
+  'html' : true,
+  'trigger' : 'focus',
+  'placement' : 'bottom',
+  'title' : function() {
+    alert('!');
+    return $(this).find(':selected').val();
+  },
+  'content' : function() {
+    return $(this).find(':selected').attr('data-description');
+  }
+});
 
   /**
    * About

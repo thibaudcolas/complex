@@ -52,7 +52,7 @@
 
                 <div class="tab-content">
                     <div class="tab-pane active" id="query">
-                        <form class="row-fluid">
+                        <form class="row-fluid" id="query-form">
 
                             <fieldset class="span8">
                                 <div class="control-group">
@@ -102,7 +102,11 @@
                     </div>
                     <!-- TODO : due thursday morning.  -->
                     <div class="tab-pane" id="environment">
-                        Viz
+                        <!-- Emmet FTW ! -->
+                        <!-- (div.row-fluid>(fieldset.span4>legend+div.control-group.span4>select>option*3)*3)*2 -->
+                        <fieldset class="environment-selection">
+
+                        </fieldset>
                     </div>
 
                     <div class="tab-pane" id="results">

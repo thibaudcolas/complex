@@ -87,16 +87,32 @@ jQuery(document).ready(function($) {
    * ---------------------------------------------------------------------
    */
 
-  $('.observation-table').dataTable({
-    'aoColumns': [
-      {
-        'sType': 'html'
-      },
-      {
-        'sType': 'data-numeric'
-      }
-    ]
+  $resultsColumns = $('.results-columns');
+  $resultsRows = $('.results-rows');
+
+  // Loads the results from a JSON file.
+  $.getJSON('data/results.json', function(data) {
+    var aoColumns = [];
+    // First we parse the columns to retrieve their pretty names and types.
+    for(var i = 0; i < data.columns.length; i++) {
+      $resultsColumns.append('<td>'+data.columns[i].title+'</td>');
+      aoColumns[i] = {'sType': data.columns[i].sType};
+    }
+
+    // Then we retrieve the data itself.
+    for (var j = 0; j < data.results.length; j++) {
+      var currentCells = '';
+      $.each(data.results[j], function (key, val) {
+        currentCells += '<td>'+val+'</td>';
+      });
+      $resultsRows.append('<tr>'+currentCells+'</tr>');
+    }
+
+    // Create the data table with the right types.
+    $('.observation-table').dataTable({'aoColumns': aoColumns});
   });
+
+
 
 });
 

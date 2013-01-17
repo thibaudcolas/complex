@@ -93,26 +93,21 @@ jQuery(document).ready(function($) {
   var $queryResult;
 
   // Loads the results from a JSON file.
-  $.getJSON('data/results.json', function(data) {
+  $.getJSON('data/npd.json', function(data) {
     $queryResult = data;
-    var aoColumns = [];
-    // First we parse the columns to retrieve their pretty names and types.
-    for(var i = 0; i < data.columns.length; i++) {
-      $resultsColumns.append('<td>'+data.columns[i].title+'</td>');
-      aoColumns[i] = {'sType': data.columns[i].sType};
-    }
+    $resultsColumns.append('<th>'+data.head.vars.join('</th><th>')+'</th>');
 
     // Then we retrieve the data itself.
-    for (var j = 0; j < data.results.length; j++) {
+    for (var j = 0; j < data.results.bindings.length; j++) {
       var currentCells = '';
-      $.each(data.results[j], function (key, val) {
-        currentCells += '<td>'+val+'</td>';
+      $.each(data.results.bindings[j], function (key, val) {
+        currentCells += '<td>'+val.value+'</td>';
       });
       $resultsRows.append('<tr>'+currentCells+'</tr>');
     }
 
     // Create the data table with the right types.
-    $('.observation-table').dataTable({'aoColumns': aoColumns});
+    $('.observation-table').dataTable();
   });
 
   /**
@@ -127,16 +122,18 @@ jQuery(document).ready(function($) {
     var environmentHTML = '';
 
     var datastores = {};
+    var datastoreHTML = '';
 
     for (var j = 0; j < data.datastores.length; j++) {
       datastores[data.datastores[j].name] = data.datastores[j];
+      datastoreHTML += '<div class="span2"><h5>'+data.datastores[j].title+'</h5><p>'+data.datastores[j].description+'</p></div>';
     }
 
     for (var i = 0; i < data.datasources.length; i++) {
-      datasourceHTML += '<fieldset class="span4"><legend>'+data.datasources[i].title+'<small class="pull-right">'+data.datasources[i].size+'Mo</small></legend><div class="control-group"><select form="query-form" class="environment-select">';
+      datasourceHTML += '<fieldset class="span4"><legend>'+data.datasources[i].title+'<small class="pull-right">'+data.datasources[i].size+'Mo</small></legend><div class="control-group"><select form="query-form" class="environment-select" data-source="'+data.datasources[i].name+'">';
 
       for (var k = 0; k < data.datasources[i].locations.length; k++) {
-        datasourceHTML += '<option data-name="'+data.datasources[i].locations[k]+'" data-description="'+datastores[data.datasources[i].locations[k]].description+'">'+datastores[data.datasources[i].locations[k]].title+'</option>';
+        datasourceHTML += '<option data-name="'+data.datasources[i].locations[k]+'">'+datastores[data.datasources[i].locations[k]].title+'</option>';
       }
 
       datasourceHTML += '</select><p class="help-block">'+data.datasources[i].description+'</p></div></fieldset>';
@@ -145,21 +142,10 @@ jQuery(document).ready(function($) {
         datasourceHTML = '';
       }
     }
-    $environmentSelection.append(environmentHTML);
+    $environmentSelection.append(environmentHTML + '<hr/><div class="row-fluid">' + datastoreHTML + '</div>');
   });
 
-$('.environment-select').popover({
-  'html' : true,
-  'trigger' : 'focus',
-  'placement' : 'bottom',
-  'title' : function() {
-    alert('!');
-    return $(this).find(':selected').val();
-  },
-  'content' : function() {
-    return $(this).find(':selected').attr('data-description');
-  }
-});
+
 
   /**
    * About

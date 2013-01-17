@@ -12,12 +12,12 @@
     },
     {
       "name" : "sdb",
-      "title" : "Jena SDB PostgreSQL",
+      "title" : "Jena SDB Postgres",
       "description" : "A persistence library for Jena backed by the PostgreSQL RDBMS."
     },
     {
       "name" : "d2rq",
-      "title" : "D2RQ PostgreSQL",
+      "title" : "D2RQ Postgres",
       "description" : "A mapping engine to access relational data with SPARQL."
     },
     {

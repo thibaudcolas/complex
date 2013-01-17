@@ -93,26 +93,21 @@ jQuery(document).ready(function($) {
   var $queryResult;
 
   // Loads the results from a JSON file.
-  $.getJSON('data/results.json', function(data) {
+  $.getJSON('data/npd.json', function(data) {
     $queryResult = data;
-    var aoColumns = [];
-    // First we parse the columns to retrieve their pretty names and types.
-    for(var i = 0; i < data.columns.length; i++) {
-      $resultsColumns.append('<td>'+data.columns[i].title+'</td>');
-      aoColumns[i] = {'sType': data.columns[i].sType};
-    }
+    $resultsColumns.append('<th>'+data.head.vars.join('</th><th>')+'</th>');
 
     // Then we retrieve the data itself.
-    for (var j = 0; j < data.results.length; j++) {
+    for (var j = 0; j < data.results.bindings.length; j++) {
       var currentCells = '';
-      $.each(data.results[j], function (key, val) {
-        currentCells += '<td>'+val+'</td>';
+      $.each(data.results.bindings[j], function (key, val) {
+        currentCells += '<td>'+val.value+'</td>';
       });
       $resultsRows.append('<tr>'+currentCells+'</tr>');
     }
 
     // Create the data table with the right types.
-    $('.observation-table').dataTable({'aoColumns': aoColumns});
+    $('.observation-table').dataTable();
   });
 
   /**

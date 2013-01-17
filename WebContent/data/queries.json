@@ -1,0 +1,22 @@
+{
+  "default" : {
+    "title" : "Default query",
+    "description" : "This is the default &lt;a href=\"#\"&gt;example&lt;/a&gt; query",
+    "string" : "PREFIX a: &lt;http://www.w3.org/2000/10/annotation-ns#&gt;\nPREFIX dc: &lt;http://purl.org/dc/elements/1.1/&gt;\nPREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;\n\n# Comment!\n\nSELECT ?given ?family\nWHERE {\n  ?annot a:annotates &lt;http://www.w3.org/TR/rdf-sparql-query/&gt; .\n  ?annot dc:creator ?c .\n  OPTIONAL {?c foaf:given ?given ;\n               foaf:family ?family } .\n  FILTER isBlank(?c)\n }"
+    },
+  "empty" : {
+    "title" : "Example one",
+    "description" : "This is another example",
+    "string" : "PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;\n\n\nSELECT ?name ?email\nWHERE {\n  ?person a foaf:Person.\n  ?person foaf:name ?name.\n  ?person foaf:mbox ?email.\n}\n"
+    },
+  "custom" : {
+    "title" : "Example two",
+    "description" : "Yet one more example",
+    "string" : "PREFIX gn: &lt;http://www.geonames.org/ontology#&gt;\nPREFIX core: &lt;http://www.w3.org/2004/02/skos/core#&gt;\nPREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;\nPREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;\n\nSELECT ?scheme (count(DISTINCT ?code) AS ?count)\nWHERE {\n  ?code core:inScheme ?scheme\n}\nGROUP BY ?scheme\nLIMIT 100\n"
+    },
+  "all" : {
+    "title" : "Example three",
+    "description" : "The last example",
+    "string" : "PREFIX abc: &lt;http://example.com/exampleOntology#&gt;\n\nSELECT ?capital ?country\nWHERE {\n  ?x abc:cityname ?capital ;\n     abc:isCapitalOf ?y .\n  ?y abc:countryname ?country ;\n     abc:isInContinent abc:Africa .\n}\n"
+    }
+}

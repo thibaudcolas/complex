@@ -100,6 +100,26 @@ header > .f3 {
  * ---------------------------------------------------------------------
  */
 
+.observation-table tbody tr.even:hover, .observation-table tbody tr.even td.highlighted {
+  background-color: #3a87ad;
+  color: #eee;
+}
+
+.observation-table tbody tr.odd:hover, .observation-table tbody tr.odd td.highlighted {
+  background-color: #3a87ad;
+  color: #eee;
+}
+
+
+.observation-table tbody tr.even:hover td, .observation-table tbody tr.even td.highlighted {
+  background-color: #3a87ad !important;
+  color: #eee;
+}
+
+.observation-table tbody tr.odd:hover td, .observation-table tbody tr.odd td.highlighted {
+  background-color: #3a87ad !important;
+}
+
 /*
  * Visualization
  * ---------------------------------------------------------------------

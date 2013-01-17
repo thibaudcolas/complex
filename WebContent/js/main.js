@@ -87,11 +87,14 @@ jQuery(document).ready(function($) {
    * ---------------------------------------------------------------------
    */
 
-  $resultsColumns = $('.results-columns');
-  $resultsRows = $('.results-rows');
+  var $resultsColumns = $('.results-columns');
+  var $resultsRows = $('.results-rows');
+
+  var $queryResult;
 
   // Loads the results from a JSON file.
   $.getJSON('data/results.json', function(data) {
+    $queryResult = data;
     var aoColumns = [];
     // First we parse the columns to retrieve their pretty names and types.
     for(var i = 0; i < data.columns.length; i++) {
@@ -113,6 +116,12 @@ jQuery(document).ready(function($) {
   });
 
 
+  /**
+   * About
+   * ---------------------------------------------------------------------
+   */
+
+  $('.contributor img').tooltip({'placement' : 'bottom'});
 
 });
 

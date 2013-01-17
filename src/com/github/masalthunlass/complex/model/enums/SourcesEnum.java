@@ -1,5 +1,5 @@
 package com.github.masalthunlass.complex.model.enums;
 
 public enum SourcesEnum {
-	TDB, SDB, D2RQ;
+	MEMORY, TDB, SDB, D2RQ;
 }

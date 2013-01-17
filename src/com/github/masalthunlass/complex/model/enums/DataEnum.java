@@ -1,5 +1,5 @@
 package com.github.masalthunlass.complex.model.enums;
 
 public enum DataEnum {
-	INSEE, PASSIM, MONUMENTS, GEONAMES, ISF;
+	INSEECOG, INSEEPOP, PASSIM, MONUMENTS, GEONAMES, ISF;
 }

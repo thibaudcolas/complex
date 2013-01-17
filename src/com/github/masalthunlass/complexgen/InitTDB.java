@@ -13,12 +13,12 @@ public class InitTDB {
 	private static HashMap<String, String> file_path;
 
 	private static void initPathFiles() {
-		file_path.put("inseepop", "/resources/data/rdf/inseepop.rdf");
-		file_path.put("inseecog", "/resources/data/rdf/inseecog.rdf");
-		file_path.put("geonames", "/resources/data/rdf/geonames.rdf");
+//		file_path.put("inseepop", "/resources/data/rdf/inseepop.rdf");
+//		file_path.put("inseecog", "/resources/data/rdf/inseecog.rdf");
+//		file_path.put("geonames", "/resources/data/rdf/geonames.rdf");
 		file_path.put("passim", "/resources/data/rdf/passim.rdf");
-		file_path.put("isf", "/resources/data/rdf/isf.rdf");
-		file_path.put("monuments", "/resources/data/rdf/monuments.rdf");
+//		file_path.put("isf", "/resources/data/rdf/isf.rdf");
+//		file_path.put("monuments", "/resources/data/rdf/monuments.rdf");
 	}
 
 	/**

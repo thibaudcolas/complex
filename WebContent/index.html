@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html class="no-js">
     <head>
@@ -45,9 +43,9 @@
                     <li class="active"><a href="#query" data-toggle="tab"><i class="icon-search"></i> Query</a></li>
                     <li><a href="#environment" data-toggle="tab"><i class="icon-cog"></i> Environment</a></li>
                     <!-- Those three tabs can only be accessed after executing a query. -->
-                    <li class="disabled"><a href="#results" data-toggle="tab"><i class="icon-th"></i> Results</a></li>
-                    <li class="disabled"><a href="#visualization" data-toggle="tab"><i class="icon-picture"></i> Visualization</a></li>
-                    <li class="disabled"><a href="#benchmark" data-toggle="tab"><i class="icon-time"></i> Benchmark</a></li>
+                    <li><a href="#results" data-toggle="tab"><i class="icon-th"></i> Results</a></li>
+                    <li><a href="#visualization" data-toggle="tab"><i class="icon-picture"></i> Visualization</a></li>
+                    <li><a href="#benchmark" data-toggle="tab"><i class="icon-time"></i> Benchmark</a></li>
                     <li><a href="#history" data-toggle="tab"><i class="icon-calendar"></i> History</a></li>
                     <li><a href="#about" data-toggle="tab"><i class="icon-bullhorn"></i> About</a></li>
                 </ul>
@@ -106,50 +104,19 @@
                     <div class="tab-pane" id="environment">
                         Viz
                     </div>
-                    <!-- TODO : due thursday before lunch. -->
+
                     <div class="tab-pane" id="results">
                         <!-- Uses the DataTables plugin. -->
                         <table class="observation-table table table-striped table-condensed table-bordered">
                             <thead>
-                                <tr>
-                                    <th>Col 1</th>
-                                    <th>Col 2</th>
+                                <!-- Filled when the query results are returned. -->
+                                <tr class="results-columns">
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr><td>OB1</td><td>OB2</td></tr>
+                            <!-- Filled when the query results are returned. -->
+                            <tbody class="results-rows">
                                 <!-- Emmet FTW ! -->
-                                <!-- tr*15>td*2>lorem2 -->
-                                <tr><td>Lorem ipsum.</td><td>Ea tenetur.</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Blanditiis iure.</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Delectus animi.</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Enim atque.</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Obcaecati maiores.</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Quos asperiores!</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Dolore maiores?</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Nihil sit!</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Facilis quas.</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Et quis.</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Similique quas.</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Laudantium ipsam.</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Ipsa quia.</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Culpa eligendi.</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Ipsa ipsam.</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Delectus sint.</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Nihil expedita.</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Laudantium maxime?</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Autem amet?</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Velit odio.</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Facere accusantium.</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Reiciendis quasi.</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Ratione tempore.</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Ab alias.</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Corporis dolor.</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Voluptas temporibus.</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Animi ut.</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Necessitatibus omnis!</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Quos impedit.</td></tr>
-                                <tr><td>Lorem ipsum.</td><td>Provident odio.</td></tr>
+                                <!-- tr*15>td*3>lorem2 -->
                             </tbody>
                         </table>
                     </div>
@@ -193,9 +160,39 @@
                         </div>
                     </div>
 
-                    <!-- TODO : due thursday morning. -->
                     <div class="tab-pane" id="about">
-                        About
+                        <div class="row-fluid">
+                            <div class="span3 contributor">
+                                <a href="http://github.com/violethaze"><img title="Namrata Patel" class="img-polaroid" src="http://gravatar.com/avatar/fb2a2905d2b472c00ee1ccf265942646?s=150" alt="Namrata Patel's Gravatar"></a>
+                            </div>
+                            <div class="span3 contributor">
+                                <a href="http://github.com/masalthunlass"><img title="Mathilde Salthun-Lassalle" class="img-polaroid" src="http://gravatar.com/avatar/0d302cb3abb7a7473fb7a339f4299d40?s=150" alt="Mathilde Salthun-Lassalle's Gravatar"></a>
+                            </div>
+                            <div class="span3 contributor">
+                                <a href="http://github.com/marminthibaut"><img title="Thibaut Marmin" class="img-polaroid" src="http://gravatar.com/avatar/1f24a65d8e4cc31761529b950927a706?s=150" alt="Thibaut Marmin's Gravatar"></a>
+                            </div>
+                            <div class="span3 contributor">
+                                <a href="http://github.com/thibweb"><img title="Thibaud Colas" class="img-polaroid" src="http://gravatar.com/avatar/634a765b36b969d27c5ac67c09c41c13?s=150" alt="Thibaud Colas's Gravatar"></a>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="row-fluid">
+                            <div class="span6">
+                                <p>
+                                    Bench is an experiment around RDF storage performance and RDF exploration via SPARQL.
+                                    It was built by four master students of the <a href="http://www.univ-montp2.fr">Université Montpellier 2</a> during a course on Semantic Web technologies and NoSQL databases.
+                                    Bench tries to combine the best of both worlds and to experiment with as much data and as much storage solutions possible to compare them and make them stand out from each others.
+                                </p>
+                            </div>
+                            <div class="span6">
+                                <p>
+                                    This Web application is built in Java EE with the <a href="http://jena.apache.org">Apache Jena</a> RDF framework.
+                                    It also uses a custom built version of <a href="http://d2rq.org">D2RQ</a> and multiple databases, relational (<a href="http://www.postgresql.org/">PostgreSQL</a>, <a href="https://www.mysql.com/">MySQL</a>, <a href="http://www.xeround.com">Databases As A Service</a>) and NoSQL (<a href="http://www.neo4j.org/">Neo4J</a>).
+                                    Finally, the interface is built with <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>, <a href="http://jquery.com/">jQuery</a>, <a href="http://codemirror.net/">CodeMirror</a> and <a href="http://d3js.org/">D3.js</a>.
+                                    <br/>Our data is from <a href="http://rdf.insee.fr/">INSEE</a>, <a href="http://www.nosdonnees.fr/">Nos Données.fr</a>, <a href="http://www.passim.info/">PASSIM</a> and <a href="http://www.geonames.org/">GeoNames</a>.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>  <!-- /container -->
@@ -203,9 +200,8 @@
             <footer>
                 <div class="container">
                     <hr/>
-                    <p>An exploration of RDF storage solutions. By <a href="https://github.com/violethaze/">Namrata Patel</a>, <a href="http://github.com/masalthunlass">Mathilde Salthun-Lassale</a>, <a href="https://github.com/marminthibaut/">Thibaut Marmin</a> and <a href="https://github.com/ThibWeb/">Thibaud Colas</a>.</p>
-                    <!-- TODO : Add everything used here. -->
-                    <p>Built with <a href="https://jena.apache.org/">Apache Jena</a>.</p>
+                    <p>An exploration of RDF storage solutions. By <a href="https://github.com/violethaze/">Namrata Patel</a>, <a href="http://github.com/masalthunlass">Mathilde Salthun-Lassalle</a>, <a href="https://github.com/marminthibaut/">Thibaut Marmin</a> and <a href="https://github.com/thibweb/">Thibaud Colas</a>.</p>
+                    <p>© 2013 &middot; Built with <a href="https://jena.apache.org/">Apache Jena</a>.</p>
                 </div>
             </footer>
 

@@ -1,0 +1,71 @@
+{
+  "datastores" : {
+    "memory" : {
+      "title" : "In-Memory store",
+      "description" : "A non-persistent RDF store which is kept in the RAM until reboot.",
+      "data" : ["geoinsee", "demoinsee", "geonames", "passim", "isf", "taweb"]
+      },
+    "tdb" : {
+      "title" : "Jena TDB",
+      "description" : "A persistence library for Jena that uses the filesystem to store triples.",
+      "data" : ["geoinsee", "demoinsee", "geonames", "passim", "isf", "taweb"]
+      },
+    "sdb" : {
+      "title" : "Jena SDB PostgreSQL",
+      "description" : "A persistence library for Jena backed by the PostgreSQL RDBMS.",
+      "data" : ["geoinsee", "demoinsee", "geonames", "passim", "isf", "taweb"]
+      },
+    "d2rq" : {
+      "title" : "D2RQ PostgreSQL",
+      "description" : "A mapping engine to access relational data with SPARQL.",
+      "data" : ["geoinsee", "demoinsee", "geonames", "passim", "isf", "taweb"]
+      },
+    "neo4j" : {
+      "title" : "Sail Neo4J",
+      "description" : "A NoSQL graph database which stores RDF triples.",
+      "data" : ["geoinsee", "demoinsee", "geonames", "passim", "isf", "taweb"]
+      },
+    "hbase" : {
+      "title" : "HBase RDF",
+      "description" : "A NoSQL column database wich stores RDF triples.",
+      "data" : ["geoinsee", "demoinsee", "geonames", "passim", "isf", "taweb"]
+      },
+    "sesame" : {
+      "title" : "OpenRDF Sesame",
+      "description" : "A triple store accessed via its SPARQL Endpoint.",
+      "data" : ["geoinsee", "demoinsee", "geonames", "passim", "isf", "taweb"]
+      }
+  },
+  "datasources" : {
+    "geoinsee" : {
+      "title" : "COG INSEE",
+      "description" : "French official geographical code, contains administrative geographical entities in France.",
+      "size" : "1"
+    },
+    "demoinsee" : {
+      "title" : "POP INSEE",
+      "description" : "French offical census data of 2010, divided by town.",
+      "size" : "2"
+    },
+    "geonames" : {
+      "title" : "GeoNames FR",
+      "description" : "The GeoNames geographical features database, restrained to France.",
+      "size" : "3"
+    },
+    "passim" : {
+      "title" : "PASSIM",
+      "description" : "French transport companies directory.",
+      "size" : "4"
+    },
+    "isf" : {
+      "title" : "ISF",
+      "description" : "Tax data about the french tax on wealth.",
+      "size" : "5"
+    },
+    "taweb" : {
+      "title" : "TAWeb",
+      "description" : "Data provided by other M2 projects.",
+      "size" : "6"
+    }
+  }
+}

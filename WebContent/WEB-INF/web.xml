@@ -8,8 +8,12 @@
 		<servlet-name>complex</servlet-name>
 		<servlet-class>com.github.masalthunlass.complex.controller</servlet-class>
 		<init-param>
-			<param-name>hostname</param-name>
-			<param-value>localhost:8080</param-value>
+			<param-name>sdb_user</param-name>
+			<param-value>user</param-value>
+		</init-param>
+		<init-param>
+			<param-name>sdb_password</param-name>
+			<param-value>password</param-value>
 		</init-param>
 	</servlet>
 	<servlet-mapping>

@@ -131,8 +131,13 @@ public class PairingDescription {
 	 *             Si le pairing n'est pas complet
 	 * @throws ModelException
 	 *             Si une erreur est survenue lors de la génération du modele
+	 * @throws IOException
+	 *             Si un fichier de configuration est manquant
+	 * @throws FileNotFoundException
+	 *             Si un fichier de configuration n'est pas accessible
 	 */
-	Model getCorrespondingModel() throws PairingException, ModelException {
+	Model getCorrespondingModel() throws PairingException, ModelException,
+			FileNotFoundException, IOException {
 		if (!complete())
 			throw new PairingException(
 					"Trying to get a corresponding model on an incomplete pairing.");

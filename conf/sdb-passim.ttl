@@ -8,6 +8,7 @@
 # Postgresql on localhost.
 # By Thibaud Colas & Mathilde Salthun-Lassalle
 
+
 <#store> rdf:type sdb:Store ;
 	# Which layout (hash/index) to use.
 	# Index might be better for MySQL http://tech.groups.yahoo.com/group/jena-dev/message/43462.
@@ -19,8 +20,7 @@
 
 <#conn> rdf:type sdb:SDBConnection ;
     sdb:sdbType       "Postgresql" ;
-    sdb:sdbHost       "localhost" ;
-    sdb:sdbName       "sdb_isf"; # nom de la base
+    sdb:sdbHost       "localhost" ; 
+    sdb:sdbName       "sdb_passim"; # nom de la base
     sdb:driver        "org.postgresql.Driver" ;
     .
-

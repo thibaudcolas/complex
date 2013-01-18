@@ -19,7 +19,7 @@
 
 <#conn> rdf:type sdb:SDBConnection ;
     sdb:sdbType       "Postgresql" ;
-    sdb:sdbHost       "localhost:port" ;
-    sdb:sdbName       "jena-sdb-geonames"; # nom de la base
-    sdb:driver        "org.protgresql.Driver" ;
+    sdb:sdbHost       "localhost" ;
+    sdb:sdbName       "sdb_geonames"; # nom de la base
+    sdb:driver        "org.postgresql.Driver" ;
     .

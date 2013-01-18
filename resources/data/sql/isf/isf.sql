@@ -5,7 +5,7 @@
 DROP TABLE IMPOT;
 
 CREATE TABLE IMPOT (
-  CodeINSEE char(10),
+  CodeINSEE char(5),
   NbRedevables integer,
   PatrimoineMoyen integer,
   ImpotMoyen integer,
@@ -14,17 +14,7 @@ CREATE TABLE IMPOT (
 );
 
 
-COPY IMPOT
-    FROM '/home/mathilde/isf/isf_2003.csv'
-    WITH  DELIMITER  AS  E'\t';
 
-COPY IMPOT
-    FROM '/home/mathilde/isf/isf_2004.csv'
-    WITH  DELIMITER  AS  E'\t';
-
-COPY IMPOT
-    FROM '/home/mathilde/isf/isf_2005.csv'
-    WITH  DELIMITER  AS  E'\t';
 
 COPY IMPOT
     FROM '/home/mathilde/isf/isf_2006.csv'

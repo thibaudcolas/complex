@@ -1,23 +1,26 @@
 package com.github.masalthunlass.complexgen;
 
-import java.io.File;
+
 import java.util.HashMap;
 import java.util.Set;
 
-import com.github.masalthunlass.complex.model.enums.DataEnum;
+
 import com.hp.hpl.jena.query.Dataset;
 import com.hp.hpl.jena.rdf.model.Model;
-import com.hp.hpl.jena.tdb.TDBFactory;
+import com.hp.hpl.jena.sdb.SDBFactory;
+import com.hp.hpl.jena.sdb.Store;
+
 import com.hp.hpl.jena.util.FileManager;
 
 public class InitSDB {
 
 	private static final String WORKING_DIRECTORY = ".";
-	private static final String DB_USER = "user";
-	private static final String DB_PASSWD = "passwd";
+	private static final String DB_USER = "";
+	private static final String DB_PASSWD = "";
 
 	private static HashMap<String, String> file_path;
 	private static HashMap<String, String> config_path;
+	private static HashMap<String, Store> stores = new HashMap<String, Store>();
 
 	private static void initPathFiles() {
 		file_path = new HashMap<String, String>();
@@ -29,12 +32,12 @@ public class InitSDB {
 		// file_path.put("monuments", "/resources/data/rdf/monuments.rdf");
 
 		config_path = new HashMap<String, String>();
-		// file_path.put("inseepop", "/resources/data/rdf/inseepop.rdf");
-		// file_path.put("inseecog", "/resources/data/rdf/inseecog.rdf");
+		// config_path.put("inseepop", "/conf/sdb-inseepop.ttl");
+		// config_path.put("inseecog", "/conf/sdb-inseecog.ttl");
 		config_path.put("geonames", "/conf/sdb-geonames.ttl");
 		config_path.put("passim", "/conf/sdb-passim.ttl");
-		// file_path.put("isf", "/resources/data/rdf/isf.rdf");
-		// file_path.put("monuments", "/resources/data/rdf/monuments.rdf");
+		// config_path.put("isf", "/conf/sdb-isf.ttl");
+		// config_path.put("monuments", "/conf/sdb-monuments.ttl");
 	}
 
 	/**
@@ -45,24 +48,44 @@ public class InitSDB {
 		initPathFiles();
 		System.out.println("Nettoyage des bases de données");
 		clearBDD();
-		System.out.println("Initialisation des bases de données");
+		System.out.println("Initialisation des stores");
 		initBDD();
 		System.out.println("Importation des données");
 		importData();
+
 	}
 
 	private static void clearBDD() {
-		// TODO
+		if (!stores.isEmpty()) {
+			Set<String> keys = stores.keySet();
+			for (String key : keys) {
+				Store store = stores.get(key);
+				store.getTableFormatter().truncate();
+			}
+		}
 	}
 
 	private static void initBDD() {
-		// TODO
+		System.setProperty("jena.db.user", DB_USER );
+		System.setProperty("jena.db.password", DB_PASSWD);
+		Set<String> keys = config_path.keySet();
+		for (String key : keys) {
+			Store store = SDBFactory.connectStore(WORKING_DIRECTORY + config_path.get(key)) ;
+			store.getTableFormatter().create();
+			stores.put(key, store);
+		}
 	}
 
 	private static void importData() {
-		Set<String> keys = file_path.keySet();
+		Set<String> keys = stores.keySet();
 		for (String key : keys) {
-			// TODO importData :)
+			Store store = stores.get(key);
+			System.out.println("\tImportation données " + key);
+			String rdfpath = file_path.get(key);
+			Dataset ds = SDBFactory.connectDataset(store);
+			Model model = ds.getDefaultModel();
+			FileManager.get().readModel(model, WORKING_DIRECTORY + rdfpath);
+			System.out.println("\t ->" + model.size() + " triplets insérés");
 		}
 	}
 }

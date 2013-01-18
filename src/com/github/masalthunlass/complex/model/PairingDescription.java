@@ -136,8 +136,8 @@ public class PairingDescription {
 	 * @throws FileNotFoundException
 	 *             Si un fichier de configuration n'est pas accessible
 	 */
-	Model getCorrespondingModel() throws PairingException, ModelException,
-			FileNotFoundException, IOException {
+	public Model getCorrespondingModel() throws PairingException,
+			ModelException, FileNotFoundException, IOException {
 		if (!complete())
 			throw new PairingException(
 					"Trying to get a corresponding model on an incomplete pairing.");
@@ -151,7 +151,8 @@ public class PairingDescription {
 			if (model == null) {
 				model = ModelUtil.generateModel(entry_key, entry_value);
 			} else {
-				model.union(ModelUtil.generateModel(entry_key, entry_value));
+				model = model.add(ModelUtil.generateModel(entry_key,
+						entry_value));
 			}
 		}
 		return model;

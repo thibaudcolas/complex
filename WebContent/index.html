@@ -48,7 +48,7 @@
                 </ul>
 
                 <div class="tab-content">
-                    <div class="tab-pane active" id="query">
+                    <div class="tab-pane" id="query">
                         <form class="row-fluid" id="query-form">
 
                             <fieldset class="span8">
@@ -120,10 +120,20 @@
                             </tbody>
                         </table>
                     </div>
-                    <!-- TODO : due thursday afternoon. -->
-                    <div class="tab-pane" id="visualization">
-                        Viz
+
+                    <div class="tab-pane active" id="visualization">
+
+                        <div id="google-chart" style="height:350px;"></div>
+                        <form method="get" id="chart-type" class="form-inline">
+                            <div class="input-prepend input-append">
+                                <span class="add-on"><i class="icon-refresh"></i></span>
+                                <select name="type" id="chart-type-select"></select>
+                                <button class="btn" onclick="sgvizler.ui.submitQuery()">Refresh</button>
+                            </div>
+                        </form>
+
                     </div>
+
                     <!-- TODO : due thursday evening. -->
                     <div class="tab-pane" id="benchmark">
                         Bench
@@ -209,6 +219,7 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/lib/jquery-1.9.0.min.js"><\/script>')</script>
+        <script src="//www.google.com/jsapi"></script>
         <script src="js/lib/bootstrap.min.js"></script>
         <script src="js/lib/d3.v3.min.js"></script>
         <script src="js/lib/jquery.dataTables.min.js"></script>
@@ -218,6 +229,11 @@
         <script src="js/lib/codemirror/searchcursor.js"></script>
         <script src="js/lib/codemirror/match-highlighter.js"></script>
         <script src="js/lib/codemirror/sparql.js"></script>
+        <script src="js/lib/sgvizler.js"></script>
+        <script type="text/javascript">
+            // Tells the Google Loader what to load from the Visualization API.
+            google.load('visualization', '1.0', {'packages':['annotatedtimeline','corechart','gauge','geomap','geochart','imagesparkline','map','orgchart','table','motionchart','treemap']});
+        </script>
         <script src="js/main.js"></script>
     </body>
 </html>

@@ -1,5 +1,7 @@
 jQuery(document).ready(function($) {
 
+ // "use strict";
+
   /**
    * Query
    * ---------------------------------------------------------------------
@@ -97,6 +99,8 @@ jQuery(document).ready(function($) {
     $queryResult = data;
     $resultsColumns.append('<th>'+data.head.vars.join('</th><th>')+'</th>');
 
+    sgvizler.go(data, 'gLineChart');
+
     // Then we retrieve the data itself.
     for (var j = 0; j < data.results.bindings.length; j++) {
       var currentCells = '';
@@ -145,7 +149,14 @@ jQuery(document).ready(function($) {
     $environmentSelection.append(environmentHTML + '<hr/><div class="row-fluid">' + datastoreHTML + '</div>');
   });
 
+  /**
+   * Visualization
+   * ---------------------------------------------------------------------
+   */
 
+  $("#chart-type-select").change(function (){
+    sgvizler.drawChart($(this).val());
+  });
 
   /**
    * About

@@ -1,1246 +1,1246 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
-xmlns="http://www.geonames.org/ontology#"
+xmlns:gn="http://www.geonames.org/ontology#"
 xmlns:insee="http://rdf.insee.fr/geo/"
 xmlns:owl="http://www.w3.org/2002/07/owl#"
 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 
  <!--Mapping from Geonames to INSEE resources - France Arrondissements -->
 
- <Feature rdf:about="http://sws.geonames.org/2967202/">
+ <gn:Feature rdf:about="http://sws.geonames.org/2967202/">
   <insee:nom xml:lang="fr">Yssingeaux</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_433"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2967324/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2967324/">
   <insee:nom xml:lang="fr">Wissembourg</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_677"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2967602/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2967602/">
   <insee:nom xml:lang="fr">Vouziers</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_084"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2967855/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2967855/">
   <insee:nom xml:lang="fr">Vitry-le-François</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_514"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2967970/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2967970/">
   <insee:nom xml:lang="fr">Vire</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_144"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2968514/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2968514/">
   <insee:nom xml:lang="fr">Villeneuve-sur-Lot</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_473"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2968747/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2968747/">
   <insee:nom xml:lang="fr">Villefranche-sur-Saône</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_692"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2968754/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2968754/">
   <insee:nom xml:lang="fr">Villefranche-de-Rouergue</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_123"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2969282/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2969282/">
   <insee:nom xml:lang="fr">Vienne</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_383"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2969391/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2969391/">
   <insee:nom xml:lang="fr">Vichy</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_033"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2969561/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2969561/">
   <insee:nom xml:lang="fr">Vesoul</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_702"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2969598/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2969598/">
   <insee:nom xml:lang="fr">Vervins</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_025"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2969678/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2969678/">
   <insee:nom xml:lang="fr">Versailles</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_784"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2969963/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2969963/">
   <insee:nom xml:lang="fr">Verdun</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_553"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2970109/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2970109/">
   <insee:nom xml:lang="fr">Vendôme</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_412"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2970775/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2970775/">
   <insee:nom xml:lang="fr">Vannes</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_563"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2971040/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2971040/">
   <insee:nom xml:lang="fr">Valenciennes</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_596"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2971049/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2971049/">
   <insee:nom xml:lang="fr">Valence</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_263"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2971297/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2971297/">
   <insee:nom xml:lang="fr">Ussel</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_193"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2971481/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2971481/">
   <insee:nom xml:lang="fr">Tulle</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_192"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2971548/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2971548/">
   <insee:nom xml:lang="fr">Troyes</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_103"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2972190/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2972190/">
   <insee:nom xml:lang="fr">Tours</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_372"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2972212/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2972212/">
   <insee:nom xml:lang="fr">Tournon-sur-Rhône</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_073"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2972314/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2972314/">
   <insee:nom xml:lang="fr">Toulouse</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_313"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2972326/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2972326/">
   <insee:nom xml:lang="fr">Toulon</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_832"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2972349/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2972349/">
   <insee:nom xml:lang="fr">Toul</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_544"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2972741/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2972741/">
   <insee:nom xml:lang="fr">Thonon-les-Bains</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_744"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2972809/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2972809/">
   <insee:nom xml:lang="fr">Thionville-Ouest</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_578"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2972810/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2972810/">
   <insee:nom xml:lang="fr">Thionville-Est</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_577"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2972855/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2972855/">
   <insee:nom xml:lang="fr">Thiers</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_635"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2973012/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2973012/">
   <insee:nom xml:lang="fr">Thann</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_686"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2973384/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2973384/">
   <insee:nom xml:lang="fr">Tarbes</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_653"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2973781/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2973781/">
   <insee:nom xml:lang="fr">Strasbourg-Ville</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_678"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2973782/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2973782/">
   <insee:nom xml:lang="fr">Strasbourg-Campagne</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_676"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2974388/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2974388/">
   <insee:nom xml:lang="fr">Soissons</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_024"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2975049/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2975049/">
   <insee:nom xml:lang="fr">Sens</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_893"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2975086/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2975086/">
   <insee:nom xml:lang="fr">Senlis</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_604"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2975313/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2975313/">
   <insee:nom xml:lang="fr">Segré</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_494"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2975347/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2975347/">
   <insee:nom xml:lang="fr">Sedan</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_083"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2975587/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2975587/">
   <insee:nom xml:lang="fr">Saverne</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_674"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2975757/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2975757/">
   <insee:nom xml:lang="fr">Saumur</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_493"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2975930/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2975930/">
   <insee:nom xml:lang="fr">Sartène</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_2A4"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2975963/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2975963/">
   <insee:nom xml:lang="fr">Sarreguemines</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_576"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2975966/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2975966/">
   <insee:nom xml:lang="fr">Sarrebourg</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_575"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2976008/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2976008/">
   <insee:nom xml:lang="fr">Sarlat-la-Canéda</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_244"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2977293/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2977293/">
   <insee:nom xml:lang="fr">Saint-Quentin</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_023"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2977844/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2977844/">
   <insee:nom xml:lang="fr">Saint-Omer</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_625"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2977920/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2977920/">
   <insee:nom xml:lang="fr">Saint-Nazaire</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_443"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2978639/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2978639/">
   <insee:nom xml:lang="fr">Saint-Malo</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_354"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2978757/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2978757/">
   <insee:nom xml:lang="fr">Saint-Lô</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_504"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2979071/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2979071/">
   <insee:nom xml:lang="fr">Saint-Julien-en-Genevois</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_743"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2979302/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2979302/">
   <insee:nom xml:lang="fr">Saint-Jean-de-Maurienne</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_733"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2979362/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2979362/">
   <insee:nom xml:lang="fr">Saint-Jean-d'Angély</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_175"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2979655/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2979655/">
   <insee:nom xml:lang="fr">Saint-Girons</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_093"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2980043/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2980043/">
   <insee:nom xml:lang="fr">Saint-Gaudens</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_312"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2980102/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2980102/">
   <insee:nom xml:lang="fr">Saint-Flour</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_153"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2980288/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2980288/">
   <insee:nom xml:lang="fr">Saint-Étienne</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_423"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2980339/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2980339/">
   <insee:nom xml:lang="fr">Saintes</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_174"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2980399/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2980399/">
   <insee:nom xml:lang="fr">Sainte-Menehould</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_515"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2980815/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2980815/">
   <insee:nom xml:lang="fr">Saint-Dizier</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_523"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2980826/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2980826/">
   <insee:nom xml:lang="fr">Saint-Dié-des-Vosges</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_883"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2980915/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2980915/">
   <insee:nom xml:lang="fr">Saint-Denis</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_933"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2981076/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2981076/">
   <insee:nom xml:lang="fr">Saint-Claude</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_393"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2981279/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2981279/">
   <insee:nom xml:lang="fr">Saint-Brieuc</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_224"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2981836/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2981836/">
   <insee:nom xml:lang="fr">Saint-Amand-Montrond</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_182"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2982651/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2982651/">
   <insee:nom xml:lang="fr">Rouen</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_763"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2982966/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2982966/">
   <insee:nom xml:lang="fr">Romorantin-Lanthenay</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_413"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2983153/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2983153/">
   <insee:nom xml:lang="fr">Rodez</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_122"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2983272/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2983272/">
   <insee:nom xml:lang="fr">Rochefort</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_172"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2983290/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2983290/">
   <insee:nom xml:lang="fr">Rochechouart</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_873"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2983360/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2983360/">
   <insee:nom xml:lang="fr">Roanne</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_422"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2983488/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2983488/">
   <insee:nom xml:lang="fr">Riom</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_634"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2983703/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2983703/">
   <insee:nom xml:lang="fr">Ribeauvillé</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_685"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2983890/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2983890/">
   <insee:nom xml:lang="fr">Rethel</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_082"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2983989/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2983989/">
   <insee:nom xml:lang="fr">Rennes</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_353"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2984113/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2984113/">
   <insee:nom xml:lang="fr">Reims</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_513"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2984191/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2984191/">
   <insee:nom xml:lang="fr">Redon</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_352"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2984512/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2984512/">
   <insee:nom xml:lang="fr">Rambouillet</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_782"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2984700/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2984700/">
   <insee:nom xml:lang="fr">Quimper</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_294"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2985228/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2985228/">
   <insee:nom xml:lang="fr">Provins</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_773"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2985289/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2985289/">
   <insee:nom xml:lang="fr">Privas</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_072"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2985643/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2985643/">
   <insee:nom xml:lang="fr">Prades</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_663"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2986139/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2986139/">
   <insee:nom xml:lang="fr">Pontoise</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_953"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2986159/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2986159/">
   <insee:nom xml:lang="fr">Pontivy</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_562"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2986301/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2986301/">
   <insee:nom xml:lang="fr">Pontarlier</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_253"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2986494/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2986494/">
   <insee:nom xml:lang="fr">Poitiers</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_863"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2987002/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2987002/">
   <insee:nom xml:lang="fr">Pithiviers</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_453"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2987913/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2987913/">
   <insee:nom xml:lang="fr">Perpignan</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_662"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2987927/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2987927/">
   <insee:nom xml:lang="fr">Péronne</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_804"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2987966/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2987966/">
   <insee:nom xml:lang="fr">Périgueux</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_243"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2988356/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2988356/">
   <insee:nom xml:lang="fr">Pau</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_643"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2988446/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2988446/">
   <insee:nom xml:lang="fr">Parthenay</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_793"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2988506/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2988506/">
   <insee:nom xml:lang="fr">Paris</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_751"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2988669/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2988669/">
   <insee:nom xml:lang="fr">Pamiers</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_092"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2989316/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2989316/">
   <insee:nom xml:lang="fr">Orléans</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_452"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2989568/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2989568/">
   <insee:nom xml:lang="fr">Oloron-Sainte-Marie</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_642"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2989818/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2989818/">
   <insee:nom xml:lang="fr">Nyons</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_262"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2990139/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2990139/">
   <insee:nom xml:lang="fr">Nontron</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_242"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2990262/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2990262/">
   <insee:nom xml:lang="fr">Nogent-sur-Seine</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_102"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2990271/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2990271/">
   <insee:nom xml:lang="fr">Nogent-le-Rotrou</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_284"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2990354/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2990354/">
   <insee:nom xml:lang="fr">Niort</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_792"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2990362/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2990362/">
   <insee:nom xml:lang="fr">Nîmes</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_302"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2990439/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2990439/">
   <insee:nom xml:lang="fr">Nice</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_062"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2990473/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2990473/">
   <insee:nom xml:lang="fr">Nevers</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_583"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2990681/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2990681/">
   <insee:nom xml:lang="fr">Neufchâteau</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_882"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2990779/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2990779/">
   <insee:nom xml:lang="fr">Nérac</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_474"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2990918/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2990918/">
   <insee:nom xml:lang="fr">Narbonne</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_113"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2990931/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2990931/">
   <insee:nom xml:lang="fr">Nantua</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_014"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2990968/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2990968/">
   <insee:nom xml:lang="fr">Nantes</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_442"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2990998/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2990998/">
   <insee:nom xml:lang="fr">Nancy</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_543"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2991152/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2991152/">
   <insee:nom xml:lang="fr">Muret</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_311"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2991213/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2991213/">
   <insee:nom xml:lang="fr">Mulhouse</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_684"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2991477/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2991477/">
   <insee:nom xml:lang="fr">Moulins</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_032"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2991703/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2991703/">
   <insee:nom xml:lang="fr">Mortagne-au-Perche</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_613"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2991771/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2991771/">
   <insee:nom xml:lang="fr">Morlaix</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_293"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2992088/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2992088/">
   <insee:nom xml:lang="fr">Montreuil</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_624"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2992165/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2992165/">
   <insee:nom xml:lang="fr">Montpellier</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_343"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2992224/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2992224/">
   <insee:nom xml:lang="fr">Montmorillon</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_862"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2992291/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2992291/">
   <insee:nom xml:lang="fr">Montluçon</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_031"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2992759/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2992759/">
   <insee:nom xml:lang="fr">Montdidier</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_803"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2992770/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2992770/">
   <insee:nom xml:lang="fr">Mont-de-Marsan</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_402"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2992889/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2992889/">
   <insee:nom xml:lang="fr">Montbrison</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_421"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2992937/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2992937/">
   <insee:nom xml:lang="fr">Montbéliard</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_252"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2992952/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2992952/">
   <insee:nom xml:lang="fr">Montbard</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_213"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2993000/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2993000/">
   <insee:nom xml:lang="fr">Montauban</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_822"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2993023/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2993023/">
   <insee:nom xml:lang="fr">Montargis</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_451"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2993475/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2993475/">
   <insee:nom xml:lang="fr">Molsheim</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_673"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2993747/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2993747/">
   <insee:nom xml:lang="fr">Mirande</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_323"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2993874/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2993874/">
   <insee:nom xml:lang="fr">Millau</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_121"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2994149/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2994149/">
   <insee:nom xml:lang="fr">Metz-Ville</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_579"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2994159/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2994159/">
   <insee:nom xml:lang="fr">Metz-Campagne</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_574"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2994616/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2994616/">
   <insee:nom xml:lang="fr">Mende</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_482"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2994650/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2994650/">
   <insee:nom xml:lang="fr">Melun</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_772"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2994797/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2994797/">
   <insee:nom xml:lang="fr">Meaux</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_771"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2994933/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2994933/">
   <insee:nom xml:lang="fr">Mayenne</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_533"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2995023/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2995023/">
   <insee:nom xml:lang="fr">Mauriac</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_152"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2995468/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2995468/">
   <insee:nom xml:lang="fr">Marseille</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_133"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2995640/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2995640/">
   <insee:nom xml:lang="fr">Marmande</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_472"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2996147/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2996147/">
   <insee:nom xml:lang="fr">Mantes-la-Jolie</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_781"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2996290/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2996290/">
   <insee:nom xml:lang="fr">Mamers</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_722"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2996881/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2996881/">
   <insee:nom xml:lang="fr">Mâcon</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_715"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2996943/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2996943/">
   <insee:nom xml:lang="fr">Lyon</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_691"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2997075/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2997075/">
   <insee:nom xml:lang="fr">Lure</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_701"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2997109/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2997109/">
   <insee:nom xml:lang="fr">Lunéville</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_542"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2997438/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2997438/">
   <insee:nom xml:lang="fr">Louhans</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_714"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2997576/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2997576/">
   <insee:nom xml:lang="fr">Lorient</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_561"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2997625/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2997625/">
   <insee:nom xml:lang="fr">Lons-le-Saunier</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_392"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2997935/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2997935/">
   <insee:nom xml:lang="fr">Lodève</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_342"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2997995/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2997995/">
   <insee:nom xml:lang="fr">Loches</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_373"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2998149/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2998149/">
   <insee:nom xml:lang="fr">Lisieux</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_143"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2998262/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2998262/">
   <insee:nom xml:lang="fr">Limoux</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_112"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2998285/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2998285/">
   <insee:nom xml:lang="fr">Limoges</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_872"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2998323/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2998323/">
   <insee:nom xml:lang="fr">Lille</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_595"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2998516/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2998516/">
   <insee:nom xml:lang="fr">Libourne</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_335"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3000071/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3000071/">
   <insee:nom xml:lang="fr">Lesparre-Médoc</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_334"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3003091/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3003091/">
   <insee:nom xml:lang="fr">Lens</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_627"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3005865/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3005865/">
   <insee:nom xml:lang="fr">Laval</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_532"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3006201/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3006201/">
   <insee:nom xml:lang="fr">Tour-du-Pin</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_382"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3006766/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3006766/">
   <insee:nom xml:lang="fr">Roche-sur-Yon</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_852"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3006783/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3006783/">
   <insee:nom xml:lang="fr">Rochelle</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_173"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3006956/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3006956/">
   <insee:nom xml:lang="fr">Largentière</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_071"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3007476/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3007476/">
   <insee:nom xml:lang="fr">Laon</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_022"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3007608/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3007608/">
   <insee:nom xml:lang="fr">Lannion</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_223"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3007679/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3007679/">
   <insee:nom xml:lang="fr">Langres</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_522"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3007688/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3007688/">
   <insee:nom xml:lang="fr">Langon</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_333"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3010153/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3010153/">
   <insee:nom xml:lang="fr">Châtre</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_363"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3012265/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3012265/">
   <insee:nom xml:lang="fr">Jonzac</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_171"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3012654/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3012654/">
   <insee:nom xml:lang="fr">Issoudun</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_364"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3012661/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3012661/">
   <insee:nom xml:lang="fr">Issoire</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_633"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3014077/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3014077/">
   <insee:nom xml:lang="fr">Haguenau</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_672"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3014220/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3014220/">
   <insee:nom xml:lang="fr">Guingamp</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_222"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3014382/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3014382/">
   <insee:nom xml:lang="fr">Guéret</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_232"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3014432/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3014432/">
   <insee:nom xml:lang="fr">Guebwiller</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_683"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3014727/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3014727/">
   <insee:nom xml:lang="fr">Grenoble</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_381"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3014855/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3014855/">
   <insee:nom xml:lang="fr">Grasse</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_061"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3015540/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3015540/">
   <insee:nom xml:lang="fr">Gourdon</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_463"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3016142/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3016142/">
   <insee:nom xml:lang="fr">Gex</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_013"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3016701/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3016701/">
   <insee:nom xml:lang="fr">Gap</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_052"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3017608/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3017608/">
   <insee:nom xml:lang="fr">Fougères</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_351"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3017797/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3017797/">
   <insee:nom xml:lang="fr">Forcalquier</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_044"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3017804/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3017804/">
   <insee:nom xml:lang="fr">Forbach</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_573"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3017920/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3017920/">
   <insee:nom xml:lang="fr">Fontenay-le-Comte</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_851"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3018172/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3018172/">
   <insee:nom xml:lang="fr">Foix</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_091"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3018236/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3018236/">
   <insee:nom xml:lang="fr">Florac</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_481"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3018505/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3018505/">
   <insee:nom xml:lang="fr">Figeac</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_462"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3019264/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3019264/">
   <insee:nom xml:lang="fr">Évreux</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_273"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3020034/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3020034/">
   <insee:nom xml:lang="fr">Épinal</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_881"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3020061/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3020061/">
   <insee:nom xml:lang="fr">Épernay</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_512"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3020685/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3020685/">
   <insee:nom xml:lang="fr">Dunkerque</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_594"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3020809/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3020809/">
   <insee:nom xml:lang="fr">Dreux</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_283"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3020849/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3020849/">
   <insee:nom xml:lang="fr">Draguignan</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_831"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3020999/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3020999/">
   <insee:nom xml:lang="fr">Douai</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_593"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3021262/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3021262/">
   <insee:nom xml:lang="fr">Dole</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_391"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3021353/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3021353/">
   <insee:nom xml:lang="fr">Dinan</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_221"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3021371/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3021371/">
   <insee:nom xml:lang="fr">Dijon</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_212"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3021381/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3021381/">
   <insee:nom xml:lang="fr">Digne-les-Bains</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_043"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3021410/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3021410/">
   <insee:nom xml:lang="fr">Dieppe</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_761"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3021434/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3021434/">
   <insee:nom xml:lang="fr">Die</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_261"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3021669/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3021669/">
   <insee:nom xml:lang="fr">Dax</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_401"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3022825/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3022825/">
   <insee:nom xml:lang="fr">Coutances</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_503"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3023475/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3023475/">
   <insee:nom xml:lang="fr">Cosne-Cours-sur-Loire</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_584"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3023505/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3023505/">
   <insee:nom xml:lang="fr">Corte</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_2B3"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3023918/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3023918/">
   <insee:nom xml:lang="fr">Confolens</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_163"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3023942/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3023942/">
   <insee:nom xml:lang="fr">Condom</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_322"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3024065/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3024065/">
   <insee:nom xml:lang="fr">Compiègne</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_603"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3024085/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3024085/">
   <insee:nom xml:lang="fr">Commercy</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_552"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3024296/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3024296/">
   <insee:nom xml:lang="fr">Colmar</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_682"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3024439/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3024439/">
   <insee:nom xml:lang="fr">Cognac</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_162"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3024634/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3024634/">
   <insee:nom xml:lang="fr">Clermont-Ferrand</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_632"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3024642/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3024642/">
   <insee:nom xml:lang="fr">Clermont</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_602"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3024780/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3024780/">
   <insee:nom xml:lang="fr">Clamecy</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_582"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3025052/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3025052/">
   <insee:nom xml:lang="fr">Cholet</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_492"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3025131/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3025131/">
   <insee:nom xml:lang="fr">Chinon</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_371"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3025465/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3025465/">
   <insee:nom xml:lang="fr">Cherbourg-Octeville</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_502"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3025888/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3025888/">
   <insee:nom xml:lang="fr">Chaumont</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_521"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3026140/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3026140/">
   <insee:nom xml:lang="fr">Châtellerault</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_861"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3026193/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3026193/">
   <insee:nom xml:lang="fr">Château-Thierry</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_021"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3026199/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3026199/">
   <insee:nom xml:lang="fr">Château-Salins</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_572"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3026202/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3026202/">
   <insee:nom xml:lang="fr">Châteauroux</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_362"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3026260/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3026260/">
   <insee:nom xml:lang="fr">Châteaulin</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_292"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3026272/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3026272/">
   <insee:nom xml:lang="fr">Château-Gontier</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_531"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3026284/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3026284/">
   <insee:nom xml:lang="fr">Châteaudun</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_282"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3026297/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3026297/">
   <insee:nom xml:lang="fr">Château-Chinon(Ville)</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_581"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3026302/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3026302/">
   <insee:nom xml:lang="fr">Châteaubriant</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_441"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3026466/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3026466/">
   <insee:nom xml:lang="fr">Chartres</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_281"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3026514/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3026514/">
   <insee:nom xml:lang="fr">Charolles</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_713"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3026612/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3026612/">
   <insee:nom xml:lang="fr">Charleville-Mézières</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_081"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3027421/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3027421/">
   <insee:nom xml:lang="fr">Chambéry</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_732"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3027483/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3027483/">
   <insee:nom xml:lang="fr">Chalon-sur-Saône</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_712"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3027486/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3027486/">
   <insee:nom xml:lang="fr">Châlons-en-Champagne</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_511"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3027887/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3027887/">
   <insee:nom xml:lang="fr">Céret</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_661"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3028260/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3028260/">
   <insee:nom xml:lang="fr">Castres</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_812"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3028321/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3028321/">
   <insee:nom xml:lang="fr">Castelsarrasin</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_821"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3028381/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3028381/">
   <insee:nom xml:lang="fr">Castellane</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_042"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3028541/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3028541/">
   <insee:nom xml:lang="fr">Carpentras</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_843"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3028640/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3028640/">
   <insee:nom xml:lang="fr">Carcassonne</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_111"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3029029/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3029029/">
   <insee:nom xml:lang="fr">Cambrai</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_592"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3029089/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3029089/">
   <insee:nom xml:lang="fr">Calvi</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_2B5"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3029161/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3029161/">
   <insee:nom xml:lang="fr">Calais</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_626"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3029212/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3029212/">
   <insee:nom xml:lang="fr">Cahors</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_461"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3029240/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3029240/">
   <insee:nom xml:lang="fr">Caen</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_142"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3029973/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3029973/">
   <insee:nom xml:lang="fr">Brive-la-Gaillarde</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_191"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3029994/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3029994/">
   <insee:nom xml:lang="fr">Brioude</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_431"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3030056/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3030056/">
   <insee:nom xml:lang="fr">Brignoles</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_833"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3030070/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3030070/">
   <insee:nom xml:lang="fr">Briey</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_541"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3030140/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3030140/">
   <insee:nom xml:lang="fr">Briançon</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_051"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3030299/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3030299/">
   <insee:nom xml:lang="fr">Brest</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_291"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3030302/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3030302/">
   <insee:nom xml:lang="fr">Bressuire</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_791"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3031004/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3031004/">
   <insee:nom xml:lang="fr">Bourges</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_181"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3031008/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3031008/">
   <insee:nom xml:lang="fr">Bourg-en-Bresse</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_012"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3031132/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3031132/">
   <insee:nom xml:lang="fr">Boulogne-sur-Mer</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_623"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3031181/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3031181/">
   <insee:nom xml:lang="fr">Boulay-Moselle</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_571"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3031580/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3031580/">
   <insee:nom xml:lang="fr">Bordeaux</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_332"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3031676/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3031676/">
   <insee:nom xml:lang="fr">Bonneville</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_742"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3032212/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3032212/">
   <insee:nom xml:lang="fr">Blois</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_411"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3032294/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3032294/">
   <insee:nom xml:lang="fr">Blaye</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_331"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3032832/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3032832/">
   <insee:nom xml:lang="fr">Béziers</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_341"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3033000/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3033000/">
   <insee:nom xml:lang="fr">Béthune</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_622"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3033122/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3033122/">
   <insee:nom xml:lang="fr">Besançon</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_251"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3033307/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3033307/">
   <insee:nom xml:lang="fr">Bernay</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_272"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3033390/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3033390/">
   <insee:nom xml:lang="fr">Bergerac</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_241"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3033623/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3033623/">
   <insee:nom xml:lang="fr">Belley</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_011"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3033765/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3033765/">
   <insee:nom xml:lang="fr">Bellac</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_871"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3033790/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3033790/">
   <insee:nom xml:lang="fr">Belfort</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_901"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3034005/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3034005/">
   <insee:nom xml:lang="fr">Beauvais</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_601"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3034125/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3034125/">
   <insee:nom xml:lang="fr">Beaune</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_211"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3034473/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3034473/">
   <insee:nom xml:lang="fr">Bayonne</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_641"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3034482/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3034482/">
   <insee:nom xml:lang="fr">Bayeux</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_141"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3034639/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3034639/">
   <insee:nom xml:lang="fr">Bastia</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_2B2"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3034801/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3034801/">
   <insee:nom xml:lang="fr">Bar-sur-Aube</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_101"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3034910/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3034910/">
   <insee:nom xml:lang="fr">Bar-le-Duc</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_551"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3034990/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3034990/">
   <insee:nom xml:lang="fr">Barcelonnette</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_041"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3035417/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3035417/">
   <insee:nom xml:lang="fr">Bagnères-de-Bigorre</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_652"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3035638/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3035638/">
   <insee:nom xml:lang="fr">Avranches</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_501"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3035679/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3035679/">
   <insee:nom xml:lang="fr">Avignon</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_842"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3035697/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3035697/">
   <insee:nom xml:lang="fr">Avesnes-sur-Helpe</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_591"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3035767/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3035767/">
   <insee:nom xml:lang="fr">Avallon</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_892"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3035842/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3035842/">
   <insee:nom xml:lang="fr">Auxerre</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_891"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3035882/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3035882/">
   <insee:nom xml:lang="fr">Autun</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_711"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3036015/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3036015/">
   <insee:nom xml:lang="fr">Aurillac</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_151"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3036280/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3036280/">
   <insee:nom xml:lang="fr">Auch</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_321"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3036293/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3036293/">
   <insee:nom xml:lang="fr">Aubusson</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_231"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3036783/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3036783/">
   <insee:nom xml:lang="fr">Arras</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_621"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3036937/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3036937/">
   <insee:nom xml:lang="fr">Arles</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_132"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3037050/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3037050/">
   <insee:nom xml:lang="fr">Argentan</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_612"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3037069/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3037069/">
   <insee:nom xml:lang="fr">Argelès-Gazost</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_651"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3037351/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3037351/">
   <insee:nom xml:lang="fr">Apt</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_841"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3037542/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3037542/">
   <insee:nom xml:lang="fr">Annecy</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_741"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3037597/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3037597/">
   <insee:nom xml:lang="fr">Angoulême</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_161"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3037655/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3037655/">
   <insee:nom xml:lang="fr">Angers</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_491"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3037796/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3037796/">
   <insee:nom xml:lang="fr">Ancenis</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_444"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3037853/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3037853/">
   <insee:nom xml:lang="fr">Amiens</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_802"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3037936/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3037936/">
   <insee:nom xml:lang="fr">Ambert</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_631"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3038011/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3038011/">
   <insee:nom xml:lang="fr">Altkirch</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_681"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3038223/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3038223/">
   <insee:nom xml:lang="fr">Alès</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_301"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3038229/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3038229/">
   <insee:nom xml:lang="fr">Alençon</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_611"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3038260/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3038260/">
   <insee:nom xml:lang="fr">Albi</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_811"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3038265/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3038265/">
   <insee:nom xml:lang="fr">Albertville</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_731"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3038333/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3038333/">
   <insee:nom xml:lang="fr">Ajaccio</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_2A1"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3038353/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3038353/">
   <insee:nom xml:lang="fr">Aix-en-Provence</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_131"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3038633/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3038633/">
   <insee:nom xml:lang="fr">Agen</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_471"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3038788/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3038788/">
   <insee:nom xml:lang="fr">Abbeville</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_801"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2969157/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2969157/">
   <insee:nom xml:lang="fr">Vigan</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_303"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2982078/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2982078/">
   <insee:nom xml:lang="fr">Sables-d'Olonne</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_853"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2985020/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2985020/">
   <insee:nom xml:lang="fr">Puy-en-Velay</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_432"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/2996175/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/2996175/">
   <insee:nom xml:lang="fr">Mans</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_723"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3013633/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3013633/">
   <insee:nom xml:lang="fr">Havre</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_762"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3032422/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3032422/">
   <insee:nom xml:lang="fr">Blanc</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_361"/>
- </Feature>
- <Feature rdf:about="http://sws.geonames.org/3037730/">
+ </gn:Feature>
+ <gn:Feature rdf:about="http://sws.geonames.org/3037730/">
   <insee:nom xml:lang="fr">Andelys</insee:nom>
   <owl:sameAs rdf:resource="http://rdf.insee.fr/geo/ARR_271"/>
- </Feature>
+ </gn:Feature>
 </rdf:RDF>

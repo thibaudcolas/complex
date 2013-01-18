@@ -1,361 +1,361 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns="http://www.geonames.org/ontology#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:gn="http://www.geonames.org/ontology#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <!--Mapping from Geonames to INSEE resources. France Regions and Departements -->
-	<Feature rdf:about="http://sws.geonames.org/2983751/">
+	<gn:Feature rdf:about="http://sws.geonames.org/2983751/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/REG_82"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2985244/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2985244/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/REG_93"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2986492/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2986492/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/REG_54"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2987375/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2987375/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/REG_22"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2988289/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2988289/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/REG_52"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2990119/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2990119/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/REG_31"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2993955/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2993955/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/REG_73"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2997551/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2997551/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/REG_41"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2998268/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2998268/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/REG_74"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3007670/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3007670/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/REG_91"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3012874/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3012874/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/REG_11"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3013756/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3013756/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/REG_23"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3017372/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3017372/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/REG_43"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3017382/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3017382/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/PAYS_FR"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3023519/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3023519/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/REG_94"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3027257/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3027257/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/REG_21"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3027939/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3027939/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/REG_24"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3030293/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3030293/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/REG_53"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3030967/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3030967/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/REG_26"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3034693/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3034693/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/REG_25"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3035876/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3035876/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/REG_83"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3037350/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3037350/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/REG_72"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3038033/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3038033/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/REG_42"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2967196/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2967196/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_78"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2967222/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2967222/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_89"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2967681/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2967681/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_88"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2968815/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2968815/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_75"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2969280/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2969280/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_86"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2970140/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2970140/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_85"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2970554/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2970554/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_84"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2971071/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2971071/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_95"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2973357/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2973357/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_82"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2974304/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2974304/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_80"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2975246/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2975246/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_93"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2975517/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2975517/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_73"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2975926/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2975926/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_72"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2976082/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2976082/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_71"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2984885/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2984885/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_66"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2987410/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2987410/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_69"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2988430/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2988430/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_62"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2989247/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2989247/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_61"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2989663/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2989663/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_60"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2990129/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2990129/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_59"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2990371/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2990371/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_58"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2991627/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2991627/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_57"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2991879/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2991879/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_56"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2994106/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2994106/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_55"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2994932/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2994932/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_53"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2995603/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2995603/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_51"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2996268/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2996268/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_50"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2996663/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2996663/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_49"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2997288/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2997288/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_48"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2997523/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2997523/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_47"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2997856/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2997856/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_41"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3007866/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3007866/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_40"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3012051/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3012051/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_39"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3012715/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3012715/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_38"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3012849/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3012849/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_35"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3013500/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3013500/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_34"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3013657/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3013657/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_92"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3013738/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3013738/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_05"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3015948/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3015948/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_33"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3016194/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3016194/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_32"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3018471/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3018471/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_29"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3019316/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3019316/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_28"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3020781/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3020781/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_26"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3020989/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3020989/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_25"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3021042/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3021042/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_24"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3021501/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3021501/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_79"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3022516/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3022516/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_23"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3023514/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3023514/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_2A"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3023532/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3023532/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_19"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3025480/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3025480/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_18"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3026644/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3026644/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_17"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3028791/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3028791/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_15"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3029094/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3029094/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_14"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3031359/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3031359/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_13"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3033789/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3033789/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_90"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3034720/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3034720/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_67"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3035691/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3035691/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_12"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3036264/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3036264/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_11"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3036420/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3036420/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_10"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3036965/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3036965/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_09"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3037136/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3037136/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_08"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3038049/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3038049/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_06"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3038375/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3038375/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_02"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2970749/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2970749/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_83"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2971090/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2971090/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_94"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2973362/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2973362/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_81"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2975248/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2975248/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_76"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2975249/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2975249/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_77"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2984887/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2984887/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_64"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2984986/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2984986/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_63"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2994111/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2994111/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_54"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2997524/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2997524/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_46"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2997857/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2997857/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_45"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2997861/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2997861/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_44"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/2997870/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/2997870/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_42"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3012804/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3012804/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_37"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3012805/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3012805/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_36"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3013663/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3013663/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_68"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3013719/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3013719/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_87"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3013726/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3013726/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_65"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3013736/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3013736/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_74"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3013737/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3013737/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_70"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3013757/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3013757/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_52"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3013760/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3013760/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_43"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3013767/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3013767/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_31"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3013793/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3013793/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_2B"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3016670/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3016670/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_30"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3019317/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3019317/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_27"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3019599/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3019599/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_91"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3023423/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3023423/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_21"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3026646/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3026646/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_16"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3037147/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3037147/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_07"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3038050/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3038050/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_04"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3038111/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3038111/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_03"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3038422/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3038422/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_01"/>
-	</Feature>
-	<Feature rdf:about="http://sws.geonames.org/3023414/">
+	</gn:Feature>
+	<gn:Feature rdf:about="http://sws.geonames.org/3023414/">
 		<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/DEP_22"/>
-	</Feature>
+	</gn:Feature>
 </rdf:RDF>

@@ -13,6 +13,13 @@ import com.github.masalthunlass.complex.model.utils.ModelUtil;
 import com.github.masalthunlass.complex.model.utils.PairingUtil;
 import com.github.masalthunlass.complex.model.utils.StatsUtil;
 import com.github.masalthunlass.complex.model.utils.StatsUtil.Unit;
+import com.hp.hpl.jena.query.Query;
+import com.hp.hpl.jena.query.QueryExecution;
+import com.hp.hpl.jena.query.QueryExecutionFactory;
+import com.hp.hpl.jena.query.QueryFactory;
+import com.hp.hpl.jena.query.ResultSet;
+import com.hp.hpl.jena.query.ResultSetFormatter;
+import com.hp.hpl.jena.query.Syntax;
 import com.hp.hpl.jena.rdf.model.Model;
 
 public class MainTest {
@@ -46,10 +53,30 @@ public class MainTest {
 		System.out.println(StatsUtil.formatMemory(
 				StatsUtil.getMemoryUsed(Runtime.getRuntime()), Unit.MB));
 
-		System.out.println(ModelUtil.generateModel(DataEnum.GEONAMES,
-				SourcesEnum.MEMORY));
-		System.out.println(ModelUtil.generateModel(DataEnum.PASSIM,
-				SourcesEnum.MEMORY));
+		PairingDescription desc = new PairingDescription();
+		desc.definePairing(DataEnum.GEONAMES, SourcesEnum.SDB);
+		desc.definePairing(DataEnum.PASSIM, SourcesEnum.MEMORY);
+		desc.definePairing(DataEnum.INSEECOG, SourcesEnum.MEMORY);
+		desc.definePairing(DataEnum.INSEEPOP, SourcesEnum.MEMORY);
+		desc.definePairing(DataEnum.ISF, SourcesEnum.MEMORY);
+		desc.definePairing(DataEnum.MONUMENTS, SourcesEnum.MEMORY);
+
+		// Model model = desc.getCorrespondingModel();
+		Model model = ModelUtil.generateModel(DataEnum.GEONAMES,
+				SourcesEnum.SDB);
+
+		String queryString = "SELECT * { ?s ?p ?o } LIMIT 10";
+
+		Query query = QueryFactory.create(queryString,Syntax.syntaxSPARQL);
+		QueryExecution exec = QueryExecutionFactory.create(query, model);
+
+		try {
+			ResultSet rs = exec.execSelect();
+			ResultSetFormatter.out(System.out, rs, query);
+		} catch (Exception e) {
+		} finally {
+			exec.close();
+		}
 
 		System.out.println(StatsUtil.formatMemory(
 				StatsUtil.getMemoryUsed(Runtime.getRuntime()), Unit.MB));

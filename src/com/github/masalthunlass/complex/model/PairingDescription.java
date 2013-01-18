@@ -151,7 +151,7 @@ public class PairingDescription {
 			if (model == null) {
 				model = ModelUtil.generateModel(entry_key, entry_value);
 			} else {
-				model = model.add(ModelUtil.generateModel(entry_key,
+				model = model.union(ModelUtil.generateModel(entry_key,
 						entry_value));
 			}
 		}

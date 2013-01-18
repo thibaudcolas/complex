@@ -12,12 +12,12 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class AppServlet
  */
-@WebServlet("/AppServlet")
+// @WebServlet("/AppServlet")
 public class AppServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	private static String sdb_user;
-	private static String sdb_password;
+	private static String sdb_user = "sdb";
+	private static String sdb_password = "password";
 
 	// Init function
 	@Override

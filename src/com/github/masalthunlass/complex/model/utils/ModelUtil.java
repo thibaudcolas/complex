@@ -3,6 +3,7 @@ package com.github.masalthunlass.complex.model.utils;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import com.github.masalthunlass.complex.controller.AppServlet;
 import com.github.masalthunlass.complex.exceptions.ModelException;
 import com.github.masalthunlass.complex.model.enums.DataEnum;
 import com.github.masalthunlass.complex.model.enums.SourcesEnum;
@@ -58,17 +59,19 @@ public class ModelUtil {
 		tdbPath += data.toString().toLowerCase() + "/";
 		Dataset ds = TDBFactory.createDataset(tdbPath);
 		System.out.println("Creating TDB Model width path " + tdbPath);
-		return ds.getDefaultModel(); // TODO resolve null pointer exception
-										// here...
+		Model model = ds.getDefaultModel();
+		return model; // TODO resolve null pointer exception
+						// here...
 	}
 
 	private static Model getSDBModel(DataEnum data)
 			throws FileNotFoundException, IOException {
+		System.setProperty("jena.db.user", AppServlet.getSdbUser());
+		System.setProperty("jena.db.password", AppServlet.getSdbPassword());
 		String configPath = PropertiesUtil.getDataProperty(data, "sdb_config");
 		Store store = SDBFactory.connectStore(PropertiesUtil
 				.getPropertiesPath() + "/" + configPath);
 		Dataset ds = DatasetStore.create(store);
-
 		return ds.getDefaultModel(); // TODO Vérifier ça :)
 	}
 

@@ -1,9 +1,7 @@
 package com.github.masalthunlass.complexgen;
 
-
 import java.util.HashMap;
 import java.util.Set;
-
 
 import com.hp.hpl.jena.query.Dataset;
 import com.hp.hpl.jena.rdf.model.Model;
@@ -15,8 +13,8 @@ import com.hp.hpl.jena.util.FileManager;
 public class InitSDB {
 
 	private static final String WORKING_DIRECTORY = ".";
-	private static final String DB_USER = "";
-	private static final String DB_PASSWD = "";
+	private static final String DB_USER = "sdb";
+	private static final String DB_PASSWD = "password";
 
 	private static HashMap<String, String> file_path;
 	private static HashMap<String, String> config_path;
@@ -24,20 +22,20 @@ public class InitSDB {
 
 	private static void initPathFiles() {
 		file_path = new HashMap<String, String>();
-		// file_path.put("inseepop", "/resources/data/rdf/inseepop.rdf");
-		// file_path.put("inseecog", "/resources/data/rdf/inseecog.rdf");
+		file_path.put("inseepop", "/resources/data/rdf/inseepop.rdf");
+		file_path.put("inseecog", "/resources/data/rdf/inseecog.rdf");
 		file_path.put("geonames", "/resources/data/rdf/geonames.rdf");
 		file_path.put("passim", "/resources/data/rdf/passim.rdf");
-		// file_path.put("isf", "/resources/data/rdf/isf.rdf");
-		// file_path.put("monuments", "/resources/data/rdf/monuments.rdf");
+		file_path.put("isf", "/resources/data/rdf/isf.rdf");
+		file_path.put("monuments", "/resources/data/rdf/monuments.rdf");
 
 		config_path = new HashMap<String, String>();
-		// config_path.put("inseepop", "/conf/sdb-inseepop.ttl");
-		// config_path.put("inseecog", "/conf/sdb-inseecog.ttl");
+		 config_path.put("inseepop", "/conf/sdb-inseepop.ttl");
+		 config_path.put("inseecog", "/conf/sdb-inseecog.ttl");
 		config_path.put("geonames", "/conf/sdb-geonames.ttl");
 		config_path.put("passim", "/conf/sdb-passim.ttl");
-		// config_path.put("isf", "/conf/sdb-isf.ttl");
-		// config_path.put("monuments", "/conf/sdb-monuments.ttl");
+		 config_path.put("isf", "/conf/sdb-isf.ttl");
+		 config_path.put("monuments", "/conf/sdb-monuments.ttl");
 	}
 
 	/**
@@ -66,11 +64,12 @@ public class InitSDB {
 	}
 
 	private static void initBDD() {
-		System.setProperty("jena.db.user", DB_USER );
+		System.setProperty("jena.db.user", DB_USER);
 		System.setProperty("jena.db.password", DB_PASSWD);
 		Set<String> keys = config_path.keySet();
 		for (String key : keys) {
-			Store store = SDBFactory.connectStore(WORKING_DIRECTORY + config_path.get(key)) ;
+			Store store = SDBFactory.connectStore(WORKING_DIRECTORY
+					+ config_path.get(key));
 			store.getTableFormatter().create();
 			stores.put(key, store);
 		}

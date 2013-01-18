@@ -29,8 +29,8 @@ public class TestJenaSDB {
 		String configPath = "./conf/sdb-xeround-complex.ttl";
 
 		// TODO Ajouter login et password.
-		System.setProperty("jena.db.user", "");
-		System.setProperty("jena.db.password", "");
+		System.setProperty("jena.db.user", "sdb-user");
+		System.setProperty("jena.db.password", "complex");
 
 		// Must be a DatasetStore to trigger the SDB query engine.
 		// Creating a graph from the Store, and adding it to a general purpose

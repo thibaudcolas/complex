@@ -8,6 +8,7 @@ import com.github.masalthunlass.complex.model.enums.DataEnum;
 import com.github.masalthunlass.complex.model.enums.SourcesEnum;
 import com.hp.hpl.jena.query.Dataset;
 import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.sdb.SDBFactory;
 import com.hp.hpl.jena.sdb.Store;
 import com.hp.hpl.jena.sdb.store.DatasetStore;
@@ -77,7 +78,16 @@ public class ModelUtil {
 	}
 
 	private static Model getMemoryModel(DataEnum data) {
-		// TODO retourner le modèle Memory correspondant au jeu de données
-		return null;
+		Model model = ModelFactory.createDefaultModel(); // createDefaultModel
+															// crée par défault
+															// un model
+															// memory-based
+		String data_path = ResourcesUtil.getProjectPath()
+				+ ResourcesUtil.getDataPath(data);
+		System.out.println("Generating in memory model from file: "
+				+ ResourcesUtil.getProjectPath()
+				+ ResourcesUtil.getDataPath(data));
+		model.read("file://" + data_path);
+		return model;
 	}
 }

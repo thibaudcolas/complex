@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Set;
 
 import com.github.masalthunlass.complex.model.enums.DataEnum;
+import com.github.masalthunlass.complex.model.utils.ResourcesUtil;
 import com.hp.hpl.jena.query.Dataset;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.tdb.TDBFactory;
@@ -15,24 +16,11 @@ public class InitTDB {
 	private static final String BASE_PATH = "/tdb";
 	private static final String WORKING_DIRECTORY = ".";
 
-	private static HashMap<String, String> file_path;
-
-	private static void initPathFiles() {
-		file_path = new HashMap<String, String>();
-		// file_path.put("inseepop", "/resources/data/rdf/inseepop.rdf");
-		// file_path.put("inseecog", "/resources/data/rdf/inseecog.rdf");
-		file_path.put("geonames", "/resources/data/rdf/geonames.rdf");
-		file_path.put("passim", "/resources/data/rdf/passim.rdf");
-		// file_path.put("isf", "/resources/data/rdf/isf.rdf");
-		// file_path.put("monuments", "/resources/data/rdf/monuments.rdf");
-	}
-
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		System.out.println("INITIALISATION DES FICHIERS TDB");
-		initPathFiles();
 		System.out.println("Suppression des répertoires TDB");
 		suppressDirectories();
 		System.out.println("Création des répertoires TDB");
@@ -67,6 +55,7 @@ public class InitTDB {
 	}
 
 	private static void importData() {
+		HashMap<String, String> file_path = ResourcesUtil.getFilePath();
 		Set<String> keys = file_path.keySet();
 		for (String key : keys) {
 			System.out.println("\tImportation données " + key);

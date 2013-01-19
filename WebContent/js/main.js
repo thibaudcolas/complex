@@ -33,8 +33,10 @@ jQuery(document).ready(function($) {
   });
 
   // Loads the queries from a JSON file.
+  // 'http://localhost:8080/Complex/default-queries'
   $.getJSON('data/queries.json', function(data) {
     var firstQuery;
+    console.log('SuCCESS');
     // $.each(data.queries, function(key, val) {
     //   // Initialize the editor with the first Query.
     //   firstQuery = firstQuery ? firstQuery : query;
@@ -50,6 +52,8 @@ jQuery(document).ready(function($) {
     $querySelect.first().attr('selected', true);
     queryEditor.setValue($('<div/>').html(firstQuery.string).text());
     reloadReferencedNamespaces();
+  }).error(function() {
+    console.log('Failure');
   });
 
   // Manages extracting namespace URIs from the query string.

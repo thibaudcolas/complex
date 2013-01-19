@@ -41,6 +41,7 @@ public class TestJenaD2RQ {
 			ResultSet rs = exec.execSelect();
 			ResultSetFormatter.out(System.out, rs, query);
 		} catch (Exception e) {
+			e.printStackTrace();
 		} finally {
 			exec.close();
 		}

@@ -67,6 +67,7 @@ public class InitTDB {
 			Model model = ds.getDefaultModel();
 			FileManager.get().readModel(model, WORKING_DIRECTORY + rdfpath);
 			System.out.println("\t ->" + model.size() + " triplets insérés");
+			ds.close();
 		}
 	}
 }

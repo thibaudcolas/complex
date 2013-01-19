@@ -253,7 +253,6 @@
      *
      */
 
-
     visualization.charts = {
         // Package for handling rendering functions.
 
@@ -275,6 +274,7 @@
                 { 'id': "gGeoChart",         'func': google.visualization.GeoChart, 'title' : 'Geo Chart'},
                 { 'id': "gGeoMap",           'func': google.visualization.GeoMap, 'title' : 'Geo Map'},
                 { 'id': "gMap",              'func': google.visualization.Map, 'title' : 'Map'},
+                // This one is defined by us.
                 { 'id': "dForceGraph",       'func': visualization.chart.dForceGraph, 'title' : 'D3 Force Graph'}
             ];
             $.merge(this.all, googlecharts);

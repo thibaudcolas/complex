@@ -74,9 +74,11 @@ jQuery(document).ready(function($) {
   // Calls the prefix.cc API to add namespaces to our query.
   $('#prefix-button').click(function (e){
     e.preventDefault();
-    prefixId = $('#prefix-text').val();
-    $.getJSON('http://prefix.cc/'+prefixId+'.file.json', function(data) {
-      newPrefix = 'PREFIX ' + prefixId + ': ';
+    var prefixId = $('#prefix-text').val();
+    // API Documentation : http://prefix.cc/about/api
+    var prefixCallURL = 'http://prefix.cc/'+prefixId+'.file.json';
+
+    $.getJSON(prefixCallURL, function(data) {
       $.each(data, function(key, val) {
         prependToEditor('PREFIX ' + prefixId + ': ' + '<' + val + '>\n');
       });
@@ -146,6 +148,7 @@ jQuery(document).ready(function($) {
 
       // Add an help block which describes the data source.
       datasourceHTML += '</select><p class="help-block">'+data.datasources[i].description+'</p></div></fieldset>';
+      // Jump line if necessary.
       if (i !== 0 && (i + 1) % 3 === 0) {
         environmentHTML += '<div class="row-fluid">'+datasourceHTML+'</div>';
         datasourceHTML = '';
@@ -199,6 +202,7 @@ jQuery(document).ready(function($) {
   }
 
   function storageSetJSON(key, json) {
+    // Stringify and parse allow us to store JSON as String (ie serialization).
     var storedObject = JSON.stringify(json);
     localStorage.setItem(key, storedObject);
   }
@@ -290,14 +294,24 @@ var svg = d3.select("#benchmark").append("svg")
   x.domain(d3.extent(data, function(d) { return d.time; }));
   y.domain(d3.extent(data, function(d) { return d.count; }));
 
+  // Draws the x axis.
   svg.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
-      .call(xAxis);
+      .call(xAxis)
+      // Draws the label.
+    .append("text")
+      .attr("y", -20)
+      .attr("x", width)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("Response time");
 
+  // Draws the ordinate axis.
   svg.append("g")
       .attr("class", "y axis")
       .call(yAxis)
+      // Draws the label.
     .append("text")
       .attr("transform", "rotate(-90)")
       .attr("y", 6)
@@ -305,6 +319,7 @@ var svg = d3.select("#benchmark").append("svg")
       .style("text-anchor", "end")
       .text("Triples");
 
+  // Draws the data line.
   svg.append("path")
       .datum(data)
       .attr("class", "line")

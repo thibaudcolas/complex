@@ -134,10 +134,10 @@ jQuery(document).ready(function($) {
     }
 
     for (var i = 0; i < data.datasources.length; i++) {
-      datasourceHTML += '<fieldset class="span4"><legend>'+data.datasources[i].title+'<small class="pull-right">'+data.datasources[i].size+'Mo</small></legend><div class="control-group"><select form="query-form" class="environment-select" data-source="'+data.datasources[i].name+'">';
+      datasourceHTML += '<fieldset class="span4"><legend>'+data.datasources[i].title+'<small class="pull-right">'+data.datasources[i].size+'Mo</small></legend><div class="control-group"><select name="'+data.datasources[i].name+'" form="query-form" class="environment-select" data-source="'+data.datasources[i].name+'">';
 
       for (var k = 0; k < data.datasources[i].locations.length; k++) {
-        datasourceHTML += '<option data-name="'+data.datasources[i].locations[k]+'">'+datastores[data.datasources[i].locations[k]].title+'</option>';
+        datasourceHTML += '<option value="'+data.datasources[i].locations[k]+'">'+datastores[data.datasources[i].locations[k]].title+'</option>';
       }
 
       datasourceHTML += '</select><p class="help-block">'+data.datasources[i].description+'</p></div></fieldset>';
@@ -157,6 +157,31 @@ jQuery(document).ready(function($) {
   $("#chart-type-select").change(function (){
     visualization.drawChart($(this).val());
   });
+
+  /**
+   * History
+   * ---------------------------------------------------------------------
+   */
+
+  $.getJSON('data/history.json', function(data) {
+    for (var i=0; i < data.items.length; i++) {
+      addHistoryItem(data.items[i], i);
+    }
+  });
+
+  function addHistoryItem(item, index) {
+    var htmlHistoryItem = '';
+    var itemEnvironment = JSON.stringify(item.environment);
+    var displayQuery = decodeURIComponent(item.query).replace(/\+/g,' ').replace(/\n/g, ' ');
+    displayQuery = displayQuery.substring(displayQuery.indexOf('SELECT'));
+
+    htmlHistoryItem += '<time class="add-on history-timestamp">'+item.timestamp+'</time>';
+    htmlHistoryItem += '<input type="text" data-query="'+item.query+'" data-env="'+itemEnvironment+'" value="'+displayQuery+'" id="history-item'+index+'" class="history-query span3" disabled/>';
+    htmlHistoryItem += '<p class="add-on">'+itemEnvironment.replace(/"/g,'')+'</p>';
+    htmlHistoryItem += '<button class="btn history-btn" type="button">Reuse</button>';
+
+    $('.history-items').append('<div class="row-fluid"><div class="input-prepend input-append span12">'+htmlHistoryItem+'</div></div>');
+  }
 
   /**
    * About

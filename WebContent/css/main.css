@@ -133,6 +133,10 @@ header > .f3 {
  * ---------------------------------------------------------------------
  */
 
+#chart-type-select {
+  width:90%;
+}
+
 /*
  * Benchmark
  * ---------------------------------------------------------------------
@@ -144,11 +148,8 @@ header > .f3 {
  */
 
 .history-header {
-
-}
-
-#history textarea {
-  resize: none;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
 }
 
 /*

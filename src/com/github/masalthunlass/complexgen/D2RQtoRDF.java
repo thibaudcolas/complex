@@ -11,7 +11,7 @@ import de.fuberlin.wiwiss.d2rq.jena.ModelD2RQ;
 public class D2RQtoRDF {
 	
 	private static final String mappingPath = "./conf/mapping-isf.ttl";
-	private static final String sortie  = "./resources/isf.rdf";
+	private static final String sortie  = "./resources/data/rdf/isf.rdf";
 
 	public static void writeRDF(Model rdf) throws IOException	{
 		File f = new File(sortie);
@@ -26,8 +26,10 @@ public class D2RQtoRDF {
 	public static void main(String[] args) {
 
 	  	Model m = new ModelD2RQ("file:" + mappingPath);
+	  	System.out.println("taille du modèle : " + m.size());
+	  
 	  	try {
-	  		System.out.println("generation" + sortie);
+	  		System.out.println("generation de " + sortie + " en cours");
 	  		writeRDF(m);
 	  		System.out.println(sortie + "généré");
 	  	} catch(IOException e) {

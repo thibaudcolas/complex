@@ -35,12 +35,18 @@ jQuery(document).ready(function($) {
   // Loads the queries from a JSON file.
   $.getJSON('data/queries.json', function(data) {
     var firstQuery;
-    $.each(data, function(key, query) {
-      // Initialize the editor with the first Query.
-      firstQuery = !firstQuery ? query : firstQuery;
-      // All the queries are put into the select with custom data attributes.
-      $querySelect.append('<option value="'+key+'" data-query="'+query.string+'" data-description="'+query.description+'">'+query.title+'</option>');
-    });
+    // $.each(data.queries, function(key, val) {
+    //   // Initialize the editor with the first Query.
+    //   firstQuery = firstQuery ? firstQuery : query;
+    //   // All the queries are put into the select with custom data attributes.
+    //   $querySelect.append('<option value="'+key+'" data-query="'+query.string+'" data-description="'+query.description+'">'+query.title+'</option>');
+    // });
+    var query;
+    for (var i = 0; i < data.queries.length; i++) {
+      query = data.queries[i];
+      firstQuery = firstQuery ? firstQuery : query;
+      $querySelect.append('<option value="'+query.name+'" data-query="'+query.string+'" data-description="'+query.description+'">'+query.title+'</option>');
+    }
     $querySelect.first().attr('selected', true);
     queryEditor.setValue($('<div/>').html(firstQuery.string).text());
     reloadReferencedNamespaces();

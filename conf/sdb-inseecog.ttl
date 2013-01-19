@@ -20,6 +20,6 @@
 <#conn> rdf:type sdb:SDBConnection ;
     sdb:sdbType       "Postgresql" ;
     sdb:sdbHost       "localhost" ;
-    sdb:sdbName       "sdb_geonames"; # nom de la base
+    sdb:sdbName       "sdb_inseecog"; # nom de la base
     sdb:driver        "org.postgresql.Driver" ;
     .

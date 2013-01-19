@@ -7,7 +7,7 @@
         <link rel="dns-prefetch" href="//ajax.googleapis.com">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <title>Bench</title>
+        <title>Triple Bench</title>
 
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
@@ -32,7 +32,7 @@
 
                 <a href="https://github.com/masalthunlass/complex"><img style="position: absolute; top: 0; right: 5%; border: 0;" src="img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
 
-                <h1>Bench <img src="img/bench-logo.png"> <small>Find a sturdy home for your triples</small></h1>
+                <h1>Triple Bench <img src="img/bench-logo.png"> <small>Find a sturdy home for your triples</small></h1>
             </header>
 
             <div class="tabbable tabs-left">
@@ -122,16 +122,12 @@
                     </div>
 
                     <div class="tab-pane active" id="visualization">
-
-                        <div id="google-chart" style="height:350px;"></div>
-                        <form method="get" id="chart-type" class="form-inline">
-                            <div class="input-prepend input-append">
-                                <span class="add-on"><i class="icon-refresh"></i></span>
-                                <select name="type" id="chart-type-select"></select>
-                                <button class="btn" onclick="sgvizler.ui.submitQuery()">Refresh</button>
-                            </div>
-                        </form>
-
+                        <div id="google-chart" style="height:350px"></div>
+                        <div class="input-prepend input-append">
+                            <span class="add-on"><i class="icon-refresh"></i></span>
+                            <select name="type" id="chart-type-select"></select>
+                            <p class="add-on">Refresh</p>
+                        </div>
                     </div>
 
                     <!-- TODO : due thursday evening. -->
@@ -189,9 +185,9 @@
                         <div class="row-fluid">
                             <div class="span6">
                                 <p>
-                                    Bench is an experiment around RDF storage performance and RDF exploration via SPARQL.
+                                    Triple Bench is an experiment around RDF storage performance and RDF exploration via SPARQL.
                                     It was built by four master students of the <a href="http://www.univ-montp2.fr">Université Montpellier 2</a> during a course on Semantic Web technologies and NoSQL databases.
-                                    Bench tries to combine the best of both worlds and to experiment with as much data and as much storage solutions possible to compare them and make them stand out from each others.
+                                    Triple Bench tries to combine the best of both worlds and to experiment with as much data and as much storage solutions as possible to compare them and make them stand out from each other.
                                 </p>
                             </div>
                             <div class="span6">
@@ -229,11 +225,11 @@
         <script src="js/lib/codemirror/searchcursor.js"></script>
         <script src="js/lib/codemirror/match-highlighter.js"></script>
         <script src="js/lib/codemirror/sparql.js"></script>
-        <script src="js/lib/sgvizler.js"></script>
         <script type="text/javascript">
             // Tells the Google Loader what to load from the Visualization API.
             google.load('visualization', '1.0', {'packages':['annotatedtimeline','corechart','gauge','geomap','geochart','imagesparkline','map','orgchart','table','motionchart','treemap']});
         </script>
+        <script src="js/visualization.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>

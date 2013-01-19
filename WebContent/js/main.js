@@ -99,7 +99,7 @@ jQuery(document).ready(function($) {
     $queryResult = data;
     $resultsColumns.append('<th>'+data.head.vars.join('</th><th>')+'</th>');
 
-    sgvizler.go(data, 'gLineChart');
+    visualization.go(data, 'gLineChart');
 
     // Then we retrieve the data itself.
     for (var j = 0; j < data.results.bindings.length; j++) {
@@ -155,7 +155,7 @@ jQuery(document).ready(function($) {
    */
 
   $("#chart-type-select").change(function (){
-    sgvizler.drawChart($(this).val());
+    visualization.drawChart($(this).val());
   });
 
   /**

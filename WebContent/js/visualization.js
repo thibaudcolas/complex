@@ -2,13 +2,13 @@
  *  (c) 2011--2012 Martin G. Skjæveland
  *
  *  Sgvizler is freely distributable under the terms of an MIT-style license.
- *  Sgvizler web site: https://code.google.com/p/sgvizler/
+ *  Sgvizler web site: https://code.google.com/p/visualization/
  *--------------------------------------------------------------------------*/
 (function (global) {
 
    // "use strict";
 
-    var sgvizler = {
+    var visualization = {
         jsonData : {},
         chartType : 'gLineChart',
 
@@ -16,24 +16,24 @@
             jsonData = json;
 
             // Loads Google Visualization charts functions.
-            sgvizler.charts.loadCharts();
+            visualization.charts.loadCharts();
 
             // Add all charts to the charts select.
             var optionsHTML = '';
-            sgvizler.charts.all.forEach(function (chart) {
+            visualization.charts.all.forEach(function (chart) {
                 optionsHTML += '<option value="'+chart.id+'">'+chart.title+'</option>';
             });
-            $('#' + this.ui.id.chartSelect).append(optionsHTML);
+            $('#' + this.ui.chartSelect).append(optionsHTML);
 
-            sgvizler.drawChart(chart);
+            visualization.drawChart(chart);
         },
 
         drawChart: function (chart) {
             chartType = chart;
-            var query = new sgvizler.query();
+            var query = new visualization.query();
             query.draw();
 
-            $('#' + this.ui.id.chartSelect).val(query.chart);
+            $('#' + this.ui.chartSelect).val(query.chart);
         },
 
         option: {
@@ -50,22 +50,15 @@
         ui: {}       // html get/set functions.
     };
 
-    sgvizler.ui = {
-        id: {
-            chartContainer:     'google-chart',
-            queryForm:    'chart-type',
-            chartSelect:    'chart-type-select'
-        },
-
-        submitQuery: function () {
-            $('#' + this.id.queryForm).submit();
-        }
+    visualization.ui = {
+        chartContainer:     'google-chart',
+        chartSelect:    'chart-type-select'
     };
 
 
 
 
-    sgvizler.query = function () {
+    visualization.query = function () {
         this.chart = chartType;
 
         this.chartOptions = {
@@ -76,21 +69,21 @@
         };
     };
 
-    sgvizler.query.prototype.draw = function () {
+    visualization.query.prototype.draw = function () {
         var that = this;
         // Retrieve the  function related to the given chart.
-        var chartFunc = sgvizler.charts.getChart(this.chart);
+        var chartFunc = visualization.charts.getChart(this.chart);
         this.setChartSpecificOptions();
 
         // Draw the chart using the Google API.
-        this.noRows = sgvizler.parser.countRowsSparqlJSON(jsonData);
+        this.noRows = visualization.parser.countRowsSparqlJSON(jsonData);
         if (this.noRows) {
-            chartFunc.draw(new google.visualization.DataTable(sgvizler.parser.SparqlJSON2GoogleJSON(jsonData)), this.chartOptions);
+            chartFunc.draw(new google.visualization.DataTable(visualization.parser.SparqlJSON2GoogleJSON(jsonData)), this.chartOptions);
         }
     };
 
     // Goes through the chartOptions associative array and retrieves the chart options for the current chart.
-    sgvizler.query.prototype.setChartSpecificOptions = function () {
+    visualization.query.prototype.setChartSpecificOptions = function () {
         var level1;
         var level2;
         for (level1 in this.chartOptions) {
@@ -130,7 +123,7 @@
      *
      */
 
-    sgvizler.parser = {
+    visualization.parser = {
 
         // variable notation: xtable, xcol(s), xrow(s) -- x is 's'(parql) or 'g'(oogle).
 
@@ -211,9 +204,6 @@
                         value.substr(3, 2),
                         value.substr(6, 2)];
             } else { // datatype === 'string' || datatype === 'boolean'
-                if (stype === 'uri') { // replace namespace with prefix
-                    newvalue = this.prefixify(value);
-                }
                 newvalue = value;
             }
             return newvalue;
@@ -221,7 +211,7 @@
 
         getGoogleJsonDatatype: function (stype, sdatatype) {
             var gdatatype = this.defaultGDatatype,
-                xsdns = sgvizler.option.namespace.xsd;
+                xsdns = visualization.option.namespace.xsd;
             if (typeof stype !== 'undefined' && (stype === 'typed-literal' || stype === 'literal')) {
                 if (sdatatype === xsdns + "float"   ||
                         sdatatype === xsdns + "double"  ||
@@ -241,27 +231,6 @@
                 }
             }
             return gdatatype;
-        },
-
-        prefixify: function (url) {
-            var ns;
-            for (ns in sgvizler.option.namespace) {
-                if (sgvizler.option.namespace.hasOwnProperty(ns) &&
-                        url.lastIndexOf(sgvizler.option.namespace[ns], 0) === 0) {
-                    return url.replace(sgvizler.option.namespace[ns], ns + ":");
-                }
-            }
-            return url;
-        },
-        unprefixify: function (qname) {
-            var ns;
-            for (ns in sgvizler.option.namespace) {
-                if (sgvizler.option.namespace.hasOwnProperty(ns) &&
-                        qname.lastIndexOf(ns + ":", 0) === 0) {
-                    return qname.replace(ns + ":", sgvizler.option.namespace[ns]);
-                }
-            }
-            return qname;
         }
     };
 
@@ -292,7 +261,7 @@
      */
 
 
-    sgvizler.charts = {
+    visualization.charts = {
         // Package for handling rendering functions.
 
         all: [],
@@ -318,7 +287,7 @@
                 { 'id': "gGeoChart",         'func': google.visualization.GeoChart, 'title' : 'Geo Chart'},
                 { 'id': "gGeoMap",           'func': google.visualization.GeoMap, 'title' : 'Geo Map'},
                 { 'id': "gMap",              'func': google.visualization.Map, 'title' : 'Map'},
-                { 'id': "dForceGraph",       'func': sgvizler.chart.dForceGraph, 'title' : 'D3 Force Graph'}
+                { 'id': "dForceGraph",       'func': visualization.chart.dForceGraph, 'title' : 'D3 Force Graph'}
             ];
             $.merge(this.all, googlecharts);
         },
@@ -326,7 +295,7 @@
         getChart: function (chartId) {
             for (var i = 0; i < this.all.length; i += 1) {
                 if (chartId === this.all[i].id) {
-                    return new this.all[i].func(document.getElementById(sgvizler.ui.id.chartContainer));
+                    return new this.all[i].func(document.getElementById(visualization.ui.chartContainer));
                 }
             }
         }
@@ -336,8 +305,8 @@
     /** dForceGraph **
         D3 force directed graph.
     */
-    sgvizler.chart.dForceGraph = function (container) { this.container = container; };
-    sgvizler.chart.dForceGraph.prototype = {
+    visualization.chart.dForceGraph = function (container) { this.container = container; };
+    visualization.chart.dForceGraph.prototype = {
         id:   "dForceGraph",
         draw: function (data, chartOpt) {
             var noColumns = data.getNumberOfColumns(),
@@ -491,6 +460,6 @@
     };
 
 
-    global.sgvizler = sgvizler;
+    global.visualization = visualization;
 
 }(window));

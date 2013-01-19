@@ -29,5 +29,10 @@ local.properties
 
 build/**
 apache-tomcat-7.0.32/**
+apache-tomcat-7.0.34/**
+
 # Strange files
 catalog-v001.xml
+
+# Checkstyle config
+.checkstyle

@@ -1,6 +1,6 @@
-@prefix map: <file://mapping-isf.ttl#> .
+@prefix map: <file:mapping-isf.ttl#> .
 @prefix db: <> .
-@prefix vocab: <vocab/> .
+@prefix vocab: <http://impot#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -9,22 +9,22 @@
 
 map:database a d2rq:Database;
 	d2rq:jdbcDriver "org.postgresql.Driver";
-	d2rq:jdbcDSN "jdbc:postgresql://localhost:5432/db-name";
+	d2rq:jdbcDSN "jdbc:postgresql://localhost/";
 	d2rq:username "user";
-	d2rq:password "passwd";
+	d2rq:password "pasword";
 	.
 
 # Table impot
 map:impot a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
-	d2rq:uriPattern "impot/@@impot.codeinsee|urlify@@/@@impot.annee@@";
+	d2rq:uriPattern "http://impot#@@impot.codeinsee|urlify@@/@@impot.annee@@";
 	d2rq:class vocab:impot;
 	d2rq:classDefinitionLabel "impot";
 	.
 map:impot__label a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:impot;
 	d2rq:property rdfs:label;
-	d2rq:pattern "impot #@@impot.codeinsee@@/@@impot.annee@@";
+	d2rq:pattern "http://impot#@@impot.codeinsee@@/@@impot.annee@@";
 	.
 map:impot_codeinsee a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:impot;

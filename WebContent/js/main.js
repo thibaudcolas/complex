@@ -163,9 +163,34 @@ jQuery(document).ready(function($) {
    * ---------------------------------------------------------------------
    */
 
+  var historyKey = 'queryHistory';
+  storageSetJSON(historyKey, {"items" : [{
+    "timestamp" : "05:13:25",
+    "query" : "PREFIX+a%3A+<http%3A%2F%2Fwww.w3.org%2F2000%2F10%2Fannotation-ns%23>%0D%0APREFIX+dc%3A+<http%3A%2F%2Fpurl.org%2Fdc%2Felements%2F1.1%2F>%0D%0APREFIX+foaf%3A+<http%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F>%0D%0A%0D%0A%23+Comment!%0D%0A%0D%0ASELECT+%3Fgiven+%3Ffamily%0D%0AWHERE+{%0D%0A++%3Fannot+a%3Aannotates+<http%3A%2F%2Fwww.w3.org%2FTR%2Frdf-sparql-query%2F>+.%0D%0A++%3Fannot+dc%3Acreator+%3Fc+.%0D%0A++OPTIONAL+{%3Fc+foaf%3Agiven+%3Fgiven+%3B%0D%0A+++++++++++++++foaf%3Afamily+%3Ffamily+}+.%0D%0A++FILTER+isBlank(%3Fc)%0D%0A+}",
+    "environment" : {
+      "inseecog" : "memory",
+      "inseepop" : "tdb",
+      "passim" : "sdb",
+      "d2rq" : "memory",
+      "isf" : "d2rq",
+      "taweb" : "sesame"
+    }
+  }]});
+
+  function storageGetJSON(key) {
+    var retrievedObject = localStorage.getItem(key);
+    return JSON.parse(retrievedObject);
+  }
+
+  function storageSetJSON(key, json) {
+    var storedObject = JSON.stringify(json);
+    localStorage.setItem(key, storedObject);
+  }
+
   $.getJSON('data/history.json', function(data) {
-    for (var i=0; i < data.items.length; i++) {
-      addHistoryItem(data.items[i], i);
+    var storageData = storageGetJSON(historyKey);
+    for (var i = storageData.items.length - 1; i >= Math.max(0, storageData.items.length - 6); i--) {
+      addHistoryItem(storageData.items[i], i);
     }
   });
 

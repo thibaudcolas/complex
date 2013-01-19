@@ -58,8 +58,7 @@
         this.chartOptions = {
             'chartArea': { left: '5%', top: '5%', width: '80%', height: '80%' },
             'gGeoMap': {'dataMode':'markers'},
-            'gMap': {'dataMode': 'markers'},
-            'gSparkline': {'showAxisLines': false}
+            'gMap': {'dataMode': 'markers'}
         };
     };
 
@@ -270,14 +269,9 @@
                 { 'id': "gBubbleChart",      'func': google.visualization.BubbleChart, 'title' : 'Bubble Chart'},
                 { 'id': "gColumnChart",      'func': google.visualization.ColumnChart, 'title' : 'Column Chart'},
                 { 'id': "gBarChart",         'func': google.visualization.BarChart, 'title' : 'Bar Chart'},
-                { 'id': "gSparkline",        'func': google.visualization.ImageSparkLine, 'title' : 'Image Spark Line'},
                 { 'id': "gScatterChart",     'func': google.visualization.ScatterChart, 'title' : 'Scatter Chart'},
-                { 'id': "gCandlestickChart", 'func': google.visualization.CandlestickChart, 'title' : 'Candlestick Chart'},
-                { 'id': "gGauge",            'func': google.visualization.Gauge, 'title' : 'Gauge'},
-                { 'id': "gOrgChart",         'func': google.visualization.OrgChart, 'title' : 'Org Chart'},
                 { 'id': "gTreeMap",          'func': google.visualization.TreeMap, 'title' : 'Tree Map'},
                 { 'id': "gTimeline",         'func': google.visualization.AnnotatedTimeLine, 'title' : 'Annotated TimeLine'},
-                { 'id': "gMotionChart",      'func': google.visualization.MotionChart, 'title' : 'Motion Chart'},
                 { 'id': "gGeoChart",         'func': google.visualization.GeoChart, 'title' : 'Geo Chart'},
                 { 'id': "gGeoMap",           'func': google.visualization.GeoMap, 'title' : 'Geo Map'},
                 { 'id': "gMap",              'func': google.visualization.Map, 'title' : 'Map'},

@@ -23,7 +23,7 @@
         },
 
         drawChart: function (chart) {
-            chartType = chart;
+            chartType = chart ? chart : chartType;
             var query = new visualization.query();
             query.draw();
 

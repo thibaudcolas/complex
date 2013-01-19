@@ -5,8 +5,8 @@
 	id="WebApp_ID" version="3.0">
 	<display-name>CoolComplex</display-name>
 	<servlet>
-		<servlet-name>complex</servlet-name>
-		<servlet-class>com.github.masalthunlass.complex.controller</servlet-class>
+		<servlet-name>app</servlet-name>
+		<servlet-class>com.github.masalthunlass.complex.controller.AppServlet</servlet-class>
 		<init-param>
 			<param-name>sdb_user</param-name>
 			<param-value>sdb</param-value>
@@ -16,9 +16,21 @@
 			<param-value>password</param-value>
 		</init-param>
 	</servlet>
+	<servlet>
+		<servlet-name>default_queries</servlet-name>
+		<servlet-class>com.github.masalthunlass.complex.controller.DefaultQueriesServlet</servlet-class>
+		<init-param>
+			<param-name>default_path_query_file</param-name>
+			<param-value>/home/thibaut/Documents/M2/mougenot/Part2/complex/conf/default-queries.json</param-value>
+		</init-param>
+	</servlet>
 	<servlet-mapping>
-		<servlet-name>complex</servlet-name>
-		<url-pattern>/complex</url-pattern>
+		<servlet-name>app</servlet-name>
+		<url-pattern>/request</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default_queries</servlet-name>
+		<url-pattern>/queries</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>/default.jsp</welcome-file>

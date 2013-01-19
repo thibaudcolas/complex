@@ -36,42 +36,42 @@
       "name" : "inseecog",
       "title" : "<a href=\"http://insee.fr/fr/\" title=\"Institut National de la Statistique et des Études Économiques\">INSEE</a> <a href=\"http://rdf.insee.fr/geo/index.html\" title=\"Code Officiel Géographique\">COG</a>",
       "description" : "French official geographical code, contains administrative geographical entities in France.",
-      "size" : "1",
+      "size" : "18",
       "locations" : ["memory", "tdb", "sdb", "neo4j", "sesame"]
     },
     {
       "name" : "inseepop",
       "title" : "<a href=\"http://insee.fr/fr/\" title=\"Institut National de la Statistique et des Études Économiques\">INSEE</a> <a href=\"http://rdf.insee.fr/demo/index.html\">Population</a>",
       "description" : "French offical census data of 2004 - 2011, divided by town.",
-      "size" : "2",
+      "size" : "19",
       "locations" : ["memory", "tdb", "sdb", "neo4j", "sesame"]
     },
     {
       "name" : "geonames",
       "title" : "<a href=\"http://www.geonames.org/ontology/documentation.html\">GeoNames</a> France",
       "description" : "The GeoNames geographical features database, restrained to France.",
-      "size" : "3",
+      "size" : "99",
       "locations" : ["memory", "tdb", "sdb", "neo4j", "sesame"]
     },
     {
       "name" : "passim",
       "title" : "<a href=\"http://www.passim.info/\">PASSIM</a> Directory",
       "description" : "French transport companies directory.",
-      "size" : "4",
+      "size" : "2",
       "locations" : ["memory", "tdb", "sdb", "neo4j", "sesame"]
     },
     {
       "name" : "isf",
       "title" : "<a href=\"http://www.nosdonnees.fr/package/isf2009\">ISF</a> Tax on wealth",
       "description" : "Tax data about the french tax on wealth.",
-      "size" : "5",
+      "size" : "1.5",
       "locations" : ["d2rq"]
     },
     {
       "name" : "taweb",
-      "title" : "TAWeb Monuments",
+      "title" : "TAWeb Museums",
       "description" : "Data provided by other M2 projects.",
-      "size" : "6",
+      "size" : "99",
       "locations" : ["memory", "tdb", "sdb", "neo4j", "sesame"]
     }
   ]

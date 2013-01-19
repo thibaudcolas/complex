@@ -139,7 +139,7 @@ jQuery(document).ready(function($) {
 
     // For each datasource, we create a fieldset with a select inside.
     for (var i = 0; i < data.datasources.length; i++) {
-      datasourceHTML += '<fieldset class="span4"><legend>'+data.datasources[i].title+'<small class="pull-right">'+data.datasources[i].size+'Mo</small></legend><div class="control-group"><select name="'+data.datasources[i].name+'" form="query-form" class="environment-select" data-source="'+data.datasources[i].name+'">';
+      datasourceHTML += '<fieldset class="span4"><legend>'+data.datasources[i].title+'<small class="pull-right"><i class="icon-hdd"></i> '+data.datasources[i].size+'Mo</small></legend><div class="control-group"><select name="'+data.datasources[i].name+'" form="query-form" class="environment-select" data-source="'+data.datasources[i].name+'">';
 
       // For each datastore bound to the datasource, we add an option to the select.
       for (var k = 0; k < data.datasources[i].locations.length; k++) {

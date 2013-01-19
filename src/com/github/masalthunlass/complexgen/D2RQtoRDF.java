@@ -10,7 +10,7 @@ import de.fuberlin.wiwiss.d2rq.jena.ModelD2RQ;
 
 public class D2RQtoRDF {
 	
-	private static final String mappingPath = "./conf/mapping-isf.ttl";
+	private static final String mappingPath = "./conf/d2rq-isf.ttl";
 	private static final String sortie  = "./resources/data/rdf/isf.rdf";
 
 	public static void writeRDF(Model rdf) throws IOException	{

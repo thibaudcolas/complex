@@ -25,7 +25,7 @@ public class TestJenaD2RQ {
 	private static Logger LOG = Logger.getLogger(TestJenaD2RQ.class);
 
 	public static void main(String[] args) {
-		String mappingPath = "./conf/mapping-isf.ttl";
+		String mappingPath = "./conf/d2rq-isf.ttl";
 		// Le ModelD2RQ est un modèle Jena utilisant un mapping D2RQ.
 		Model m = new ModelD2RQ("file:" + mappingPath);
 

@@ -24,12 +24,12 @@ public class PropertiesUtil {
 
 	/** Properties filenames */
 	private static String SOURCES_PATH = "sources.properties";
-	private static String SDB_GEONAMES_PATH = "sdb-geonames.properties";
-	private static String SDB_ISF_PATH = "sdb-geonames.properties";
-	private static String SDB_PASSIM_PATH = "sdb-passim.properties";
-	private static String SDB_INSEEPOP_PATH = "sdb-inseepop.properties";
-	private static String SDB_INSEECOG_PATH = "sdb-inseecog.properties";
-	private static String SDB_MONUMENTS_PATH = "sdb-monuments.properties";
+	private static String GEONAMES_PATH = "geonames.properties";
+	private static String ISF_PATH = "isf.properties";
+	private static String PASSIM_PATH = "passim.properties";
+	private static String INSEEPOP_PATH = "inseepop.properties";
+	private static String INSEECOG_PATH = "inseecog.properties";
+	private static String MONUMENTS_PATH = "monuments.properties";
 	private static String TDB_PATH = "tdb.properties";
 
 	/** Applications Path & values */
@@ -38,13 +38,13 @@ public class PropertiesUtil {
 
 	/** properties values */
 	private static Set<Entry<Object, Object>> sources_values = null;
-	private static Set<Entry<Object, Object>> sdb_geonames_values = null;
-	private static Set<Entry<Object, Object>> sdb_isf_values = null;
-	private static Set<Entry<Object, Object>> sdb_passim_values = null;
-	private static Set<Entry<Object, Object>> sdb_inseepop_values = null;
-	private static Set<Entry<Object, Object>> sdb_inseecog_values = null;
-	private static Set<Entry<Object, Object>> sdb_monuments_values = null;
-	private static Set<Entry<Object, Object>> tdb_values = null;
+	private static Set<Entry<Object, Object>> geonames_values = null;
+	private static Set<Entry<Object, Object>> isf_values = null;
+	private static Set<Entry<Object, Object>> passim_values = null;
+	private static Set<Entry<Object, Object>> inseepop_values = null;
+	private static Set<Entry<Object, Object>> inseecog_values = null;
+	private static Set<Entry<Object, Object>> monuments_values = null;
+	private static Set<Entry<Object, Object>> values = null;
 
 	public static String getPropertiesPath() {
 		return propertiesPath;
@@ -129,6 +129,7 @@ public class PropertiesUtil {
 			Entry<Object, Object> entry = (Entry<Object, Object>) it.next();
 			String entry_key = (String) entry.getKey();
 			String entry_value = (String) entry.getValue();
+//			System.out.println(entry_value);
 
 			if (entry_key.equalsIgnoreCase(key))
 				return entry_value;
@@ -167,9 +168,9 @@ public class PropertiesUtil {
 	 */
 	public static Set<Entry<Object, Object>> getTdbProperties()
 			throws FileNotFoundException, IOException {
-		if (tdb_values == null)
+		if (values == null)
 			loadProperties();
-		return tdb_values;
+		return values;
 	}
 
 	/**
@@ -189,29 +190,29 @@ public class PropertiesUtil {
 			throws FileNotFoundException, IOException {
 		switch (data) {
 		case GEONAMES:
-			if (sdb_geonames_values == null)
+			if (geonames_values == null)
 				loadProperties();
-			return sdb_geonames_values;
+			return geonames_values;
 		case INSEECOG:
-			if (sdb_inseecog_values == null)
+			if (inseecog_values == null)
 				loadProperties();
-			return sdb_inseecog_values;
+			return inseecog_values;
 		case INSEEPOP:
-			if (sdb_inseepop_values == null)
+			if (inseepop_values == null)
 				loadProperties();
-			return sdb_inseepop_values;
+			return inseepop_values;
 		case ISF:
-			if (sdb_isf_values == null)
+			if (isf_values == null)
 				loadProperties();
-			return sdb_isf_values;
+			return isf_values;
 		case MONUMENTS:
-			if (sdb_monuments_values == null)
+			if (monuments_values == null)
 				loadProperties();
-			return sdb_monuments_values;
+			return monuments_values;
 		case PASSIM:
-			if (sdb_passim_values == null)
+			if (passim_values == null)
 				loadProperties();
-			return sdb_passim_values;
+			return passim_values;
 		default:
 			return null;
 		}
@@ -236,32 +237,36 @@ public class PropertiesUtil {
 		properties = new Properties();
 
 		properties.load(new FileInputStream(propertiesPath + "/"
-				+ SDB_GEONAMES_PATH));
-		sdb_geonames_values = properties.entrySet();
+				+ GEONAMES_PATH));
+		geonames_values = properties.entrySet();
 		properties = new Properties();
+		
 		properties.load(new FileInputStream(propertiesPath + "/"
-				+ SDB_INSEECOG_PATH));
-		sdb_inseecog_values = properties.entrySet();
+				+ INSEECOG_PATH));
+		inseecog_values = properties.entrySet();
 		properties = new Properties();
+		
 		properties.load(new FileInputStream(propertiesPath + "/"
-				+ SDB_INSEEPOP_PATH));
-		sdb_inseepop_values = properties.entrySet();
+				+ INSEEPOP_PATH));
+		inseepop_values = properties.entrySet();
 		properties = new Properties();
+		
+		properties.load(new FileInputStream(propertiesPath + "/" + ISF_PATH));
+		isf_values = properties.entrySet();
+		properties = new Properties();
+		
+		properties.load(new FileInputStream(propertiesPath + "/"
+				+ MONUMENTS_PATH));
+		monuments_values = properties.entrySet();
+		properties = new Properties();
+		
 		properties
-				.load(new FileInputStream(propertiesPath + "/" + SDB_ISF_PATH));
-		sdb_isf_values = properties.entrySet();
+				.load(new FileInputStream(propertiesPath + "/" + PASSIM_PATH));
+		passim_values = properties.entrySet();
 		properties = new Properties();
-		properties.load(new FileInputStream(propertiesPath + "/"
-				+ SDB_MONUMENTS_PATH));
-		sdb_monuments_values = properties.entrySet();
-		properties = new Properties();
-		properties.load(new FileInputStream(propertiesPath + "/"
-				+ SDB_PASSIM_PATH));
-		sdb_passim_values = properties.entrySet();
-
-		properties = new Properties();
+		
 		properties.load(new FileInputStream(propertiesPath + "/" + TDB_PATH));
-		tdb_values = properties.entrySet();
+		values = properties.entrySet();
 
 	}
 

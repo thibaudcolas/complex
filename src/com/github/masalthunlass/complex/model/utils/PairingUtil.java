@@ -31,7 +31,7 @@ public class PairingUtil {
 	 */
 	public static Boolean verify(DataEnum data, SourcesEnum source)
 			throws FileNotFoundException, IOException {
-		System.out.println("verifying");
+//		System.out.println("verifying");
 		Boolean verified = false;
 
 		String available = PropertiesUtil.getSourcesProperty(data.toString()

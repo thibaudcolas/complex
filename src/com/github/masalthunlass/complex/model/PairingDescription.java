@@ -39,7 +39,7 @@ public class PairingDescription {
 
 	public PairingDescription() {
 		pairing = new HashSet<Entry<DataEnum, SourcesEnum>>();
-		System.out.println("new pairing description");
+//		System.out.println("new pairing description");
 	}
 
 	/**
@@ -74,7 +74,7 @@ public class PairingDescription {
 			if (entry_key.equals(data)) {
 				entry.setValue(source);
 				ok = true;
-				System.out.println("override");
+//				System.out.println("override");
 			}
 		}
 
@@ -82,7 +82,7 @@ public class PairingDescription {
 			Entry<DataEnum, SourcesEnum> entry = new MyEntry<DataEnum, SourcesEnum>(
 					data, source);
 			pairing.add(entry);
-			System.out.println("new");
+//			System.out.println("new");
 		}
 
 		return complete();

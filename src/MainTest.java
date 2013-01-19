@@ -54,25 +54,27 @@ public class MainTest {
 				StatsUtil.getMemoryUsed(Runtime.getRuntime()), Unit.MB));
 
 		PairingDescription desc = new PairingDescription();
-		desc.definePairing(DataEnum.GEONAMES, SourcesEnum.SDB);
-		desc.definePairing(DataEnum.PASSIM, SourcesEnum.MEMORY);
-		desc.definePairing(DataEnum.INSEECOG, SourcesEnum.MEMORY);
-		desc.definePairing(DataEnum.INSEEPOP, SourcesEnum.MEMORY);
-		desc.definePairing(DataEnum.ISF, SourcesEnum.MEMORY);
-		desc.definePairing(DataEnum.MONUMENTS, SourcesEnum.MEMORY);
+		desc.definePairing(DataEnum.GEONAMES, SourcesEnum.MEMORY);
+		desc.definePairing(DataEnum.PASSIM, SourcesEnum.TDB);
+		desc.definePairing(DataEnum.INSEECOG, SourcesEnum.SDB);
+		desc.definePairing(DataEnum.INSEEPOP, SourcesEnum.TDB);
+		desc.definePairing(DataEnum.ISF, SourcesEnum.D2RQ);
+		desc.definePairing(DataEnum.MONUMENTS, SourcesEnum.SDB);
 
-		// Model model = desc.getCorrespondingModel();
-		Model model = ModelUtil.generateModel(DataEnum.GEONAMES,
-				SourcesEnum.SDB);
+		Model model = desc.getCorrespondingModel();
+		// Model model = ModelUtil.generateModel(DataEnum.GEONAMES,
+		// SourcesEnum.SDB);
 
-		String queryString = "SELECT * { ?s ?p ?o } LIMIT 10";
+		String queryString = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>"
+				+ "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"
+				+ "SELECT ?type count(?s) { ?s rdf:type ?type } GROUP BY ?type";
 
-		Query query = QueryFactory.create(queryString,Syntax.syntaxSPARQL);
+		Query query = QueryFactory.create(queryString, Syntax.syntaxARQ);
 		QueryExecution exec = QueryExecutionFactory.create(query, model);
 
 		try {
 			ResultSet rs = exec.execSelect();
-			ResultSetFormatter.out(System.out, rs, query);
+			ResultSetFormatter.outputAsJSON(System.out, rs);
 		} catch (Exception e) {
 		} finally {
 			exec.close();

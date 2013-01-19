@@ -15,6 +15,8 @@ import com.hp.hpl.jena.sdb.Store;
 import com.hp.hpl.jena.sdb.store.DatasetStore;
 import com.hp.hpl.jena.tdb.TDBFactory;
 
+import de.fuberlin.wiwiss.d2rq.jena.ModelD2RQ;
+
 public class ModelUtil {
 
 	/**
@@ -58,7 +60,8 @@ public class ModelUtil {
 
 		tdbPath += data.toString().toLowerCase() + "/";
 		Dataset ds = TDBFactory.createDataset(tdbPath);
-		System.out.println("Creating TDB Model width path " + tdbPath);
+		System.out.println("Creating " + data + " TDB Model width path "
+				+ tdbPath);
 		Model model = ds.getDefaultModel();
 		return model; // TODO resolve null pointer exception
 						// here...
@@ -69,15 +72,21 @@ public class ModelUtil {
 		System.setProperty("jena.db.user", AppServlet.getSdbUser());
 		System.setProperty("jena.db.password", AppServlet.getSdbPassword());
 		String configPath = PropertiesUtil.getDataProperty(data, "sdb_config");
-		Store store = SDBFactory.connectStore(PropertiesUtil
-				.getPropertiesPath() + "/" + configPath);
+		String path = PropertiesUtil.getPropertiesPath() + "/" + configPath;
+		System.out.println("Creating " + data + " SDB Model at " + path);
+		Store store = SDBFactory.connectStore(path);
 		Dataset ds = DatasetStore.create(store);
 		return ds.getDefaultModel(); // TODO Vérifier ça :)
 	}
 
-	private static Model getD2RQModel(DataEnum data) {
-		// TODO retourner le modèle D2RQ correspondant au jeu de données
-		return null;
+	private static Model getD2RQModel(DataEnum data)
+			throws FileNotFoundException, IOException {
+		String configPath = PropertiesUtil.getDataProperty(data, "d2rq_config");
+		System.out.println("Creating " + data + " D2RQ model from file:"
+				+ "file:" + PropertiesUtil.getPropertiesPath() + "/"
+				+ configPath);
+		return new ModelD2RQ("file:" + PropertiesUtil.getPropertiesPath() + "/"
+				+ configPath);
 	}
 
 	private static Model getMemoryModel(DataEnum data) {
@@ -87,8 +96,8 @@ public class ModelUtil {
 															// memory-based
 		String data_path = ResourcesUtil.getProjectPath()
 				+ ResourcesUtil.getDataPath(data);
-		System.out.println("Generating in memory model from file: "
-				+ ResourcesUtil.getProjectPath()
+		System.out.println("Creating " + data
+				+ " in memory model from file: " + ResourcesUtil.getProjectPath()
 				+ ResourcesUtil.getDataPath(data));
 		model.read("file://" + data_path);
 		return model;

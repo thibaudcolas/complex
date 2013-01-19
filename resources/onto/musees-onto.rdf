@@ -1,0 +1,82 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.technoweb.fr/musee/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://www.technoweb.fr/musee/departement_appartient_region">
+    <rdfs:range rdf:resource="http://www.technoweb.fr/musee/Departement"/>
+    <rdfs:domain rdf:resource="http://www.technoweb.fr/musee/Musee"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.technoweb.fr/musee/Nom_departement">
+    <rdfs:domain rdf:resource="http://www.technoweb.fr/musee/Departement"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.technoweb.fr/musee/code_postale">
+    <rdfs:domain rdf:resource="http://www.technoweb.fr/musee/Ville"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.technoweb.fr/musee/nom_musee">
+    <rdfs:domain rdf:resource="http://www.technoweb.fr/musee/Musee"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.technoweb.fr/musee/Horaires">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.technoweb.fr/musee/a_pour_horaire">
+    <rdfs:range rdf:resource="http://www.technoweb.fr/musee/Horaires"/>
+    <rdfs:domain rdf:resource="http://www.technoweb.fr/musee/Musee"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.technoweb.fr/musee/Etat_fermeture">
+    <rdfs:domain rdf:resource="http://www.technoweb.fr/musee/Horaires"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.technoweb.fr/musee/Musee">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.technoweb.fr/musee/Ville">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.technoweb.fr/musee/adresse_musee">
+    <rdfs:domain rdf:resource="http://www.technoweb.fr/musee/Musee"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.technoweb.fr/musee/Site_web">
+    <rdfs:domain rdf:resource="http://www.technoweb.fr/musee/Musee"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.technoweb.fr/musee/Region">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.technoweb.fr/musee/Departement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.technoweb.fr/musee/Nom_region">
+    <rdfs:domain rdf:resource="http://www.technoweb.fr/musee/Region"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.technoweb.fr/musee/Nom_ville">
+    <rdfs:domain rdf:resource="http://www.technoweb.fr/musee/Ville"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.technoweb.fr/musee/Periode_Ouverture">
+    <rdfs:domain rdf:resource="http://www.technoweb.fr/musee/Horaires"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.technoweb.fr/musee/ville_appartient_au_departement">
+    <rdfs:range rdf:resource="http://www.technoweb.fr/musee/Departement"/>
+    <rdfs:domain rdf:resource="http://www.technoweb.fr/musee/Ville"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.technoweb.fr/musee/musee_appartient_ville">
+    <rdfs:range rdf:resource="http://www.technoweb.fr/musee/Ville"/>
+    <rdfs:domain rdf:resource="http://www.technoweb.fr/musee/Musee"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.technoweb.fr/musee/Fermeture_annuelle">
+    <rdfs:domain rdf:resource="http://www.technoweb.fr/musee/Horaires"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -71,9 +71,22 @@ jQuery(document).ready(function($) {
     queryEditor.setValue(str + queryEditor.getValue());
   }
 
-  // Calls the prefix.cc API to add namespaces to our query.
   $('#prefix-button').click(function (e){
     e.preventDefault();
+    callPrefixCCAPI();
+  });
+
+  $("#prefix-text").keypress(function (e) {
+        var key = window.event ? e.keyCode : e.which;
+        // Enter = 13.
+        if (key == '13') {
+            e.preventDefault();
+            callPrefixCCAPI();
+        }
+    });
+
+  // Calls the prefix.cc API to add namespaces to our query.
+  function callPrefixCCAPI() {
     var prefixId = $('#prefix-text').val();
     // API Documentation : http://prefix.cc/about/api
     var prefixCallURL = 'http://prefix.cc/'+prefixId+'.file.json';
@@ -84,7 +97,7 @@ jQuery(document).ready(function($) {
       });
       reloadReferencedNamespaces();
     });
-  });
+  }
 
   /**
    * Results

@@ -7,7 +7,7 @@ import com.github.masalthunlass.complex.model.enums.DataEnum;
 public class ResourcesUtil {
 
 	private static HashMap<String, String> file_path;
-	private static String projectPath = System.getProperty("user.dir");
+	private static String projectPath = PropertiesUtil.getProjectPath();
 
 	public static String getProjectPath() {
 		return projectPath;

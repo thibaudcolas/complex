@@ -10,6 +10,7 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 
+import com.github.masalthunlass.complex.controller.AppServlet;
 import com.github.masalthunlass.complex.model.enums.DataEnum;
 
 /**
@@ -33,7 +34,7 @@ public class PropertiesUtil {
 	private static String TDB_PATH = "tdb.properties";
 
 	/** Applications Path & values */
-	private static String projectPath = System.getProperty("user.dir");
+	private static String projectPath = AppServlet.getDefaultPath();
 	private static String propertiesPath = projectPath + "/conf";
 
 	/** properties values */
@@ -129,7 +130,7 @@ public class PropertiesUtil {
 			Entry<Object, Object> entry = (Entry<Object, Object>) it.next();
 			String entry_key = (String) entry.getKey();
 			String entry_value = (String) entry.getValue();
-//			System.out.println(entry_value);
+			// System.out.println(entry_value);
 
 			if (entry_key.equalsIgnoreCase(key))
 				return entry_value;
@@ -240,31 +241,31 @@ public class PropertiesUtil {
 				+ GEONAMES_PATH));
 		geonames_values = properties.entrySet();
 		properties = new Properties();
-		
+
 		properties.load(new FileInputStream(propertiesPath + "/"
 				+ INSEECOG_PATH));
 		inseecog_values = properties.entrySet();
 		properties = new Properties();
-		
+
 		properties.load(new FileInputStream(propertiesPath + "/"
 				+ INSEEPOP_PATH));
 		inseepop_values = properties.entrySet();
 		properties = new Properties();
-		
+
 		properties.load(new FileInputStream(propertiesPath + "/" + ISF_PATH));
 		isf_values = properties.entrySet();
 		properties = new Properties();
-		
+
 		properties.load(new FileInputStream(propertiesPath + "/"
 				+ MONUMENTS_PATH));
 		monuments_values = properties.entrySet();
 		properties = new Properties();
-		
+
 		properties
 				.load(new FileInputStream(propertiesPath + "/" + PASSIM_PATH));
 		passim_values = properties.entrySet();
 		properties = new Properties();
-		
+
 		properties.load(new FileInputStream(propertiesPath + "/" + TDB_PATH));
 		values = properties.entrySet();
 

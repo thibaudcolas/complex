@@ -15,6 +15,10 @@
 			<param-name>sdb_password</param-name>
 			<param-value>password</param-value>
 		</init-param>
+		<init-param>
+			<param-name>default_path</param-name>
+			<param-value>/home/thibaut/Documents/M2/mougenot/Part2/complex</param-value>
+		</init-param>
 	</servlet>
 	<servlet>
 		<servlet-name>default_queries</servlet-name>

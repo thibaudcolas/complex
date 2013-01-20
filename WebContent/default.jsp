@@ -51,7 +51,7 @@
                                     <select id="query-select">
                                     </select>
                                     <!-- This textarea is handled by Code Mirror and populated at runtime. -->
-                                    <textarea id="query-editor" name="query-editor">
+                                    <textarea id="query-editor" name="query">
                                     </textarea>
                                 </div>
                             </fieldset>
@@ -193,22 +193,9 @@
 
         </div>
 
-        <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script> -->
-        <!-- <script>window.jQuery || document.write('<script src="js/lib/jquery-1.9.0.min.js"><\/script>')</script> -->
         <script src="//www.google.com/jsapi"></script>
         <!-- default.js is jquery + bootstrap + d3 + datatables + codemirror combined. -->
         <script src="js/lib/default.js"></script>
-        <!--
-        <script src="js/lib/bootstrap.min.js"></script>
-        <script src="js/lib/d3.v3.min.js"></script>
-        <script src="js/lib/jquery.dataTables.min.js"></script>
-        <script src="js/lib/dataTables.bootstrap.js"></script>
-        <script src="js/lib/codemirror/codemirror.js"></script>
-        <script src="js/lib/codemirror/matchbrackets.js"></script>
-        <script src="js/lib/codemirror/searchcursor.js"></script>
-        <script src="js/lib/codemirror/match-highlighter.js"></script>
-        <script src="js/lib/codemirror/sparql.js"></script>
-         -->
         <script type="text/javascript">
             // Tells the Google Loader what to load from the Visualization API.
             google.load('visualization', '1.0', {'packages':['annotatedtimeline','corechart','geomap','geochart','map','treemap']});

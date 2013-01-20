@@ -8,6 +8,7 @@ jQuery(document).ready(function($) {
    */
 
   var $querySelect = $('#query-select');
+  var environmentSelectClass = 'environment-select';
   var $queryNamespaces = $('.query-namespaces');
 
   // Creates the CodeMirror editor.
@@ -34,8 +35,12 @@ jQuery(document).ready(function($) {
 
   // Loads the queries from a JSON file.
   // 'http://localhost:8080/Complex/default-queries'
-  $.getJSON('http://localhost:8080/Complex/defaut-queries', function(data) {
+  // Good line :
+  // $.getJSON('http://localhost:8080/complex/queries', function(data) {
+  $.getJSON('data/queries.json', function(data) {
     var firstQuery;
+    console.log('Success');
+
     var query;
     for (var i = 0; i < data.queries.length; i++) {
       query = data.queries[i];
@@ -45,6 +50,8 @@ jQuery(document).ready(function($) {
     $querySelect.first().attr('selected', true);
     queryEditor.setValue($('<div/>').html(firstQuery.string).text());
     reloadReferencedNamespaces();
+  }).error(function(request, status, error) {
+    console.log('Failure');
   });
 
   // Manages extracting namespace URIs from the query string.
@@ -111,7 +118,8 @@ jQuery(document).ready(function($) {
   var $queryResult;
 
   // Loads the results from a JSON file.
-  $.getJSON('data/npd.json', function(data) {
+  // data/npd.json
+  $.getJSON('http://localhost:8080/complex/test', function(data) {
     $queryResult = data;
     $resultsColumns.append('<th>'+data.head.vars.join('</th><th>')+'</th>');
 
@@ -153,7 +161,7 @@ jQuery(document).ready(function($) {
 
     // For each datasource, we create a fieldset with a select inside.
     for (var i = 0; i < data.datasources.length; i++) {
-      datasourceHTML += '<fieldset class="span4"><legend>'+data.datasources[i].title+'<small class="pull-right"><i class="icon-hdd"></i> '+data.datasources[i].size+'Mo</small></legend><div class="control-group"><select name="'+data.datasources[i].name+'" form="query-form" class="environment-select" data-source="'+data.datasources[i].name+'">';
+      datasourceHTML += '<fieldset class="span4"><legend>'+data.datasources[i].title+'<small class="pull-right"><i class="icon-hdd"></i> '+data.datasources[i].size+'Mo</small></legend><div class="control-group"><select name="'+data.datasources[i].name+'" id="'+data.datasources[i].name+'-select" form="query-form" class="environment-select" data-source="'+data.datasources[i].name+'">';
 
       // For each datastore bound to the datasource, we add an option to the select.
       for (var k = 0; k < data.datasources[i].locations.length; k++) {
@@ -346,6 +354,54 @@ var svg = d3.select("#benchmark").append("svg")
    */
 
   $('.contributor img').tooltip({'placement' : 'bottom'});
+
+  /**
+   * Send query
+   * ---------------------------------------------------------------------
+   */
+
+  var $queryForm = $('#query-form');
+
+  $queryForm.submit(function (event) {
+    event.preventDefault();
+
+    var environmentParameters = retrieveQueryFields();
+    var jqxhr = sendSPARQLQuery(environmentParameters);
+  });
+
+  function retrieveQueryFields () {
+    var fieldsValues = {
+      query: queryEditor.getValue(),
+      limit: $('#set-limit').val(),
+      inference: $('#use-inference').val()
+    };
+
+    // For all environment pairing selects.
+    $('.' + environmentSelectClass).each(function (){
+      $this = $(this);
+      fieldsValues[$this.attr('name')] = $this.val();
+    });
+
+    return fieldsValues;
+  }
+
+  function sendSPARQLQuery (queryParameters) {
+    var timestamp = Date.now();
+    queryParameters['timestamp'] = timestamp;
+    console.log("SPARQL Query " + timestamp);
+
+    var jqxhr = $.post('http://localhost:8080/complex/dump',
+      queryParameters,
+      function (data) {
+        console.log('callback !');
+      },
+      'json'
+    ).success(function() { console.log(timestamp + " SUCCESS"); })
+     .error(function() { console.log(timestamp + " ERROR"); })
+     .complete(function() { console.log(timestamp + " COMPLETE"); });
+
+     return jqxhr;
+  }
 
 });
 

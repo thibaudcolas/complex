@@ -124,6 +124,11 @@ public class AppServlet extends HttpServlet {
 			response.setStatus(400);
 			response.setContentType("text/plain");
 			response.getWriter().write(e.getMessage());
+		} catch (Exception e) {
+			response.setStatus(400);
+			response.setContentType("text/plain");
+			response.getWriter().write(
+					"Unidentified exception: " + e.getMessage());
 		}
 		/*
 		 * CoolQuery query = new CoolQuery(request); CoolResponse response = new

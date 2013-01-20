@@ -37,7 +37,7 @@ jQuery(document).ready(function($) {
   // 'http://localhost:8080/Complex/default-queries'
   // Good line :
   // $.getJSON('http://localhost:8080/complex/queries', function(data) {
-  $.getJSON('data/queries.json', function(data) {
+  $.getJSON('queries', function(data) {
     var firstQuery;
     console.log('Success');
 
@@ -119,7 +119,7 @@ jQuery(document).ready(function($) {
 
   // Loads the results from a JSON file.
   // data/npd.json
-  $.getJSON('http://localhost:8080/complex/test', function(data) {
+  $.getJSON('data/npd.json', function(data) {
     $queryResult = data;
     $resultsColumns.append('<th>'+data.head.vars.join('</th><th>')+'</th>');
 
@@ -390,10 +390,12 @@ var svg = d3.select("#benchmark").append("svg")
     queryParameters['timestamp'] = timestamp;
     console.log("SPARQL Query " + timestamp);
 
-    var jqxhr = $.post('http://localhost:8080/complex/dump',
+    var jqxhr = $.post('http://localhost:8080/complex/request',
       queryParameters,
       function (data) {
         console.log('callback !');
+        visualization.jsonData = data.request;
+        visualization.drawChart('dForceGraph');
       },
       'json'
     ).success(function() { console.log(timestamp + " SUCCESS"); })

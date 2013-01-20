@@ -23,6 +23,12 @@
       "title": "Example three",
       "description": "The last example",
       "string": "PREFIX abc: &lt;http://example.com/exampleOntology#&gt;\n\nSELECT ?capital ?country\nWHERE {\n  ?x abc:cityname ?capital ;\n     abc:isCapitalOf ?y .\n  ?y abc:countryname ?country ;\n     abc:isInContinent abc:Africa .\n}\n"
+    },
+    {
+      "name": "count",
+      "title": "Classes",
+      "description": "The count example",
+      "string": "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;\nSELECT ?o count(?s)\nWHERE {\n  ?s rdf:type ?o\n}\nGROUP BY ?o\n"
     }
   ]
 }

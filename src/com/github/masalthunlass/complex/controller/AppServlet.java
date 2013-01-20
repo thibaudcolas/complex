@@ -25,6 +25,8 @@ public class AppServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static final String param_query = "query";
 
+	//TODO Create a conf/sdb.properties file with those values inside.
+	//TODO Or use the ones defined in web.xml (but requires both projects to stay together).
 	private static String sdb_user = "sdb";
 	private static String sdb_password = "password";
 

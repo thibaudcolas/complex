@@ -13,6 +13,10 @@ import com.hp.hpl.jena.util.FileManager;
 public class InitSDB {
 
 	private static final String WORKING_DIRECTORY = ".";
+	//TODO Create a conf/sdb.properties file with those values inside.
+	//TODO Or use the ones defined in web.xml (but requires both projects to stay together).
+//	private static final String DB_USER = System.getProperty("sdb.user");
+//	private static final String DB_USER = System.getProperty("sdb.password");
 	private static final String DB_USER = "sdb";
 	private static final String DB_PASSWD = "password";
 

@@ -1,5 +1,4 @@
-/** A servlet that dumps its request
- */
+/** A servlet that dumps its request */
 
 package com.github.masalthunlass.complex.controller;
 

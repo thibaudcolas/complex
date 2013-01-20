@@ -13,6 +13,7 @@ import com.hp.hpl.jena.util.FileManager;
 
 public class InitTDB {
 
+	// Executes from the project's root ( ..../complex/)
 	private static final String BASE_PATH = "/tdb";
 	private static final String WORKING_DIRECTORY = ".";
 

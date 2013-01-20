@@ -7,7 +7,6 @@
         chartType : 'gLineChart',
 
         go: function (json, chart) {
-            jsonData = json;
 
             // Loads Google Visualization charts functions.
             visualization.charts.loadCharts();
@@ -22,7 +21,9 @@
             visualization.drawChart(chart);
         },
 
-        drawChart: function (chart) {
+        drawChart: function (json, chart) {
+            jsonData = json;
+
             chartType = chart ? chart : chartType;
             var query = new visualization.query();
             query.draw();

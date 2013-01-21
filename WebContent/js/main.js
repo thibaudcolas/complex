@@ -424,27 +424,21 @@ var svg = d3.select("#benchmark").append("svg")
     queryParameters['timestamp'] = timestamp;
     console.log("SPARQL Query " + timestamp);
 
-    // var jqxhr = $.post('data/npd2.json',
+    // var jqxhr : contains the AJAX query.
     var jqxhr = $.post('http://localhost:8080/complex/request',
       queryParameters,
       function (data) {
-        // jsonResult = data;
-        // handleQueryResults(data);
-        console.log('CB');
-        jsonResult = data.request;
         handleQueryResults(data.request);
       },
       'json'
     )
     .success(function() {
-      console.log('OK');
       $('#wait-modal').modal('hide');
       $('#alert-modal').modal('hide');
       $('a[href="#visualization"]').tab('show');
       console.log(timestamp + " SUCCESS");
     })
     .error(function (xhr, ajaxOptions, thrownError) {
-      console.log('KO');
       $('#alert-modal-message').empty();
       $('#alert-modal-message').append('<strong>'+xhr.status+'</strong> '+ xhr.responseText);
       $('#wait-modal').modal('hide');

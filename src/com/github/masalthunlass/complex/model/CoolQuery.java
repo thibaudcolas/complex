@@ -71,7 +71,10 @@ public class CoolQuery {
 			return new CoolResponse(this, rs, time_model, memory_model,
 					time_query, memory_query);
 
-		} catch (PairingException | ModelException e) {
+		} catch (PairingException e) {
+			throw new CoolQueryException("Oops something goes wrong...");
+		}
+		catch (ModelException e) {
 			throw new CoolQueryException("Oops something goes wrong...");
 		} catch (IOException e) {
 			throw new CoolQueryException(

@@ -25,7 +25,7 @@ PREFIX wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#>
 
 # PASSIM
 
-PREFIX geo-fr: <http://rdf.insee.fr/geo/>>
+PREFIX geo-fr: <http://rdf.insee.fr/geo/>
 PREFIX passim: <http://data.lirmm.fr/ontologies/passim#>
 
 # TAWEB

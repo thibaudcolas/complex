@@ -2,27 +2,76 @@
   "queries": [
     {
       "name": "default",
-      "title": "Default query",
+      "title": "Number of entities per class",
+      "description": "The count example",
+      "string": "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;\nSELECT ?o count(?s)\nWHERE {\n  ?s rdf:type ?o\n}\nGROUP BY ?o\n"
+    },
+    {
+      "name": "format",
+      "title": "Well-formatted query",
       "description": "This is the default &lt;a href=\"#\"&gt;example&lt;/a&gt; query",
       "string": "PREFIX a: &lt;http://www.w3.org/2000/10/annotation-ns#&gt;\nPREFIX dc: &lt;http://purl.org/dc/elements/1.1/&gt;\nPREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;\n\n# Comment!\n\nSELECT ?given ?family\nWHERE {\n  ?annot a:annotates &lt;http://www.w3.org/TR/rdf-sparql-query/&gt; .\n  ?annot dc:creator ?c .\n  OPTIONAL {?c foaf:given ?given ;\n               foaf:family ?family } .\n  FILTER isBlank(?c)\n }"
     },
     {
-      "name": "empty",
-      "title": "Example one",
-      "description": "This is another example",
-      "string": "PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;\n\n\nSELECT ?name ?email\nWHERE {\n  ?person a foaf:Person.\n  ?person foaf:name ?name.\n  ?person foaf:mbox ?email.\n}\n"
+      "name": "cities",
+      "title": "Cities with a good ratio of ISF taxpayers per population",
+      "description": "Cities with a good ratio of ISF taxpayers per population",
+      "string": "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX vocab: &lt;http://impot.org/ontology#&gt;\nPREFIX igeo: &lt;http://rdf.insee.fr/def/geo#&gt;\nPREFIX idemo: &lt;http://rdf.insee.fr/def/demo#&gt;\nPREFIX d2rq: &lt;http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#&gt;\n\n# Villes de plus de 40000 habitants qui possèdent plus de 300 ménages assujettis à l\'ISF en 2010\n\nSELECT DISTINCT ?ville ?nbr ?popT\nWHERE { ?impot vocab:impot_codeinsee ?codecom;\n               rdf:type vocab:impot ;\n               vocab:impot_nbrredevables ?nbr;\n               vocab:impot_annee \'2010\'.\n        FILTER (?nbr &gt; 150).\n      ?commune igeo:codeCommune ?codecom ;\n               igeo:nom ?ville ;\n               idemo:population ?pop ;\n               idemo:populationTotale ?popT .\n  FILTER (?popT &gt; 40000).\n}"
     },
     {
-      "name": "custom",
-      "title": "Example two",
-      "description": "Yet one more example",
-      "string": "PREFIX gn: &lt;http://www.geonames.org/ontology#&gt;\nPREFIX core: &lt;http://www.w3.org/2004/02/skos/core#&gt;\nPREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;\nPREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;\n\nSELECT ?scheme (count(DISTINCT ?code) AS ?count)\nWHERE {\n  ?code core:inScheme ?scheme\n}\nGROUP BY ?scheme\nLIMIT 100\n"
+      "name": "highest",
+      "title": "Highest mean tax amount",
+      "description": "Highest mean tax amount",
+      "string": "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX vocab: &lt;http://impot.org/ontology#&gt;\nPREFIX igeo: &lt;http://rdf.insee.fr/def/geo#&gt;\n\n# Quelle ville possède le plus haut impôt moyen pour ses habitants assujettis à l\'ISF ?\n\nSELECT DISTINCT ?ville\nWHERE { ?impot vocab:impot_codeinsee ?codecom;\n               rdf:type vocab:impot ;\n               vocab:impot_impotmoyen ?impM .\n      ?commune igeo:codeCommune ?codecom ;\n               igeo:nom ?ville .\n} ORDER BY DESC(?impM) LIMIT 1 "
     },
     {
-      "name": "all",
-      "title": "Example three",
-      "description": "The last example",
-      "string": "PREFIX abc: &lt;http://example.com/exampleOntology#&gt;\n\nSELECT ?capital ?country\nWHERE {\n  ?x abc:cityname ?capital ;\n     abc:isCapitalOf ?y .\n  ?y abc:countryname ?country ;\n     abc:isInContinent abc:Africa .\n}\n"
-    }
+      "name": "highest2",
+      "title": "Highest mean tax amount 2",
+      "description": "Highest mean tax amount 2",
+      "string": "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX vocab: &lt;http://impot.org/ontology#&gt;\nPREFIX igeo: &lt;http://rdf.insee.fr/def/geo#&gt;\n\nSELECT DISTINCT ?ville max(?impM as ?impMax )\nWHERE { ?impot vocab:impot_codeinsee ?codecom;\n               rdf:type vocab:impot ;\n               vocab:impot_impotmoyen ?impM .\n      ?commune igeo:codeCommune ?codecom ;\n               igeo:nom ?ville .\n}"
+    },
+    {
+      "name": "departments",
+      "title": "Departments where cities have a good ratio of ISF taxpayers per population",
+      "description": "Departments where cities have a good ratio of ISF taxpayers per population",
+      "string": "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX vocab: &lt;http://impot.org/ontology#&gt;\nPREFIX igeo: &lt;http://rdf.insee.fr/def/geo#&gt;\nPREFIX idemo: &lt;http://rdf.insee.fr/def/demo#&gt;\n\n# Donnez Départements qui ont des villes de plus de x habitants qui possèdent plus de x menages assujettis à l\'ISF en 2010\n\nSELECT DISTINCT ?dep\nWHERE { ?impot vocab:impot_codeinsee ?codecom;\n               rdf:type vocab:impot ;\n               vocab:impot_nbrredevables ?nbr;\n               vocab:impot_annee \'2010\'.\n        FILTER (?nbr &gt; 150).\n      ?commune igeo:codeCommune ?codecom ;\n               igeo:nom ?ville ;\n               idemo:population ?pop ;\n               idemo:populationTotale ?popT .\n  FILTER (?popT &gt; 40000).\n      ?dep rdf:type igeo:Departement ;\n           igeo:subdivisionDirecte ?arr .\n      ?arr igeo:subdivisionDirecte ?commune .\n}"
+    },
+    {
+      "name": "disabled",
+      "title": "Number of disabled-friendly transport services",
+      "description": "Number of disabled-friendly transport services",
+      "string": "PREFIX passim: &lt;http://data.lirmm.fr/ontologies/passim#&gt;\n\n# Nombre de services de transports accessibles aux handicapés par département\n\nSELECT DISTINCT ?dep count(?desc) AS ?service\nWHERE { ?desc passim:isAccessibilityForDisabledPerson \'Oui\' ;\n  ?desc passim:department ?dep ;  \n} group by ?dep ."
+    },
+    {
+      "name": "mean",
+      "title": "mean tax amout in Herault per year",
+      "description": "mean tax amout in Herault per year",
+      "string": "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX vocab: &lt;http://impot.org/ontology#&gt;\nPREFIX igeo: &lt;http://rdf.insee.fr/def/geo#&gt;\nPREFIX idemo: &lt;http://rdf.insee.fr/def/demo#&gt;\n\n# impot_moyen total dans le département de l\'Hérault par année\n\nSELECT DISTINCT ?annee sum(?impotM) AS ?impotMoyen\nWHERE {\n  ?impot vocab:impot_codeinsee ?codecom;\n               rdf:type vocab:impot ;\n    vocab:impot_annee ?annee ;\n               vocab:impot_impotmoyen ?impotM .\n  ?commune igeo:codeCommune ?codecom .\n        ?dep rdf:type igeo:Departement ;\n             igeo:subdivisionDirecte ?arr ;\n       igeo:nom \"Hérault\" .\n        ?arr igeo:subdivisionDirecte ?commune .\n     } group by  ?annee;"
+    },
+    {
+      "name": "rich",
+      "title": "Number of rich people per department",
+      "description": "Number of rich people per department",
+      "string": "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX vocab: &lt;http://impot.org/ontology#&gt;\nPREFIX igeo: &lt;http://rdf.insee.fr/def/geo#&gt;\nPREFIX idemo: &lt;http://rdf.insee.fr/def/demo#&gt;\n\n# nombre de redevables total par département de plus de 500 000 habitants\n\nSELECT DISTINCT ?dep sum(?nbrR) AS ?nbreTotal\nWHERE {\n  ?impot vocab:impot_codeinsee ?codecom;\n               rdf:type vocab:impot ;\n    vocab:impot_annee ?annee ;\n               vocab:impot_nbredevables ?nbrR .\n  ?commune igeo:codeCommune ?codecom .\n        ?dep rdf:type igeo:Departement ;\n             igeo:subdivisionDirecte ?arr ;\n               idemo:population ?pop ;\n               idemo:populationTotale ?popT .\n        FILTER (?dep &gt; 500000).\n        ?arr igeo:subdivisionDirecte ?commune .\n     } group by ?dep;"
+    },
+    {
+      "name": "coordinates",
+      "title": "Coordinates of cities with trains",
+      "description": "Coordinates of cities with trains",
+      "string": "PREFIX geo-fr: &lt;http://rdf.insee.fr/geo/&gt;\nPREFIX passim: &lt;http://data.lirmm.fr/ontologies/passim#&gt;\n\n# coordonnées des \"communes\" où il y a un mode de transport train\n\nSELECT DISTINCT ?lat ?long\nWHERE {\n  ?desc passim:modeOfTransport passim:Train ;\n                 passim:centerTown ?commune .\n        ?commune wgs84_pos:lat ?lat ;\n  ?commune wgs84_pos:long ?long .\n     } \n     LIMIT 100;"
+    },
+    {
+      "name": "areas",
+      "title": "Areas where people are tech-friendly",
+      "description": "Areas where people are tech-friendly",
+      "string": "PREFIX geo-fr: &lt;http://rdf.insee.fr/geo/&gt;\nPREFIX passim: &lt;http://data.lirmm.fr/ontologies/passim#&gt;\nPREFIX igeo: &lt;http://rdf.insee.fr/def/geo#&gt;\nPREFIX idemo: &lt;http://rdf.insee.fr/def/demo#&gt;\nPREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\n\n# classement de la population des régions où il y a un service de calcul d\'itinéraires et horaires\n\nSELECT DISTINCT ?nom ?popTotale\nWHERE {\n  ?desc passim:typeOfService passim:CalculDitineraire ;\n              passim:typeOfService passim:Horaires ;\n        passim:region ?region .\n        ?region rdf:type igeo:Region ;\n    igeo:nom ?nom ;\n    idemo:population ?popLeg ;\n          idemo:populationTotale ?popTotale .\n     } ORDER BY DESC ;"
+    },
+    {
+      "name": "prefixes",
+      "title": "Prefixes",
+      "description": "Prefixes",
+      "string": "# Prefixes\n\nPREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;\nPREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;\nPREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;\n# GN INSEE\n\nPREFIX gn: &lt;http://www.geonames.org/ontology#&gt;\nPREFIX insee: &lt;http://rdf.insee.fr/geo/&gt;\n# INSEE\n\nPREFIX geo: &lt;http://id.insee.fr/geo/&gt;\nPREFIX igeo: &lt;http://rdf.insee.fr/def/geo#&gt;\nPREFIX idemo: &lt;http://rdf.insee.fr/def/demo#&gt;\n# GN\n\nPREFIX cc: &lt;http://creativecommons.org/ns#&gt;\nPREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;\nPREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;\nPREFIX gn: &lt;http://www.geonames.org/ontology#&gt;\nPREFIX wgs84_pos: &lt;http://www.w3.org/2003/01/geo/wgs84_pos#&gt;\n# PASSIM\n\nPREFIX geo-fr: &lt;http://rdf.insee.fr/geo/&gt;\nPREFIX passim: &lt;http://data.lirmm.fr/ontologies/passim#&gt;\n# TAWEB\n\nPREFIX monument: &lt;http://decouvertedupatrimoine.org/monument/&gt;\nPREFIX musee: &lt;http://www.technosweba.net/musee#&gt;\nPREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;\n# ISF \n\nPREFIX vocab: &lt;http://impot.org/ontology#&gt;\nPREFIX d2rq: &lt;http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#&gt;"
+    },
+
   ]
 }

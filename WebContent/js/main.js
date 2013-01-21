@@ -395,11 +395,12 @@ var svg = d3.select("#benchmark").append("svg")
   var $queryForm = $('#query-form');
 
   $queryForm.submit(function (event) {
-    $('#wait-modal').modal('show');
     event.preventDefault();
 
     var environmentParameters = retrieveQueryFields();
     var jqxhr = sendSPARQLQuery(environmentParameters);
+
+    $('#wait-modal').modal('show');
   });
 
   function retrieveQueryFields () {
@@ -424,7 +425,7 @@ var svg = d3.select("#benchmark").append("svg")
     console.log("SPARQL Query " + timestamp);
 
     // var jqxhr = $.post('data/npd2.json',
-    var jqxhr = $.getJSON('http://localhost:8080/complex/request',
+    var jqxhr = $.post('http://localhost:8080/complex/request',
       queryParameters,
       function (data) {
         // jsonResult = data;
@@ -435,12 +436,14 @@ var svg = d3.select("#benchmark").append("svg")
       'json'
     ).success(function() {
       $('#wait-modal').modal('hide');
+      $('#alert-modal').modal('hide');
       $('a[href="#visualization"]').tab('show');
       console.log(timestamp + " SUCCESS");
     })
     .error(function (xhr, ajaxOptions, thrownError) {
       $('#alert-modal-message').empty();
       $('#alert-modal-message').append('<strong>'+xhr.status+'</strong> '+ xhr.responseText);
+      $('#wait-modal').modal('hide');
       $('#alert-modal').modal('show');
       console.log(timestamp + " ERROR");
     })

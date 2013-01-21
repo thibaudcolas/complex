@@ -39,6 +39,7 @@ public class CoolQuery {
 
 	public CoolResponse execute() throws CoolQueryException {
 		try {
+			Query query = QueryFactory.create(queryString, Syntax.syntaxARQ);
 			System.gc();
 			long time_model = System.currentTimeMillis();
 			long memory_model = StatsUtil.getMemoryUsed(Runtime.getRuntime());
@@ -51,7 +52,6 @@ public class CoolQuery {
 			long time_query = System.currentTimeMillis();
 			long memory_query = StatsUtil.getMemoryUsed(Runtime.getRuntime());
 
-			Query query = QueryFactory.create(queryString, Syntax.syntaxARQ);
 			QueryExecution exec = QueryExecutionFactory.create(query, model);
 
 			ResultSet rs;

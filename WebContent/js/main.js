@@ -34,10 +34,9 @@ jQuery(document).ready(function($) {
   });
 
   // Loads the queries from a JSON file.
-  // 'http://localhost:8080/Complex/default-queries'
   // Good line :
-  // $.getJSON('http://localhost:8080/complex/queries', function(data) {
-  $.getJSON('queries', function(data) {
+  //$.getJSON('queries', function(data) {
+  $.getJSON('http://localhost:8080/complex/queries', function(data) {
     var firstQuery;
     console.log('Success');
 

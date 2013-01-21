@@ -12,6 +12,8 @@
         <meta name="description" content="Triple Bench — Find a sturdy home for your triples">
         <meta name="viewport" content="width=device-width">
 
+        <link rel="favicon" href="favicon.ico">
+
         <!-- lib.css contains all the lib/ stylesheets concatenated. -->
         <link rel="stylesheet" href="css/lib.css">
         <link rel="stylesheet" href="css/main.css">

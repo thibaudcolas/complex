@@ -7,6 +7,9 @@ jQuery(document).ready(function($) {
    * ---------------------------------------------------------------------
    */
 
+  var jsonResult = {};
+  var jqxhrSubmit;
+
   var $querySelect = $('#query-select');
   var environmentSelectClass = 'environment-select';
   var $queryNamespaces = $('.query-namespaces');
@@ -36,7 +39,7 @@ jQuery(document).ready(function($) {
   // Loads the queries from a JSON file.
   // Good line :
   //$.getJSON('queries', function(data) {
-  $.getJSON('http://localhost:8080/complex/queries', function(data) {
+  $.getJSON('queries', function(data) {
     var firstQuery;
     console.log('Success');
 
@@ -119,10 +122,18 @@ jQuery(document).ready(function($) {
   // Loads the results from a JSON file.
   // data/npd.json
   $.getJSON('data/npd.json', function(data) {
+    handleQueryResults(data);
+  });
+
+  function handleQueryResults (data) {
     $queryResult = data;
+
+    $resultsColumns.empty();
+    $resultsRows.empty();
+
     $resultsColumns.append('<th>'+data.head.vars.join('</th><th>')+'</th>');
 
-    visualization.go(data, 'gLineChart');
+    visualization.draw(data, 'gLineChart');
 
     // Then we retrieve the data itself.
     for (var j = 0; j < data.results.bindings.length; j++) {
@@ -135,7 +146,7 @@ jQuery(document).ready(function($) {
 
     // Create the data table with the right types.
     $('.observation-table').dataTable();
-  });
+  }
 
   /**
    * Environment
@@ -185,13 +196,15 @@ jQuery(document).ready(function($) {
    * ---------------------------------------------------------------------
    */
 
+  visualization.init();
+
   $('a[href="#visualization"]').on('shown', function(){
-    visualization.drawChart();
+    visualization.refresh();
   });
 
   // Calls the chart function().draw()
   $("#chart-type-select").change(function (){
-    visualization.drawChart($(this).val());
+    visualization.redraw($(this).val());
   });
 
   /**
@@ -348,6 +361,26 @@ var svg = d3.select("#benchmark").append("svg")
 
 
   /**
+   * Validation button.
+   * ---------------------------------------------------------------------
+   */
+
+   $('#validation-button').click(function (e){
+    e.preventDefault();
+    $this = $(this);
+    var queryString = queryEditor.getValue();
+    $.getJSON('http://localhost:8080/complex/validate?query=' + queryString, function (data) {
+      if (data.valid) {
+        $this.removeClass('btn-info').removeClass('btn-danger').addClass('btn-success');
+      }
+      else {
+        $this.removeClass('btn-info').removeClass('btn-success').addClass('btn-danger');
+      }
+    });
+   });
+
+
+  /**
    * About
    * ---------------------------------------------------------------------
    */
@@ -362,6 +395,7 @@ var svg = d3.select("#benchmark").append("svg")
   var $queryForm = $('#query-form');
 
   $queryForm.submit(function (event) {
+    $('#wait-modal').modal('show');
     event.preventDefault();
 
     var environmentParameters = retrieveQueryFields();
@@ -389,17 +423,30 @@ var svg = d3.select("#benchmark").append("svg")
     queryParameters['timestamp'] = timestamp;
     console.log("SPARQL Query " + timestamp);
 
-    var jqxhr = $.post('http://localhost:8080/complex/request',
+    // var jqxhr = $.post('data/npd2.json',
+    var jqxhr = $.getJSON('http://localhost:8080/complex/request',
       queryParameters,
       function (data) {
-        console.log('callback !');
-        visualization.jsonData = data.request;
-        visualization.drawChart('dForceGraph');
+        // jsonResult = data;
+        // handleQueryResults(data);
+        jsonResult = data.request;
+        handleQueryResults(data.request);
       },
       'json'
-    ).success(function() { console.log(timestamp + " SUCCESS"); })
-     .error(function() { console.log(timestamp + " ERROR"); })
-     .complete(function() { console.log(timestamp + " COMPLETE"); });
+    ).success(function() {
+      $('#wait-modal').modal('hide');
+      $('a[href="#visualization"]').tab('show');
+      console.log(timestamp + " SUCCESS");
+    })
+    .error(function (xhr, ajaxOptions, thrownError) {
+      $('#alert-modal-message').empty();
+      $('#alert-modal-message').append('<strong>'+xhr.status+'</strong> '+ xhr.responseText);
+      $('#alert-modal').modal('show');
+      console.log(timestamp + " ERROR");
+    })
+    .complete(function() {
+      console.log(timestamp + " COMPLETE");
+    });
 
      return jqxhr;
   }

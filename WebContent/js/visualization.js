@@ -6,8 +6,7 @@
         jsonData : {},
         chartType : 'gLineChart',
 
-        go: function (json, chart) {
-
+        init: function () {
             // Loads Google Visualization charts functions.
             visualization.charts.loadCharts();
 
@@ -17,16 +16,22 @@
                 optionsHTML += '<option value="'+chart.id+'">'+chart.title+'</option>';
             });
             $('#' + this.ui.chartSelect).append(optionsHTML);
-
-            visualization.drawChart(chart);
         },
 
-        drawChart: function (json, chart) {
-            jsonData = json;
-
-            chartType = chart ? chart : chartType;
+        refresh : function () {
             var query = new visualization.query();
             query.draw();
+        },
+
+        redraw : function (chart) {
+            visualization.chartType = chart ? chart : visualization.chartType;
+
+            visualization.refresh();
+        },
+
+        draw : function (json, chart) {
+            visualization.jsonData = json;
+            visualization.redraw(chart);
 
             $('#' + this.ui.chartSelect).val(query.chart);
         },
@@ -54,7 +59,7 @@
 
 
     visualization.query = function () {
-        this.chart = chartType;
+        this.chart = visualization.chartType;
 
         this.chartOptions = {
             'chartArea': { left: '5%', top: '5%', width: '80%', height: '80%' },
@@ -70,9 +75,9 @@
         this.setChartSpecificOptions();
 
         // Draw the chart using the Google API.
-        this.noRows = visualization.parser.countRowsSparqlJSON(jsonData);
+        this.noRows = visualization.parser.countRowsSparqlJSON(visualization.jsonData);
         if (this.noRows) {
-            chartFunc.draw(new google.visualization.DataTable(visualization.parser.SparqlJSON2GoogleJSON(jsonData)), this.chartOptions);
+            chartFunc.draw(new google.visualization.DataTable(visualization.parser.SparqlJSON2GoogleJSON(visualization.jsonData)), this.chartOptions);
         }
     };
 

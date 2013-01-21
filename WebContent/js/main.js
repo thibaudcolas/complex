@@ -430,17 +430,21 @@ var svg = d3.select("#benchmark").append("svg")
       function (data) {
         // jsonResult = data;
         // handleQueryResults(data);
+        console.log('CB');
         jsonResult = data.request;
         handleQueryResults(data.request);
       },
       'json'
-    ).success(function() {
+    )
+    .success(function() {
+      console.log('OK');
       $('#wait-modal').modal('hide');
       $('#alert-modal').modal('hide');
       $('a[href="#visualization"]').tab('show');
       console.log(timestamp + " SUCCESS");
     })
     .error(function (xhr, ajaxOptions, thrownError) {
+      console.log('KO');
       $('#alert-modal-message').empty();
       $('#alert-modal-message').append('<strong>'+xhr.status+'</strong> '+ xhr.responseText);
       $('#wait-modal').modal('hide');

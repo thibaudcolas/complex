@@ -4,67 +4,49 @@
       "name": "default",
       "title": "Number of entities per class",
       "description": "The count example",
-      "string": "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;\nSELECT ?o count(?s)\nWHERE {\n  ?s rdf:type ?o\n}\nGROUP BY ?o\n"
+      "string": "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;\n\n# Number of entities per RDF type.\n\nSELECT ?type (count(?s) AS ?nbEntities)\nWHERE {\n  ?s rdf:type ?type\n}\nGROUP BY ?type\nORDER BY DESC(?nbEntities)"
     },
     {
-      "name": "format",
-      "title": "Well-formatted query",
-      "description": "This is the default &lt;a href=\"#\"&gt;example&lt;/a&gt; query",
-      "string": "PREFIX a: &lt;http://www.w3.org/2000/10/annotation-ns#&gt;\nPREFIX dc: &lt;http://purl.org/dc/elements/1.1/&gt;\nPREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;\n\n# Comment!\n\nSELECT ?given ?family\nWHERE {\n  ?annot a:annotates &lt;http://www.w3.org/TR/rdf-sparql-query/&gt; .\n  ?annot dc:creator ?c .\n  OPTIONAL {?c foaf:given ?given ;\n               foaf:family ?family } .\n  FILTER isBlank(?c)\n }"
+      "name": "disabled-department",
+      "title": "Number of disabled-friendly transport services per department",
+      "description": "Number of disabled-friendly transport services per department",
+      "string": "PREFIX passim: &lt;http://data.lirmm.fr/ontologies/passim#&gt;\nPREFIX geo: &lt;http://rdf.insee.fr/geo/&gt;\n\n# Number of disabled-friendly transport services per department.\n# Uses ARQ Syntax (for COUNT)\n\nSELECT ?department (COUNT(?desc) AS ?nbServices)\nWHERE {\n  ?desc passim:isAccessibilityForDisabledPerson 'Oui' .\n  ?desc passim:department ?dep .\n  ?dep geo:nom ?department\n}\nGROUP BY ?department\nORDER BY DESC(?nbServices)"
+    },
+    {
+      "name": "disabled-region",
+      "title": "Number of disabled-friendly transport services per region",
+      "description": "Number of disabled-friendly transport services per region",
+      "string": "PREFIX passim: &lt;http://data.lirmm.fr/ontologies/passim#&gt;\nPREFIX geo: &lt;http://rdf.insee.fr/geo/&gt;\n\n# Number of disabled-friendly transport services per region.\n# Uses ARQ Syntax (for COUNT)\n\nSELECT ?region (COUNT(?desc) AS ?nbServices)\nWHERE {\n  ?desc passim:isAccessibilityForDisabledPerson 'Oui' .\n  ?desc passim:region ?reg .\n  ?reg geo:nom ?region\n}\nGROUP BY ?region\nORDER BY DESC(?nbServices)"
     },
     {
       "name": "cities",
-      "title": "Cities with a good ratio of ISF taxpayers per population",
+      "title": "Cities where more than 1'000 homes pay the ISF",
       "description": "Cities with a good ratio of ISF taxpayers per population",
-      "string": "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX vocab: &lt;http://impot.org/ontology#&gt;\nPREFIX igeo: &lt;http://rdf.insee.fr/def/geo#&gt;\nPREFIX idemo: &lt;http://rdf.insee.fr/def/demo#&gt;\nPREFIX d2rq: &lt;http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#&gt;\n\n# Villes de plus de 40000 habitants qui possèdent plus de 300 ménages assujettis à l\'ISF en 2010\n\nSELECT DISTINCT ?ville ?nbr ?popT\nWHERE { ?impot vocab:impot_codeinsee ?codecom;\n               rdf:type vocab:impot ;\n               vocab:impot_nbrredevables ?nbr;\n               vocab:impot_annee \'2010\'.\n        FILTER (?nbr &gt; 150).\n      ?commune igeo:codeCommune ?codecom ;\n               igeo:nom ?ville ;\n               idemo:population ?pop ;\n               idemo:populationTotale ?popT .\n  FILTER (?popT &gt; 40000).\n}"
+      "string": "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX vocab: &lt;http://impot.org/ontology#&gt;\nPREFIX geo: &lt;http://rdf.insee.fr/geo/&gt;\n\n# Cities where more than 1000 families paid the ISF in 2010.\n\nSELECT ?ville ?nbRedevables\nWHERE {\n  ?impot vocab:impot_annee 2010 .\n  ?impot vocab:impot_nbredevables ?nbRedevables .\n  FILTER (?nbRedevables &gt; 1000) .\n  ?impot vocab:impot_codeinsee ?codecom .\n  ?com geo:code_commune ?codecom .\n  ?com geo:nom ?ville\n}\nORDER BY DESC(?nbRedevables)"
     },
     {
-      "name": "highest",
-      "title": "Highest mean tax amount",
-      "description": "Highest mean tax amount",
-      "string": "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX vocab: &lt;http://impot.org/ontology#&gt;\nPREFIX igeo: &lt;http://rdf.insee.fr/def/geo#&gt;\n\n# Quelle ville possède le plus haut impôt moyen pour ses habitants assujettis à l\'ISF ?\n\nSELECT DISTINCT ?ville\nWHERE { ?impot vocab:impot_codeinsee ?codecom;\n               rdf:type vocab:impot ;\n               vocab:impot_impotmoyen ?impM .\n      ?commune igeo:codeCommune ?codecom ;\n               igeo:nom ?ville .\n} ORDER BY DESC(?impM) LIMIT 1 "
-    },
-    {
-      "name": "highest2",
-      "title": "Highest mean tax amount 2",
-      "description": "Highest mean tax amount 2",
-      "string": "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX vocab: &lt;http://impot.org/ontology#&gt;\nPREFIX igeo: &lt;http://rdf.insee.fr/def/geo#&gt;\n\nSELECT DISTINCT ?ville max(?impM as ?impMax )\nWHERE { ?impot vocab:impot_codeinsee ?codecom;\n               rdf:type vocab:impot ;\n               vocab:impot_impotmoyen ?impM .\n      ?commune igeo:codeCommune ?codecom ;\n               igeo:nom ?ville .\n}"
-    },
-    {
-      "name": "departments",
-      "title": "Departments where cities have a good ratio of ISF taxpayers per population",
-      "description": "Departments where cities have a good ratio of ISF taxpayers per population",
-      "string": "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX vocab: &lt;http://impot.org/ontology#&gt;\nPREFIX igeo: &lt;http://rdf.insee.fr/def/geo#&gt;\nPREFIX idemo: &lt;http://rdf.insee.fr/def/demo#&gt;\n\n# Donnez Départements qui ont des villes de plus de x habitants qui possèdent plus de x menages assujettis à l\'ISF en 2010\n\nSELECT DISTINCT ?dep\nWHERE { ?impot vocab:impot_codeinsee ?codecom;\n               rdf:type vocab:impot ;\n               vocab:impot_nbrredevables ?nbr;\n               vocab:impot_annee \'2010\'.\n        FILTER (?nbr &gt; 150).\n      ?commune igeo:codeCommune ?codecom ;\n               igeo:nom ?ville ;\n               idemo:population ?pop ;\n               idemo:populationTotale ?popT .\n  FILTER (?popT &gt; 40000).\n      ?dep rdf:type igeo:Departement ;\n           igeo:subdivisionDirecte ?arr .\n      ?arr igeo:subdivisionDirecte ?commune .\n}"
-    },
-    {
-      "name": "disabled",
-      "title": "Number of disabled-friendly transport services",
-      "description": "Number of disabled-friendly transport services",
-      "string": "PREFIX passim: &lt;http://data.lirmm.fr/ontologies/passim#&gt;\n\n# Nombre de services de transports accessibles aux handicapés par département\n\nSELECT DISTINCT ?dep count(?desc) AS ?service\nWHERE { ?desc passim:isAccessibilityForDisabledPerson \'Oui\' ;\n  ?desc passim:department ?dep ;  \n} group by ?dep ."
-    },
-    {
-      "name": "mean",
-      "title": "mean tax amout in Herault per year",
-      "description": "mean tax amout in Herault per year",
-      "string": "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX vocab: &lt;http://impot.org/ontology#&gt;\nPREFIX igeo: &lt;http://rdf.insee.fr/def/geo#&gt;\nPREFIX idemo: &lt;http://rdf.insee.fr/def/demo#&gt;\n\n# impot_moyen total dans le département de l\'Hérault par année\n\nSELECT DISTINCT ?annee sum(?impotM) AS ?impotMoyen\nWHERE {\n  ?impot vocab:impot_codeinsee ?codecom;\n               rdf:type vocab:impot ;\n    vocab:impot_annee ?annee ;\n               vocab:impot_impotmoyen ?impotM .\n  ?commune igeo:codeCommune ?codecom .\n        ?dep rdf:type igeo:Departement ;\n             igeo:subdivisionDirecte ?arr ;\n       igeo:nom \"Hérault\" .\n        ?arr igeo:subdivisionDirecte ?commune .\n     } group by  ?annee;"
-    },
-    {
-      "name": "rich",
-      "title": "Number of rich people per department",
-      "description": "Number of rich people per department",
-      "string": "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX vocab: &lt;http://impot.org/ontology#&gt;\nPREFIX igeo: &lt;http://rdf.insee.fr/def/geo#&gt;\nPREFIX idemo: &lt;http://rdf.insee.fr/def/demo#&gt;\n\n# nombre de redevables total par département de plus de 500 000 habitants\n\nSELECT DISTINCT ?dep sum(?nbrR) AS ?nbreTotal\nWHERE {\n  ?impot vocab:impot_codeinsee ?codecom;\n               rdf:type vocab:impot ;\n    vocab:impot_annee ?annee ;\n               vocab:impot_nbredevables ?nbrR .\n  ?commune igeo:codeCommune ?codecom .\n        ?dep rdf:type igeo:Departement ;\n             igeo:subdivisionDirecte ?arr ;\n               idemo:population ?pop ;\n               idemo:populationTotale ?popT .\n        FILTER (?dep &gt; 500000).\n        ?arr igeo:subdivisionDirecte ?commune .\n     } group by ?dep;"
+      "name": "highest-nbtaxpayers",
+      "title": "Number of ISF taxpayers per region per year + France as a whole.",
+      "description": "Number of ISF taxpayers per region per year + France as a whole.",
+      "string": "\nPREFIX vocab: &lt;http://impot.org/ontology#&gt;\nPREFIX geo: &lt;http://rdf.insee.fr/geo/&gt;\n\n# Number of families who paid ISF in each region each year + total for all of France.\n\nSELECT ?region ?annee (SUM(?nbR) AS ?nbRedevables)\nWHERE {\n  ?impot vocab:impot_annee ?annee .\n  ?impot vocab:impot_nbredevables ?nbR .\n  ?impot vocab:impot_codeinsee ?codecom .\n  ?com geo:code_commune ?codecom .\n  ?dep geo:chef-lieu ?com .\n  ?reg geo:subdivision ?dep .\n  ?reg geo:nom ?region\n}\nGROUP BY ?region ?annee\nORDER BY DESC(?nbRedevables)"
     },
     {
       "name": "coordinates",
-      "title": "Coordinates of cities with trains",
-      "description": "Coordinates of cities with trains",
-      "string": "PREFIX geo-fr: &lt;http://rdf.insee.fr/geo/&gt;\nPREFIX passim: &lt;http://data.lirmm.fr/ontologies/passim#&gt;\n\n# coordonnées des \"communes\" où il y a un mode de transport train\n\nSELECT DISTINCT ?lat ?long\nWHERE {\n  ?desc passim:modeOfTransport passim:Train ;\n                 passim:centerTown ?commune .\n        ?commune wgs84_pos:lat ?lat ;\n  ?commune wgs84_pos:long ?long .\n     } \n     LIMIT 100;"
+      "title": "A query that returns coordinates",
+      "description": "A query that returns coordinates",
+      "string": "PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;\nPREFIX wgs84: &lt;http://www.w3.org/2003/01/geo/wgs84_pos#&gt;\nPREFIX gn: &lt;http://www.geonames.org/ontology#&gt;\nPREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX geo: &lt;http://rdf.insee.fr/geo/&gt;\nPREFIX vocab: &lt;http://impot.org/ontology#&gt;\n# A query that returns coordinates.\nSELECT ?lat ?long ?population\nWHERE {\n  ?feature gn:population ?population .\n  ?feature wgs84:lat ?lat .\n  ?feature wgs84:long ?long .\n}\nORDER BY DESC(?population)"
     },
     {
-      "name": "areas",
-      "title": "Areas where people are tech-friendly",
-      "description": "Areas where people are tech-friendly",
-      "string": "PREFIX geo-fr: &lt;http://rdf.insee.fr/geo/&gt;\nPREFIX passim: &lt;http://data.lirmm.fr/ontologies/passim#&gt;\nPREFIX igeo: &lt;http://rdf.insee.fr/def/geo#&gt;\nPREFIX idemo: &lt;http://rdf.insee.fr/def/demo#&gt;\nPREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\n\n# classement de la population des régions où il y a un service de calcul d\'itinéraires et horaires\n\nSELECT DISTINCT ?nom ?popTotale\nWHERE {\n  ?desc passim:typeOfService passim:CalculDitineraire ;\n              passim:typeOfService passim:Horaires ;\n        passim:region ?region .\n        ?region rdf:type igeo:Region ;\n    igeo:nom ?nom ;\n    idemo:population ?popLeg ;\n          idemo:populationTotale ?popTotale .\n     } ORDER BY DESC ;"
+      "name": "forcegraph",
+      "title": "Test of the D3 force graph",
+      "description": "Test of the D3 force graph",
+      "string": "\nPREFIX geo: &lt;http://rdf.insee.fr/geo/&gt;\n\n# Test of the D3 Force Graph.\n\nSELECT ?sup ?reg\nWHERE {\n  ?sup geo:subdivision ?sub .\n  ?sub a geo:Region .\n  ?sub geo:nom ?reg\n}"
+    },
+    {
+      "name": "forcegraphbis",
+      "title": "A beautiful D3 force graph",
+      "description": "Test of the D3 force graph - Next level",
+      "string": "\nPREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;\nPREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;\nPREFIX gn: &lt;http://www.geonames.org/ontology#&gt;\n\n# Produces a really beautiful D3 graph of France, its region and its departments.\n\nSELECT ?feature ?parent ?popfeature ?popparent\nWHERE {\n  ?feature gn:parentFeature ?parent .\n  ?feature gn:population ?popfeature .\n  ?parent gn:population ?popparent\n}"
     },
     {
       "name": "prefixes",

@@ -1,0 +1,127 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# Number of entities per RDF type.
+
+SELECT ?type (count(?s) AS ?nbEntities)
+WHERE {
+  ?s rdf:type ?type
+}
+GROUP BY ?type
+ORDER BY DESC(?nbEntities)
+
+
+PREFIX passim: <http://data.lirmm.fr/ontologies/passim#>
+PREFIX geo: <http://rdf.insee.fr/geo/>
+
+# Number of disabled-friendly transport services per department.
+# Uses ARQ Syntax (for COUNT)
+
+SELECT ?department (COUNT(?desc) AS ?nbServices)
+WHERE {
+  ?desc passim:isAccessibilityForDisabledPerson 'Oui' .
+  ?desc passim:department ?dep .
+  ?dep geo:nom ?department
+}
+GROUP BY ?department
+ORDER BY DESC(?nbServices)
+
+
+PREFIX passim: <http://data.lirmm.fr/ontologies/passim#>
+PREFIX geo: <http://rdf.insee.fr/geo/>
+
+# Number of disabled-friendly transport services per region.
+# Uses ARQ Syntax (for COUNT)
+
+SELECT ?region (COUNT(?desc) AS ?nbServices)
+WHERE {
+  ?desc passim:isAccessibilityForDisabledPerson 'Oui' .
+  ?desc passim:region ?reg .
+  ?reg geo:nom ?region
+}
+GROUP BY ?region
+ORDER BY DESC(?nbServices)
+
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX vocab: <http://impot.org/ontology#>
+PREFIX geo: <http://rdf.insee.fr/geo/>
+
+# Cities where more than 1000 families paid the ISF in 2010.
+
+SELECT ?ville ?nbRedevables
+WHERE {
+  ?impot vocab:impot_annee 2010 .
+  ?impot vocab:impot_nbredevables ?nbRedevables .
+  FILTER (?nbRedevables > 1000) .
+  ?impot vocab:impot_codeinsee ?codecom .
+  ?com geo:code_commune ?codecom .
+  ?com geo:nom ?ville
+}
+ORDER BY DESC(?nbRedevables)
+
+
+PREFIX vocab: <http://impot.org/ontology#>
+PREFIX geo: <http://rdf.insee.fr/geo/>
+
+# Number of families who paid ISF in each region each year + total for all of France.
+# \nPREFIX vocab: <http://impot.org/ontology#>\nPREFIX geo: <http://rdf.insee.fr/geo/>\n\n# Number of families who paid ISF in each region each year + total for all of France.\n\nSELECT ?region ?annee (SUM(?nbR) AS ?nbRedevables)\nWHERE {\n  ?impot vocab:impot_annee ?annee .\n  ?impot vocab:impot_nbredevables ?nbR .\n  ?impot vocab:impot_codeinsee ?codecom .\n  ?com geo:code_commune ?codecom .\n  ?dep geo:chef-lieu ?com .\n  ?reg geo:subdivision ?dep .\n  ?reg geo:nom ?region\n}\nGROUP BY ?region ?annee\nORDER BY DESC(?nbRedevables)
+
+SELECT ?region ?annee (SUM(?nbR) AS ?nbRedevables)
+WHERE {
+  ?impot vocab:impot_annee ?annee .
+  ?impot vocab:impot_nbredevables ?nbR .
+  ?impot vocab:impot_codeinsee ?codecom .
+  ?com geo:code_commune ?codecom .
+  ?dep geo:chef-lieu ?com .
+  ?reg geo:subdivision ?dep .
+  ?reg geo:nom ?region
+}
+GROUP BY ?region ?annee
+ORDER BY DESC(?nbRedevables)
+
+
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX gn: <http://www.geonames.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX geo: <http://rdf.insee.fr/geo/>
+PREFIX vocab: <http://impot.org/ontology#>
+
+# A query that returns coordinates.
+
+SELECT ?lat ?long ?population
+WHERE {
+  ?feature gn:population ?population .
+  ?feature wgs84:lat ?lat .
+  ?feature wgs84:long ?long .
+
+}
+ORDER BY DESC(?population)
+
+
+PREFIX geo: <http://rdf.insee.fr/geo/>
+
+# Test of the D3 Force Graph.
+# \nPREFIX geo: <http://rdf.insee.fr/geo/>\n\n# Test of the D3 Force Graph.\n\nSELECT ?sup ?reg\nWHERE {\n  ?sup geo:subdivision ?sub .\n  ?sub a geo:Region .\n  ?sub geo:nom ?reg\n}
+
+SELECT ?sup ?reg
+WHERE {
+  ?sup geo:subdivision ?sub .
+  ?sub a geo:Region .
+  ?sub geo:nom ?reg
+}
+
+
+PREFIX geo: <http://rdf.insee.fr/geo/>
+
+# Test of the D3 Force Graph — Next level.
+\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX gn: <http://www.geonames.org/ontology#>\n\n# Produces a really beautiful D3 graph of France, its region and its departments.\n\nSELECT ?feature ?parent ?popfeature ?popparent\nWHERE {\n  ?feature gn:parentFeature ?parent .\n  ?feature gn:population ?popfeature .\n  ?parent gn:population ?popparent\n}
+
+SELECT ?feature ?parent ?popfeature ?popparent
+WHERE {
+  ?feature gn:parentFeature ?parent .
+  ?feature gn:population ?popfeature .
+  ?parent gn:population ?popparent
+}

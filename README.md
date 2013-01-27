@@ -1,8 +1,8 @@
 ## Triple Bench : interconnexion de sources de données et benchmarking ##
 
-[Wiki](https://github.com/masalthunlass/complex/wiki)
-
 Triple Bench est une application de benchmarking d'architectures de triple stores interconnectés. Ce wiki explique en détail ses objectifs, choix architecturaux et sa réalisation.
+
+Triple Bench a été réalisé en Java EE et nécessite l'usage d'un serveur Tomcat et de plusieurs bases de données PostgreSQL. Une version de démonstration est disponible en ligne : [Triple Bench Featherweight](http://www.trgdy.com/complex). Cette démonstration utilise des requêtes prédéfinies et renvoit des résultats précalculés.
 
 __Équipe :__
 

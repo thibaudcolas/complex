@@ -65,7 +65,6 @@ PREFIX vocab: <http://impot.org/ontology#>
 PREFIX geo: <http://rdf.insee.fr/geo/>
 
 # Number of families who paid ISF in each region each year + total for all of France.
-# \nPREFIX vocab: <http://impot.org/ontology#>\nPREFIX geo: <http://rdf.insee.fr/geo/>\n\n# Number of families who paid ISF in each region each year + total for all of France.\n\nSELECT ?region ?annee (SUM(?nbR) AS ?nbRedevables)\nWHERE {\n  ?impot vocab:impot_annee ?annee .\n  ?impot vocab:impot_nbredevables ?nbR .\n  ?impot vocab:impot_codeinsee ?codecom .\n  ?com geo:code_commune ?codecom .\n  ?dep geo:chef-lieu ?com .\n  ?reg geo:subdivision ?dep .\n  ?reg geo:nom ?region\n}\nGROUP BY ?region ?annee\nORDER BY DESC(?nbRedevables)
 
 SELECT ?region ?annee (SUM(?nbR) AS ?nbRedevables)
 WHERE {

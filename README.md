@@ -6,7 +6,7 @@ Triple Bench a été réalisé en Java EE et nécessite l'usage d'un serveur Tom
 
 __Équipe :__
 
-* [Thibaud Colas](https://github.com/thibweb)
+* [Thibaud Colas](https://github.com/thibaudcolas)
 * [Thibaut Marmin](https://github.com/marminthibaut)
 * [Namrata Patel](https://github.com/violethaze)
 * [Mathilde Salthun-Lassalle](https://github.com/masalthunlass)

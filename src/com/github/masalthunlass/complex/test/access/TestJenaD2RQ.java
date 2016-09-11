@@ -17,33 +17,33 @@ import de.fuberlin.wiwiss.d2rq.jena.ModelD2RQ;
  * Postgres. TODO S'assurer que le mot de passe est bien présent dans le fichier
  * de mapping avant exécution.
  * 
- * @author ThibWeb
+ * @author thibaudcolas
  * @date 13/01/13
  */
 public class TestJenaD2RQ {
 
-	private static Logger LOG = Logger.getLogger(TestJenaD2RQ.class);
+    private static Logger LOG = Logger.getLogger(TestJenaD2RQ.class);
 
-	public static void main(String[] args) {
-		String mappingPath = "./conf/d2rq-isf.ttl";
-		// Le ModelD2RQ est un modèle Jena utilisant un mapping D2RQ.
-		Model m = new ModelD2RQ("file:" + mappingPath);
+    public static void main(String[] args) {
+        String mappingPath = "./conf/d2rq-isf.ttl";
+        // Le ModelD2RQ est un modèle Jena utilisant un mapping D2RQ.
+        Model m = new ModelD2RQ("file:" + mappingPath);
 
-		LOG.info("Loading " + mappingPath);
+        LOG.info("Loading " + mappingPath);
 
-		String queryString = "SELECT * WHERE {?s ?p ?o} LIMIT 10";
-		LOG.info("Processing " + queryString);
+        String queryString = "SELECT * WHERE {?s ?p ?o} LIMIT 10";
+        LOG.info("Processing " + queryString);
 
-		Query query = QueryFactory.create(queryString);
-		QueryExecution exec = QueryExecutionFactory.create(query, m);
+        Query query = QueryFactory.create(queryString);
+        QueryExecution exec = QueryExecutionFactory.create(query, m);
 
-		try {
-			ResultSet rs = exec.execSelect();
-			ResultSetFormatter.out(System.out, rs, query);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			exec.close();
-		}
-	}
+        try {
+            ResultSet rs = exec.execSelect();
+            ResultSetFormatter.out(System.out, rs, query);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            exec.close();
+        }
+    }
 }
